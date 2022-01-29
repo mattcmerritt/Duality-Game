@@ -21,6 +21,9 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField]
     public static Sprite Portrait;
 
+    // Instance Data
+    private bool IsFrozen;
+
     // Getting layer information to prevent raycasts from hitting the player
     private void Awake()
     {
@@ -33,42 +36,57 @@ public class PlayerInteractions : MonoBehaviour
     // Obtain user input
     private void Update()
     {
-        // get the direction to check for an interact prompt in
-        int direction = movement.GetDirection();
-        Vector3 targetDirection = Vector3.zero;
+        if (!IsFrozen)
+        {
+            // get the direction to check for an interact prompt in
+            int direction = movement.GetDirection();
+            Vector3 targetDirection = Vector3.zero;
 
-        // check right
-        if (direction == 0)
-        {
-            targetDirection = Vector3.right;
-        }
-        else if (direction == 1)
-        {
-            targetDirection = Vector3.up;
-        }
-        else if (direction == 2)
-        {
-            targetDirection = Vector3.left;
-        }
-        else 
-        {
-            targetDirection = Vector3.down;
-        }
-
-
-        // check for an npc/item to interact with
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, Distance, TargetLayer);
-            if (hit.transform != null)
+            // check right
+            if (direction == 0)
             {
-                //Debug.Log("Interacted with: " + hit.transform.name);
-                NPC npc = hit.transform.GetComponent<NPC>();
-                if (npc != null)
+                targetDirection = Vector3.right;
+            }
+            else if (direction == 1)
+            {
+                targetDirection = Vector3.up;
+            }
+            else if (direction == 2)
+            {
+                targetDirection = Vector3.left;
+            }
+            else
+            {
+                targetDirection = Vector3.down;
+            }
+
+
+            // check for an npc/item to interact with
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, Distance, TargetLayer);
+                if (hit.transform != null)
                 {
-                    npc.StartConversation();
+                    //Debug.Log("Interacted with: " + hit.transform.name);
+                    NPC npc = hit.transform.GetComponent<NPC>();
+                    if (npc != null)
+                    {
+                        npc.StartConversation();
+                    }
                 }
             }
         }
+    }
+
+    // Function to prevent the character from acting and moving
+    public void Freeze()
+    {
+        IsFrozen = true;
+    }
+
+    // Function to re-enable player control
+    public void Unfreeze()
+    {
+        IsFrozen = false;
     }
 }
