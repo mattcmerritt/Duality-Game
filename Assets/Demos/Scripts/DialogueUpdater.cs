@@ -68,6 +68,8 @@ public class DialogueUpdater : MonoBehaviour
             {
                 RemainingMessages.RemoveAt(0);
                 DialogueText.SetText("");
+                SpeakerName.SetText(RemainingMessages[0].Name);
+                SpeakerImage.sprite = RemainingMessages[0].Portrait;
                 StartCoroutine(TypeText(RemainingMessages[0].Text));
             }
             else
