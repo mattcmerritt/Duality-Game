@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Instance Data
     private Vector2 InputDirection;
+    private float Direction;
+    private bool IsFrozen;
 
     // Constants
     private const float MoveSpeed = 5f;
@@ -19,21 +21,66 @@ public class PlayerMovement : MonoBehaviour
     // Obtain user input every frame
     private void Update()
     {
-        // Get movement input
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float inputY = Input.GetAxisRaw("Vertical");
-        InputDirection = new Vector2(inputX, inputY);
-        InputDirection.Normalize();
+        if (!IsFrozen)
+        {
+            // Get movement input
+            float inputX = Input.GetAxisRaw("Horizontal");
+            float inputY = Input.GetAxisRaw("Vertical");
+            InputDirection = new Vector2(inputX, inputY);
+            InputDirection.Normalize();
 
-        // Update animator with values
-        ani.SetFloat("Horizontal", inputX);
-        ani.SetFloat("Vertical", inputY);
-        ani.SetFloat("Magnitude", InputDirection.magnitude);
+            // Update animator with values
+            ani.SetFloat("Horizontal", inputX);
+            ani.SetFloat("Vertical", inputY);
+            ani.SetFloat("Magnitude", InputDirection.magnitude);
+
+            // Updating the player's direction
+            string clipName = ani.GetCurrentAnimatorClipInfo(0)[0].clip.name.ToLower();
+            if (clipName.Contains("right"))
+            {
+                Direction = 0;
+            }
+            else if (clipName.Contains("up"))
+            {
+                Direction = 1;
+            }
+            else if (clipName.Contains("left"))
+            {
+                Direction = 2;
+            }
+            else
+            {
+                Direction = 3;
+            }
+            ani.SetFloat("Direction", Direction);
+        }
     }
 
     // Move player based on their input
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + InputDirection * MoveSpeed * Time.fixedDeltaTime);
+        if (!IsFrozen)
+        {
+            rb.MovePosition(rb.position + InputDirection * MoveSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    public int GetDirection()
+    {
+        return (int) Direction;
+    }
+
+    // Function to prevent the character from acting and moving
+    public void Freeze()
+    {
+        IsFrozen = true;
+        GetComponent<PlayerInteractions>().Freeze();
+    }
+
+    // Function to re-enable player control
+    public void Unfreeze()
+    {
+        IsFrozen = false;
+        GetComponent<PlayerInteractions>().Unfreeze();
     }
 }

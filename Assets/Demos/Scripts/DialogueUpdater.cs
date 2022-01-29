@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 // Code adapted from https://www.youtube.com/watch?v=_nRzoTzeyxU
 
@@ -9,16 +10,23 @@ public class DialogueUpdater : MonoBehaviour
 {
     public GameObject DialogueBox;
     public TMP_Text DialogueText;
-    private List<string> RemainingMessages;
+    public TMP_Text SpeakerName;
+    public Image SpeakerImage;
+    private List<DialogueLine> RemainingMessages;
 
     // call this function to start a dialogue interaction
-    public void StartDialogue(List<string> messages)
+    public void StartDialogue(List<DialogueLine> messages)
     {
-        RemainingMessages = messages;
+        // Taking control away from the player
+        FindObjectOfType<PlayerMovement>().Freeze();
+
+        RemainingMessages = new List<DialogueLine>(messages);
         DialogueBox.SetActive(true);
         if(RemainingMessages.Count > 0)
         {
-            StartCoroutine(TypeText(RemainingMessages[0]));
+            SpeakerName.SetText(RemainingMessages[0].Name);
+            SpeakerImage.sprite = RemainingMessages[0].Portrait;
+            StartCoroutine(TypeText(RemainingMessages[0].Text));
         }
         else
         {
@@ -37,9 +45,13 @@ public class DialogueUpdater : MonoBehaviour
 
     public void ClearDialogue()
     {
+        // Giving the player back control of the character
+        FindObjectOfType<PlayerMovement>().Unfreeze();
+
         RemainingMessages.Clear();
         DialogueBox.SetActive(false);
         DialogueText.SetText("");
+        SpeakerName.SetText("");
     }
 
     // this isn't used, but could be
@@ -54,15 +66,17 @@ public class DialogueUpdater : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && DialogueBox.activeSelf)
         {
             StopAllCoroutines();
-            if (RemainingMessages[0] != DialogueText.text)
+            if (RemainingMessages[0].Text != DialogueText.text)
             {
-                DialogueText.SetText(RemainingMessages[0]);
+                DialogueText.SetText(RemainingMessages[0].Text);
             }
             else if (RemainingMessages.Count > 1)
             {
                 RemainingMessages.RemoveAt(0);
                 DialogueText.SetText("");
-                StartCoroutine(TypeText(RemainingMessages[0]));
+                SpeakerName.SetText(RemainingMessages[0].Name);
+                SpeakerImage.sprite = RemainingMessages[0].Portrait;
+                StartCoroutine(TypeText(RemainingMessages[0].Text));
             }
             else
             {
