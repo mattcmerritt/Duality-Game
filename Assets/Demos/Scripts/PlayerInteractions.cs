@@ -19,6 +19,7 @@ public class PlayerInteractions : MonoBehaviour
     // Dialogue data
     public static string Name = "You";
     [SerializeField]
+    private Sprite TempPortrait;
     public static Sprite Portrait;
 
     // Instance Data
@@ -31,6 +32,8 @@ public class PlayerInteractions : MonoBehaviour
         {
             TargetLayer += l.value;
         }
+
+        Portrait = TempPortrait;
     }
 
     // Obtain user input

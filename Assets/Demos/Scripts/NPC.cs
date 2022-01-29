@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
     private Sprite Portrait;
 
     // Create a list of dialogue items for when the NPC is interacted with
-    private void Awake()
+    private void Start()
     {
         DialogueItems = new List<DialogueLine>();
         for (int i = 0; i < Lines.Count; i++)
