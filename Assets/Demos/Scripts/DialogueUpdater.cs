@@ -17,6 +17,9 @@ public class DialogueUpdater : MonoBehaviour
     // call this function to start a dialogue interaction
     public void StartDialogue(List<DialogueLine> messages)
     {
+        // Taking control away from the player
+        FindObjectOfType<PlayerMovement>().Freeze();
+
         RemainingMessages = new List<DialogueLine>(messages);
         DialogueBox.SetActive(true);
         if(RemainingMessages.Count > 0)
@@ -42,6 +45,9 @@ public class DialogueUpdater : MonoBehaviour
 
     public void ClearDialogue()
     {
+        // Giving the player back control of the character
+        FindObjectOfType<PlayerMovement>().Unfreeze();
+
         RemainingMessages.Clear();
         DialogueBox.SetActive(false);
         DialogueText.SetText("");

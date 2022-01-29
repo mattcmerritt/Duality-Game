@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2324502372320166434}
   - component: {fileID: 2324502372320166444}
   - component: {fileID: 3156866688434143350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,3 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ani: {fileID: 2324502372320166434}
   movement: {fileID: 2324502372320166444}
+  LayersToHit:
+  - serializedVersion: 2
+    m_Bits: 128
+  TempPortrait: {fileID: 8617477585349726980, guid: ad61b185f64be8146bb80e3e96d9fbf5, type: 3}
