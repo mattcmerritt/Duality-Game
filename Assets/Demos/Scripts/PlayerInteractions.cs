@@ -16,6 +16,11 @@ public class PlayerInteractions : MonoBehaviour
     private int TargetLayer;
     private float Distance = 1f;
 
+    // Dialogue data
+    public static string Name = "You";
+    [SerializeField]
+    public static Sprite Portrait;
+
     // Getting layer information to prevent raycasts from hitting the player
     private void Awake()
     {
@@ -57,7 +62,12 @@ public class PlayerInteractions : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, Distance, TargetLayer);
             if (hit.transform != null)
             {
-                Debug.Log("Interacted with: " + hit.transform.name);
+                //Debug.Log("Interacted with: " + hit.transform.name);
+                NPC npc = hit.transform.GetComponent<NPC>();
+                if (npc != null)
+                {
+                    npc.StartConversation();
+                }
             }
         }
     }
