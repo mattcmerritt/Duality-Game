@@ -10,7 +10,7 @@ public class DialogueTest : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Listener.StartDialogue(new List<string> { "This is message 1.", "This is message 2.", "This is message 3." });
+            //Listener.StartDialogue(new List<string> { "This is message 1.", "This is message 2.", "This is message 3." });
         }
     }
 }

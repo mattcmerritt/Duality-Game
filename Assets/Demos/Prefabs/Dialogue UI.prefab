@@ -199,9 +199,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8617477585349726980, guid: ad61b185f64be8146bb80e3e96d9fbf5, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -332,6 +332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 8827608358698144859}
   DialogueText: {fileID: 8827608359606254851}
+  SpeakerName: {fileID: 393825201}
+  SpeakerImage: {fileID: 1423482658}
 --- !u!1 &8827608359606254853
 GameObject:
   m_ObjectHideFlags: 0
