@@ -39,6 +39,6 @@ public class NPC : MonoBehaviour
 
     public void StartConversation()
     {
-        DialogueUI.StartDialogue(new List<string>(Lines));
+        DialogueUI.StartDialogue(DialogueItems);
     }
 }
