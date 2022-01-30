@@ -1562,6 +1562,7 @@ MonoBehaviour:
   - {fileID: 1702328943}
   - {fileID: 268680554}
   WatchBox: {fileID: 1506391191}
+  WatchBoxNPC: {fileID: 1506391192}
   Exit: {fileID: 1484457998}
 --- !u!4 &2101245410 stripped
 Transform:
