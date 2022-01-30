@@ -27,7 +27,6 @@ public class CatQuestFuture : Quest
                 if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
-                    SceneManager.LoadScene("OutsidePast2");
                 }
             }
         }

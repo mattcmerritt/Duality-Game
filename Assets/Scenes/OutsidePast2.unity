@@ -1317,22 +1317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lines:
-  - "Mayor Abernath! I\u2019m so glad I caught you. I wanted to give you my move-in
-    papers. "
-  - "Oh, yes, thank you! Good morning, please call me Amber. There\u2019s no need
-    for such formalities. "
-  - "I\u2019m so glad you decided to move back to our quaint little town. Just in
-    time for our time capsule this weekend as well! "
-  - Time capsule?
-  - "Why yes, our town is putting together a time capsule to bury for 20 years from
-    now. Not many people have volunteered to put items in it, but I\u2019m hopin\u2019
-    that\u2019ll change by the end of the week. "
-  - 'Having you will be a wonderful thing for us, I can feel it. As I always say,
-    the future holds great things for our people. '
-  - "Great things, huh\u2026? I wonder, what will everything be like in 20 years? "
-  - "Where is that\u2013? The pocketwatch?? "
-  SpokenByPlayer: 0100000100000101
-  Name: Amber
+  - I lost my cat... Can you help me find him?
+  SpokenByPlayer: 00
+  Name: Martin
   Portrait: {fileID: 8617477585349726980, guid: ad61b185f64be8146bb80e3e96d9fbf5, type: 3}
 --- !u!61 &729836423
 BoxCollider2D:
@@ -1505,11 +1492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.82
+      value: 14.41
       objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: 10.61
       objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2063,6 +2050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540650350}
+  - component: {fileID: 1540650349}
   m_Layer: 0
   m_Name: Quest 4
   m_TagString: Untagged
@@ -2070,6 +2058,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1540650349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540650348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d777e1d6630fc4899f9db8863dd118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 729836422}
 --- !u!4 &1540650350
 Transform:
   m_ObjectHideFlags: 0

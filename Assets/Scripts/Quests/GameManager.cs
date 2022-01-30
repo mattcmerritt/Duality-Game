@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "cat":
                 QuestType = QuestTypes.CatQuest;
-                ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest = FindObjectOfType<CatQuestPast>();
                 ActiveQuest.SetActive(true);
                 break;
             case "record":
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (ActiveQuest.IsCompleted())
         {
             ActiveQuest.SetActive(false);
-
+            Debug.Log("Changing Quests");
             switch (ActiveQuest)
             {
                 case UnpackingQuest u:
@@ -58,13 +59,34 @@ public class GameManager : MonoBehaviour
                     // switch active quest to papers quest
                     QuestType = QuestTypes.PapersQuest;
                     ActiveQuest.SetActive(true);
+                    Debug.Log("Changing to Papers");
                     break;
                 case PapersQuest p:
                     PlayerPrefs.SetString("Quest", "explore");
                     QuestType = QuestTypes.ExploreQuest;
                     ActiveQuest.SetActive(true);
+                    Debug.Log("Changing to Explore");
+                    // change to next scene for next quest
+                    SceneManager.LoadScene("OutsideFuture");
+                    break;
+                case CatQuestFuture e:
+                    PlayerPrefs.SetString("Quest", "cat");
+                    QuestType = QuestTypes.CatQuest;
+                    ActiveQuest.SetActive(true);
+                    Debug.Log("Changing to Cat");
+                    // change to next scene for next quest
+                    SceneManager.LoadScene("OutsidePast2");
+                    break;
+                case CatQuestPast c:
+                    PlayerPrefs.SetString("Quest", "record");
+                    QuestType = QuestTypes.RecordQuest;
+                    ActiveQuest.SetActive(true);
+                    Debug.Log("Changing to Record");
+                    // change to next scene for next quest
+                    SceneManager.LoadScene("Menu");
                     break;
                 default:
+                    Debug.Log("Failed Changing Quests");
                     break;
             }
 

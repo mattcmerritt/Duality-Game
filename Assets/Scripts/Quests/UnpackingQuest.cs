@@ -10,6 +10,8 @@ public class UnpackingQuest : Quest
     [SerializeField]
     private BoxScript WatchBox;
     [SerializeField]
+    private NPC WatchBoxNPC;
+    [SerializeField]
     private Exit Exit;
 
     // Objectives Display
@@ -45,9 +47,12 @@ public class UnpackingQuest : Quest
 
             if (WatchBox.BoxChecked())
             {
-                Completed = true;
-                QuestUI.ChangeText("- Go speak with the mayor at the east of town");
-                Exit.AllowExit();
+                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                {
+                    Completed = true;
+                    QuestUI.ChangeText("- Go speak with the mayor at the east of town");
+                    Exit.AllowExit();
+                }
             }
         }
     }

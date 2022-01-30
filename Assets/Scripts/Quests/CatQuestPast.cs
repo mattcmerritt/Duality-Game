@@ -28,11 +28,12 @@ public class CatQuestPast : Quest
                 {
                     QuestUI.ChangeText("- Talk to Martin\n- Help find Martin's cat");
 
+                    /*
                     if (true)
                     {
                         Completed = true;
-                        SceneManager.LoadScene("OutsidePast2");
                     }
+                    */
                 }
             }
         }

@@ -27,7 +27,6 @@ public class PapersQuest : Quest
                 if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
-                    SceneManager.LoadScene("OutsideFuture");
                 }
             }
         }
