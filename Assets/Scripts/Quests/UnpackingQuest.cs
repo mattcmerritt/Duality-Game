@@ -2,27 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnpackingQuest : MonoBehaviour
+public class UnpackingQuest : Quest
 {
     // Key items
     [SerializeField]
     private List<BoxScript> Boxes;
     [SerializeField]
     private Exit Exit;
+
     private void Update()
     {
-        bool finishedUnpacking = true;
-        for (int i = 0; i < Boxes.Count; i++)
+        if (Active)
         {
-            if (!Boxes[i].BoxChecked())
+            bool finishedUnpacking = true;
+            for (int i = 0; i < Boxes.Count; i++)
             {
-                finishedUnpacking = false;
+                if (!Boxes[i].BoxChecked())
+                {
+                    finishedUnpacking = false;
+                }
             }
-        }
 
-        if (finishedUnpacking)
-        {
-            Exit.AllowExit();
+            if (finishedUnpacking)
+            {
+                Completed = true;
+                Exit.AllowExit();
+            }
         }
     }
 }
