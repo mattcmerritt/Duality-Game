@@ -246,6 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 113130270}
+  catsCaught: 0
+  timeUntilNextCatAction: 5
+  catActive: 0
 --- !u!1 &265197727
 GameObject:
   m_ObjectHideFlags: 0

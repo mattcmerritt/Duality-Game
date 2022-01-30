@@ -7,6 +7,10 @@ public class Minigame : MonoBehaviour
     // Components
     [SerializeField]
     private Collider2D col;
+    public int catsCaught = 0;
+    public float timeUntilNextCatAction = 5;
+    public bool catActive = false;
+    public bool minigameActive = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,23 +18,28 @@ public class Minigame : MonoBehaviour
         {
 
             collision.GetComponent<PlayerMovement>().Freeze();
+            minigameActive = true;
+            
+        }
+    }
 
-            int catsCaught = 0;
-            float timeUntilNextCatAction = 300;
-            bool catActive = false;
+    private void Update()
+    {
+        if(minigameActive)
+        {
             LeafPile[] piles = GameObject.FindObjectsOfType<LeafPile>();
 
-            while (catsCaught < 3)
+            if (catsCaught < 3)
             {
                 timeUntilNextCatAction -= Time.deltaTime;
 
                 // enable cat
-                if(timeUntilNextCatAction <= 0 && !catActive)
+                if (timeUntilNextCatAction <= 0 && !catActive)
                 {
                     catActive = true;
                     int chosenPile = Random.Range(0, piles.Length);
                     piles[chosenPile].HasCat = true;
-                    timeUntilNextCatAction = 60;
+                    timeUntilNextCatAction = 2;
                 }
 
                 // disable cat
@@ -41,11 +50,12 @@ public class Minigame : MonoBehaviour
                     {
                         pile.HasCat = false;
                     }
+                    timeUntilNextCatAction = 5;
                 }
 
                 else if (catActive)
                 {
-                    foreach(LeafPile pile in piles)
+                    foreach (LeafPile pile in piles)
                     {
                         if (Input.GetKeyDown(pile.PileKey))
                         {
@@ -60,8 +70,11 @@ public class Minigame : MonoBehaviour
                     }
                 }
             }
-
-            collision.GetComponent<PlayerMovement>().Unfreeze();
+            else
+            {
+                FindObjectOfType<PlayerMovement>().Unfreeze();
+                minigameActive = false;
+            }
         }
     }
 }
