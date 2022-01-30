@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutsidePast2.unity
     guid: c98e058acce927841b83423e6d1f38ce
+  - enabled: 1
+    path: Assets/Scenes/TownHallFuture.unity
+    guid: d196f20de25b299419ac6ad013d3d1cc
+  - enabled: 1
+    path: Assets/Scenes/TownHallPast.unity
+    guid: 6741073a934072e4ab84934c3a4876d4
   m_configObjects: {}
