@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541056551113096011}
   - component: {fileID: 4904659022610566602}
+  - component: {fileID: 27505726392897280}
   m_Layer: 0
   m_Name: Tree1
   m_TagString: Untagged
@@ -82,3 +83,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &27505726392897280
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823456183986255256}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.9337517, y: -2.4448419}
+  - {x: 0.60042, y: -2.0602508}
+  - {x: -0.5317097, y: -2.0685642}
+  - {x: -0.76200867, y: -2.315528}
+  - {x: -1.0909138, y: -2.3022692}
+  - {x: -1.4098549, y: -2.4007893}
+  - {x: -0.5954952, y: -2.457109}
+  - {x: 0.9339489, y: -2.443228}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
