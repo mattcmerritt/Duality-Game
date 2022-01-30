@@ -58,4 +58,11 @@ public class NPC : MonoBehaviour
     {
         return SpokenWith;
     }
+
+    public void ReplaceConversation(List<DialogueLine> newLines)
+    {
+        DialogueItems = newLines;
+    }
+
+
 }

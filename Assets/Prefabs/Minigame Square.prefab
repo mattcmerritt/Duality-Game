@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012079239, y: -0.14493656}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58934784, y: 0.5007744}
   m_EdgeRadius: 0
 --- !u!114 &8839289616259992751
 MonoBehaviour:
@@ -127,3 +127,6 @@ MonoBehaviour:
   timeUntilNextCatAction: 5
   catActive: 0
   minigameActive: 0
+  Cat: {fileID: 21300000, guid: e36ce849416b1ed4cb7e3b0fbb24fff6, type: 3}
+  BushCat: {fileID: 4720216510328841301, guid: 76a67c84c9318fa41a6c7f75b97063ea, type: 3}
+  Martin: {fileID: 21300000, guid: 751f95ed2d39cb849b0ab978366a20a2, type: 3}
