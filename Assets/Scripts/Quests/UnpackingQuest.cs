@@ -12,6 +12,14 @@ public class UnpackingQuest : Quest
     [SerializeField]
     private Exit Exit;
 
+    // Objectives Display
+    private ObjectivesUI QuestUI;
+
+    private void Awake()
+    {
+        QuestUI = FindObjectOfType<ObjectivesUI>();
+    }
+
     protected override void Update()
     {
         if (Active)
@@ -25,12 +33,14 @@ public class UnpackingQuest : Quest
                     boxesChecked++;
                 }
             }
+            QuestUI.ChangeText("- Unpack the boxes (" + boxesChecked + "/3)");
 
             // if the player has collected all of the boxes,
             // activate the watch box
             if (boxesChecked >= 3)
             {
                 WatchBox.gameObject.SetActive(true);
+                QuestUI.ChangeText("- Unpack the boxes (" + boxesChecked + "/3)\n- Check the last box");
             }
 
             if (WatchBox.BoxChecked())

@@ -8,14 +8,24 @@ public class PapersQuest : Quest
     [SerializeField]
     private NPC Mayor;
 
+    // Objectives Display
+    private ObjectivesUI QuestUI;
+
+    private void Awake()
+    {
+        QuestUI = FindObjectOfType<ObjectivesUI>();
+    }
+
     protected override void Update()
     {
         if (Active)
         {
+            QuestUI.ChangeText("- Go speak with the mayor at the east of town");
             if (Mayor.CheckSpokenWith())
             {
                 Completed = true;
                 Debug.Log("Game completed");
+                QuestUI.ChangeText("\nNo objectives remaining");
             }
         }
     }
