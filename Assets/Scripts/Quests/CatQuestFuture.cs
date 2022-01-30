@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PapersQuest : Quest
+public class CatQuestFuture : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Mayor;
+    private NPC Owner;
 
     // Objectives Display
     private ObjectivesUI QuestUI;
@@ -21,13 +21,13 @@ public class PapersQuest : Quest
     {
         if (Active)
         {
-            QuestUI.ChangeText("- Go speak with the mayor at the east of town");
-            if (Mayor.CheckSpokenWith())
+            QuestUI.ChangeText("- Explore the town and speak to the locals");
+            if (Owner.CheckSpokenWith())
             {
                 if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
-                    SceneManager.LoadScene("OutsideFuture");
+                    SceneManager.LoadScene("OutsidePast2");
                 }
             }
         }

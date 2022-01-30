@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
         string currentQuest = PlayerPrefs.GetString("Quest");
         switch (currentQuest)
         {
-            case "none":
-                QuestType = QuestTypes.NoQuest;
-                ActiveQuest = FindObjectOfType<Quest>();
+            case "explore":
+                QuestType = QuestTypes.ExploreQuest;
+                ActiveQuest = FindObjectOfType<CatQuestFuture>();
                 ActiveQuest.SetActive(true);
                 break;
             case "papers":
@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
                     QuestType = QuestTypes.PapersQuest;
                     ActiveQuest.SetActive(true);
                     break;
+                case PapersQuest p:
+                    PlayerPrefs.SetString("Quest", "explore");
+                    QuestType = QuestTypes.ExploreQuest;
+                    ActiveQuest.SetActive(true);
+                    break;
                 default:
                     break;
             }
@@ -75,5 +80,5 @@ public enum QuestTypes
     PapersQuest,
     CatQuest,
     RecordQuest,
-    NoQuest,
+    ExploreQuest,
 }

@@ -46,6 +46,7 @@ public class UnpackingQuest : Quest
             if (WatchBox.BoxChecked())
             {
                 Completed = true;
+                QuestUI.ChangeText("- Go speak with the mayor at the east of town");
                 Exit.AllowExit();
             }
         }
