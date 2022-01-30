@@ -11,7 +11,7 @@ public class Minigame : MonoBehaviour
     public float timeUntilNextCatAction = 5;
     public bool catActive = false;
     public bool minigameActive = false;
-    public Sprite Cat, BushCat;
+    public Sprite Cat, BushCat, Martin;
 
     // Objectives Display
     private ObjectivesUI QuestUI;
@@ -106,6 +106,15 @@ public class Minigame : MonoBehaviour
                 FindObjectOfType<DialogueUpdater>().StartDialogue(EndGameLines);
 
                 QuestUI.ChangeText("- Go return Cookie to Martin");
+
+                // find Martin and change his dialogue
+                List<DialogueLine> MartinCookieLines = new List<DialogueLine>();
+                MartinCookieLines.Add(new DialogueLine("Cookie!! You found her. Thank you so much.", Martin, "Martin"));
+                MartinCookieLines.Add(new DialogueLine("Happy to help, Martin.", PlayerInteractions.Portrait, PlayerInteractions.Name));
+                MartinCookieLines.Add(new DialogueLine("Here, have this cat paw medallion I got from the shelter. I know it’s not valuable, but as a token of my appreciation. We’re both very thankful.", Martin, "Martin"));
+                MartinCookieLines.Add(new DialogueLine("*Meow*", Cat, "Cookie"));
+
+                FindObjectOfType<NPC>().ReplaceConversation(MartinCookieLines);
             }
         }
     }
