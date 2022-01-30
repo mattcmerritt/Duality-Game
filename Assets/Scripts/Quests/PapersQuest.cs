@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PapersQuest : Quest
 {
@@ -28,6 +29,7 @@ public class PapersQuest : Quest
                     Completed = true;
                     QuestUI.ChangeText("\nNo objectives remaining");
                     Debug.Log("Conversation ended");
+                    SceneManager.LoadScene("OutsideFuture");
                 }
             }
         }
