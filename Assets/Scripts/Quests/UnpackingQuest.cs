@@ -17,6 +17,9 @@ public class UnpackingQuest : Quest
     // Objectives Display
     private ObjectivesUI QuestUI;
 
+    // Instance Data
+    private bool HasNoticed;
+
     private void Awake()
     {
         QuestUI = FindObjectOfType<ObjectivesUI>();
@@ -44,8 +47,9 @@ public class UnpackingQuest : Quest
                 WatchBox.gameObject.SetActive(true);
                 QuestUI.ChangeText("- Unpack the boxes (" + boxesChecked + "/3)\n- Check the last box");
 
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                if (!FindObjectOfType<DialogueUpdater>().DialogueActive && !HasNoticed)
                 {
+                    HasNoticed = true;
                     List<DialogueLine> lines = new List<DialogueLine>();
                     lines.Add(new DialogueLine("Huh? What’s that?", PlayerInteractions.Portrait, PlayerInteractions.Name));
                     FindObjectOfType<DialogueUpdater>().StartDialogue(lines);
