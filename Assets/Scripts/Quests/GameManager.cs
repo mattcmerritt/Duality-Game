@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
     private QuestTypes QuestType;
     [SerializeField]
     private Quest ActiveQuest;
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "papers":
                 QuestType = QuestTypes.PapersQuest;
-                ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest = FindObjectOfType<PapersQuest>();
                 ActiveQuest.SetActive(true);
                 break;
             case "cat":
@@ -53,11 +54,16 @@ public class GameManager : MonoBehaviour
             {
                 case UnpackingQuest u:
                     // write papers quest to player prefs
+                    PlayerPrefs.SetString("Quest", "papers");
                     // switch active quest to papers quest
+                    QuestType = QuestTypes.PapersQuest;
+                    ActiveQuest.SetActive(true);
                     break;
                 default:
                     break;
             }
+
+            PlayerPrefs.Save();
         }
     }
 }

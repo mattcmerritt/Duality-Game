@@ -18,6 +18,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private Sprite Portrait;
 
+    // Instance Data
+    private bool SpokenWith;
+
     // Create a list of dialogue items for when the NPC is interacted with
     private void Start()
     {
@@ -41,11 +44,18 @@ public class NPC : MonoBehaviour
     {
         DialogueUI.StartDialogue(DialogueItems);
 
+        SpokenWith = true;
+
         // handling special interactions
         BoxScript box = GetComponent<BoxScript>();
         if (box != null)
         {
             box.Check();
         }
+    }
+
+    public bool CheckSpokenWith()
+    {
+        return SpokenWith;
     }
 }
