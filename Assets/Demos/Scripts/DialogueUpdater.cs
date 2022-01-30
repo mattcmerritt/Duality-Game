@@ -13,10 +13,12 @@ public class DialogueUpdater : MonoBehaviour
     public TMP_Text SpeakerName;
     public Image SpeakerImage;
     private List<DialogueLine> RemainingMessages;
+    public bool DialogueActive = false;
 
     // call this function to start a dialogue interaction
     public void StartDialogue(List<DialogueLine> messages)
     {
+        DialogueActive = true;
         // Taking control away from the player
         FindObjectOfType<PlayerMovement>().Freeze();
 
@@ -52,6 +54,7 @@ public class DialogueUpdater : MonoBehaviour
         DialogueBox.SetActive(false);
         DialogueText.SetText("");
         SpeakerName.SetText("");
+        DialogueActive = false;
     }
 
     // this isn't used, but could be

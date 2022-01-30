@@ -26,6 +26,11 @@ public class PapersQuest : Quest
                 Completed = true;
                 Debug.Log("Game completed");
                 QuestUI.ChangeText("\nNo objectives remaining");
+
+                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                {
+                    Debug.Log("Conversation ended");
+                }
             }
         }
     }
