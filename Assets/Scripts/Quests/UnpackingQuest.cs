@@ -43,6 +43,13 @@ public class UnpackingQuest : Quest
             {
                 WatchBox.gameObject.SetActive(true);
                 QuestUI.ChangeText("- Unpack the boxes (" + boxesChecked + "/3)\n- Check the last box");
+
+                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                {
+                    List<DialogueLine> lines = new List<DialogueLine>();
+                    lines.Add(new DialogueLine("Huh? What’s that?", PlayerInteractions.Portrait, PlayerInteractions.Name));
+                    FindObjectOfType<DialogueUpdater>().StartDialogue(lines);
+                }
             }
 
             if (WatchBox.BoxChecked())
