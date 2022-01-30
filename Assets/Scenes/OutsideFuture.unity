@@ -1356,7 +1356,7 @@ MonoBehaviour:
   - Hello. I wish I had my cat.
   SpokenByPlayer: 00
   Name: Martin
-  Portrait: {fileID: 8617477585349726980, guid: ad61b185f64be8146bb80e3e96d9fbf5, type: 3}
+  Portrait: {fileID: 21300000, guid: d6ef3b730f0e8e246b00188843664ae7, type: 3}
 --- !u!61 &729836423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1374,7 +1374,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.2538232, y: 1.5250001}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1423,8 +1423,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8617477585349726980, guid: ad61b185f64be8146bb80e3e96d9fbf5, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 1217950955772457077, guid: 71bbb52269aee3440ac3893600ce0fdd, type: 3}
+  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1534,6 +1534,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2324502372320166432, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2324502372320166432, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2324502372320166432, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4056604
+      objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_RootOrder
       value: 3
