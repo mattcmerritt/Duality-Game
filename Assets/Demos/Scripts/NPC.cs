@@ -40,5 +40,12 @@ public class NPC : MonoBehaviour
     public void StartConversation()
     {
         DialogueUI.StartDialogue(DialogueItems);
+
+        // handling special interactions
+        BoxScript box = GetComponent<BoxScript>();
+        if (box != null)
+        {
+            box.Check();
+        }
     }
 }
