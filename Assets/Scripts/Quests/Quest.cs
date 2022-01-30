@@ -21,4 +21,9 @@ public class Quest : MonoBehaviour
     {
         Active = active;
     }
+
+    protected virtual void Update()
+    {
+
+    }
 }

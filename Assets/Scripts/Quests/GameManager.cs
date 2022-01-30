@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private QuestTypes QuestType;
+    [SerializeField]
     private Quest ActiveQuest;
 
     // getting the current quest from the playerprefs
@@ -13,26 +14,31 @@ public class GameManager : MonoBehaviour
         string currentQuest = PlayerPrefs.GetString("Quest");
         switch (currentQuest)
         {
-            case "unpacking":
-                QuestType = QuestTypes.UnpackingQuest;
-                ActiveQuest = FindObjectOfType<UnpackingQuest>();
+            case "none":
+                QuestType = QuestTypes.NoQuest;
+                ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest.SetActive(true);
                 break;
             case "papers":
                 QuestType = QuestTypes.PapersQuest;
                 ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest.SetActive(true);
                 break;
             case "cat":
                 QuestType = QuestTypes.CatQuest;
                 ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest.SetActive(true);
                 break;
             case "record":
                 QuestType = QuestTypes.RecordQuest;
                 ActiveQuest = FindObjectOfType<Quest>();
+                ActiveQuest.SetActive(true);
                 break;
             default:
-                QuestType = QuestTypes.NoQuest;
-                ActiveQuest = FindObjectOfType<Quest>();
-                break;
+                QuestType = QuestTypes.UnpackingQuest;
+                ActiveQuest = FindObjectOfType<UnpackingQuest>();
+                ActiveQuest.SetActive(true);
+                break; 
         }
     }
 

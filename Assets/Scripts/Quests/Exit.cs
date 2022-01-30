@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Exit : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Leaving the scene");
+            SceneManager.LoadScene("OutsidePast");
         }
     }
 

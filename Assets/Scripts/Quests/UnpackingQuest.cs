@@ -8,22 +8,32 @@ public class UnpackingQuest : Quest
     [SerializeField]
     private List<BoxScript> Boxes;
     [SerializeField]
+    private BoxScript WatchBox;
+    [SerializeField]
     private Exit Exit;
 
-    private void Update()
+    protected override void Update()
     {
         if (Active)
         {
-            bool finishedUnpacking = true;
+            int boxesChecked = 0;
+
             for (int i = 0; i < Boxes.Count; i++)
             {
-                if (!Boxes[i].BoxChecked())
+                if (Boxes[i].BoxChecked())
                 {
-                    finishedUnpacking = false;
+                    boxesChecked++;
                 }
             }
 
-            if (finishedUnpacking)
+            // if the player has collected all of the boxes,
+            // activate the watch box
+            if (boxesChecked >= 3)
+            {
+                WatchBox.gameObject.SetActive(true);
+            }
+
+            if (WatchBox.BoxChecked())
             {
                 Completed = true;
                 Exit.AllowExit();
