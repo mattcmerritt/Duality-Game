@@ -1062,6 +1062,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 93525615642202703, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
+      propertyPath: m_text
+      value: "Objectives:\n - Unpack the boxes (0/3)"
+      objectReference: {fileID: 0}
     - target: {fileID: 8827608359807370993, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
       propertyPath: m_Pivot.x
       value: 0
