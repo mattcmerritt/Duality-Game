@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
                     ActiveQuest.SetActive(true);
                     Debug.Log("Changing to Explore");
                     // change to next scene for next quest
-                    SceneManager.LoadScene("OutsideFuture");
+                    SceneManager.LoadScene("TownHallFuture");
                     break;
                 case CatQuestFuture e:
                     PlayerPrefs.SetString("Quest", "cat");

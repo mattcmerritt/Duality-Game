@@ -22,7 +22,7 @@ public class CatQuestFuture : Quest
         if (Active)
         {
             QuestUI.ChangeText("- Explore the town and speak to the locals");
-            if (Owner.CheckSpokenWith())
+            if (Owner != null && Owner.CheckSpokenWith())
             {
                 if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
                 {
