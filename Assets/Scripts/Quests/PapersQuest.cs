@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PapersQuest : Quest
 {
@@ -23,9 +24,13 @@ public class PapersQuest : Quest
             QuestUI.ChangeText("- Go speak with the mayor at the east of town");
             if (Mayor.CheckSpokenWith())
             {
-                Completed = true;
-                Debug.Log("Game completed");
-                QuestUI.ChangeText("\nNo objectives remaining");
+                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                {
+                    Completed = true;
+                    QuestUI.ChangeText("\nNo objectives remaining");
+                    Debug.Log("Conversation ended");
+                    SceneManager.LoadScene("OutsideFuture");
+                }
             }
         }
     }
