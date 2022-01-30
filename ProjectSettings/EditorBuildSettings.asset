@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutsideFuture.unity
     guid: 024bf4da2bf0afa40a89f540d6b2496b
+  - enabled: 1
+    path: Assets/Scenes/OutsidePast2.unity
+    guid: c98e058acce927841b83423e6d1f38ce
   m_configObjects: {}

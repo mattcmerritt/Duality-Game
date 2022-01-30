@@ -27,9 +27,6 @@ public class PapersQuest : Quest
                 if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
-                    QuestUI.ChangeText("\nNo objectives remaining");
-                    Debug.Log("Conversation ended");
-                    SceneManager.LoadScene("OutsideFuture");
                 }
             }
         }
