@@ -114,7 +114,7 @@ public class Minigame : MonoBehaviour
                 MartinCookieLines.Add(new DialogueLine("Here, have this cat paw medallion I got from the shelter. I know it’s not valuable, but as a token of my appreciation. We’re both very thankful.", Martin, "Martin"));
                 MartinCookieLines.Add(new DialogueLine("*Meow*", Cat, "Cookie"));
 
-                FindObjectOfType<NPC>().ReplaceConversation(MartinCookieLines);
+                FindObjectOfType<Demo.NPC>().ReplaceConversation(MartinCookieLines);
             }
         }
     }

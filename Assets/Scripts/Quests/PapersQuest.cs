@@ -7,7 +7,7 @@ public class PapersQuest : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Mayor;
+    private Demo.NPC Mayor;
 
     // Objectives Display
     private ObjectivesUI QuestUI;

@@ -7,7 +7,7 @@ public class CatQuestFuture : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Owner;
+    private Demo.NPC Owner;
 
     // Objectives Display
     private ObjectivesUI QuestUI;

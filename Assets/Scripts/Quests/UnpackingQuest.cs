@@ -10,7 +10,7 @@ public class UnpackingQuest : Quest
     [SerializeField]
     private BoxScript WatchBox;
     [SerializeField]
-    private NPC WatchBoxNPC;
+    private Demo.NPC WatchBoxNPC;
     [SerializeField]
     private Exit Exit;
 

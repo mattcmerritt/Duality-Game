@@ -11,7 +11,19 @@ Various UI scripts.
 - `Scripts/Menu/Menu.cs` - This script just handles the start button.
 - `Scripts/Quests/ObjectivesUI.cs` - Contians the textbox in the top-left and a method to change the text.
 
-## Dialogue Systems
+## New Dialogue Systems
+These scripts handle the new dialogue systems. They are all contianed in the `Dialogue` namespace, to prevent any duplicate name issues.
+- `Scripts/Dialogue/Character.cs` - Base class for anything that can talk, comes with a name and portrait.
+- `Scripts/Dialogue/Conversation.cs` - Unused, intended to contain a collection of `DialogueElement`s.
+- `Scripts/Dialogue/ConversationBuilder.cs` - A serializable object that can be used to load in individual messages in a sequence, with the potential for a decision at the end that leads to multiple other `ConversationBuilder`s.
+- `Scripts/Dialogue/Decision.cs` - A `DialogueElement` that forces the user to select an option to continue dialogue.
+- `Scripts/Dialogue/DecisionBuilder.cs` - A serializable object that can be used to load in a decision for a `ConversationBuilder`.
+- `Scripts/Dialogue/DialogueElement.cs` - An abstract parent class that helps to generalize items that can be said.
+- `Scripts/Dialogue/DialogueUpdater.cs` - Makes the player run through the linked structure that is currently loaded in as the `DialogueElement`.
+- `Scripts/Dialogue/Line.cs` - An instantiable version of `DialogueElement`.
+- `Scripts/Dialogue/NPC.cs` - Contains a conversation as well as some `Character` data for when they get interacted with.
+
+## Old Dialogue Systems
 These scripts are all involved in displaying text and running through a conversation.
 - `Demos/Scripts/DialogueLine.cs` - Represents a singular line of dialogue, with message and speaker details.
 - `Demos/Scripts/DialogueTest.cs` - Nothing, can be removed.
