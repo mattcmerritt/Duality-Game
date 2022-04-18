@@ -16,12 +16,6 @@ public class PlayerInteractions : MonoBehaviour
     private int TargetLayer;
     private float Distance = 1f;
 
-    // Dialogue data
-    public static string Name = "You";
-    [SerializeField]
-    private Sprite TempPortrait;
-    public static Sprite Portrait;
-
     // Instance Data
     private bool IsFrozen;
 
@@ -32,8 +26,6 @@ public class PlayerInteractions : MonoBehaviour
         {
             TargetLayer += l.value;
         }
-
-        Portrait = TempPortrait;
     }
 
     // Obtain user input

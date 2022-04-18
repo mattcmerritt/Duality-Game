@@ -35,7 +35,7 @@ namespace Demo
                 }
                 else
                 {
-                    DialogueItems.Add(new DialogueLine(Lines[i], PlayerInteractions.Portrait, PlayerInteractions.Name));
+                    DialogueItems.Add(new DialogueLine(Lines[i], FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
                 }
             }
 

@@ -51,7 +51,7 @@ public class UnpackingQuest : Quest
                 {
                     HasNoticed = true;
                     List<DialogueLine> lines = new List<DialogueLine>();
-                    lines.Add(new DialogueLine("Huh? What’s that?", PlayerInteractions.Portrait, PlayerInteractions.Name));
+                    lines.Add(new DialogueLine("Huh? What’s that?", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
                     FindObjectOfType<DialogueUpdater>().StartDialogue(lines);
                 }
             }
