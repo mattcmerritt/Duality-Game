@@ -8,6 +8,7 @@ namespace Dialogue
     public class ConversationBuilder
     {
         public List<Line> Lines;
+        public bool HasDecision;
         public DecisionBuilder Decision;
 
         public DialogueElement Build() 
@@ -17,7 +18,7 @@ namespace Dialogue
                 Lines[i].AddNext(Lines[i+1]);
             }
 
-            if (Decision != null)
+            if (HasDecision)
             {
                 Lines[Lines.Count - 1].AddNext(Decision.Build());
             }

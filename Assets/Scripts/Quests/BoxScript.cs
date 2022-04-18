@@ -11,7 +11,7 @@ public class BoxScript : MonoBehaviour
     [SerializeField]
     private GameObject Particles;
     [SerializeField]
-    private Demo.NPC npc;
+    private Dialogue.NPC npc;
     [SerializeField]
     private Collider2D col;
 
