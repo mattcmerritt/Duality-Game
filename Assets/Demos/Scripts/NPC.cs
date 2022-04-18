@@ -64,5 +64,10 @@ public class NPC : MonoBehaviour
         DialogueItems = newLines;
     }
 
+    // TODO: override when necessary in child classes of NPC to create alternate ways of finishing a quest
+    public bool CheckTaskComplete()
+    {
+        return CheckSpokenWith();
+    }
 
 }
