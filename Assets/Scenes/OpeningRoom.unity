@@ -547,8 +547,14 @@ MonoBehaviour:
     Decision:
       Question: 
       Speaker: {fileID: 0}
-      Options: []
-      BranchingConversations: []
+      Options:
+      - Branch 1
+      - Branch 2
+      - Branch 3
+      BranchingConversations:
+      - Lines: []
+      - Lines: []
+      - Lines: []
 --- !u!61 &353346364
 BoxCollider2D:
   m_ObjectHideFlags: 0

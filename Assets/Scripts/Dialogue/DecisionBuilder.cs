@@ -10,7 +10,8 @@ namespace Dialogue
         public string Question;
         public NPC Speaker;
         public string[] Options;
-        public ConversationBuilder[] BranchingConversations;
+        // ideally, this should be just ConversationBuilder
+        public EndingConversationBuilder[] BranchingConversations;
 
         public DialogueElement Build()
         {
