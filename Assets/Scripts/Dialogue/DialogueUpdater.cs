@@ -83,6 +83,10 @@ namespace Dialogue
                     SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
                     StartCoroutine(TypeText(ActiveConversation.Text));
                 }
+                else if (ActiveConversation is Decision)
+                {
+                    Debug.Log("Decision reached, this cannot be skipped.");
+                }
                 else
                 {
                     ClearDialogue();

@@ -63,7 +63,7 @@ public class PlayerInteractions : MonoBehaviour
                 if (hit.transform != null)
                 {
                     //Debug.Log("Interacted with: " + hit.transform.name);
-                    Demo.NPC npc = hit.transform.GetComponent<Demo.NPC>();
+                    Dialogue.NPC npc = hit.transform.GetComponent<Dialogue.NPC>();
                     if (npc != null)
                     {
                         npc.StartConversation();

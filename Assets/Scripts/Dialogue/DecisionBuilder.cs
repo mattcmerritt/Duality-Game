@@ -8,7 +8,7 @@ namespace Dialogue
     public class DecisionBuilder 
     {
         public string Question;
-        public NPC Speaker;
+        public Character Speaker;
         public string[] Options;
         // ideally, this should be just ConversationBuilder
         public EndingConversationBuilder[] BranchingConversations;
