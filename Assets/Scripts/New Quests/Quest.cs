@@ -12,6 +12,14 @@ namespace Quests
         public List<Task> Tasks;
         // TODO: add attribute for a quest reward here
 
+        public void SetupAllTasks()
+        {
+            foreach (Task task in Tasks)
+            {
+                task.Setup();
+            }
+        }
+
         public string UpdateObjectiveText()
         {
             foreach (Task task in Tasks)
