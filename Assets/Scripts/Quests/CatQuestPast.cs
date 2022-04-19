@@ -7,7 +7,7 @@ public class CatQuestPast : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Owner;
+    private Dialogue.NPC Owner;
 
     // Objectives Display
     private ObjectivesUI QuestUI;
@@ -24,7 +24,7 @@ public class CatQuestPast : Quest
             QuestUI.ChangeText("- Talk to Martin");
             if (Owner.CheckSpokenWith())
             {
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                if (!FindObjectOfType<Dialogue.DialogueUpdater>().DialogueActive)
                 {
                     QuestUI.ChangeText("- Talk to Martin\n- Help find Martin's cat");
 

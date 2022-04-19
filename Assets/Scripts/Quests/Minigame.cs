@@ -26,10 +26,10 @@ public class Minigame : MonoBehaviour
         if (collision.tag == "Player") // and some flag is active for the cat game to trigger
         {
             List<DialogueLine> BeginGameLines = new List<DialogueLine>();
-            BeginGameLines.Add(new DialogueLine("Cookie, is that you??", PlayerInteractions.Portrait, PlayerInteractions.Name));
+            BeginGameLines.Add(new DialogueLine("Cookie, is that you??", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
             BeginGameLines.Add(new DialogueLine("*Meow*", BushCat, "Cookie"));
-            BeginGameLines.Add(new DialogueLine("It looks like she wants to play?", PlayerInteractions.Portrait, PlayerInteractions.Name));
-            BeginGameLines.Add(new DialogueLine("Cookie, this is no time for games!", PlayerInteractions.Portrait, PlayerInteractions.Name));
+            BeginGameLines.Add(new DialogueLine("It looks like she wants to play?", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
+            BeginGameLines.Add(new DialogueLine("Cookie, this is no time for games!", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
 
             FindObjectOfType<DialogueUpdater>().StartDialogue(BeginGameLines);
 
@@ -100,7 +100,7 @@ public class Minigame : MonoBehaviour
                 
                 // trigger dialogue for finding cat
                 List<DialogueLine> EndGameLines = new List<DialogueLine>();
-                EndGameLines.Add(new DialogueLine("Caught you! Come on, let’s go, Martin is worried about you.", PlayerInteractions.Portrait, PlayerInteractions.Name));
+                EndGameLines.Add(new DialogueLine("Caught you! Come on, let’s go, Martin is worried about you.", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
                 EndGameLines.Add(new DialogueLine("*Meow*", Cat, "Cookie"));
 
                 FindObjectOfType<DialogueUpdater>().StartDialogue(EndGameLines);
@@ -110,11 +110,11 @@ public class Minigame : MonoBehaviour
                 // find Martin and change his dialogue
                 List<DialogueLine> MartinCookieLines = new List<DialogueLine>();
                 MartinCookieLines.Add(new DialogueLine("Cookie!! You found her. Thank you so much.", Martin, "Martin"));
-                MartinCookieLines.Add(new DialogueLine("Happy to help, Martin.", PlayerInteractions.Portrait, PlayerInteractions.Name));
+                MartinCookieLines.Add(new DialogueLine("Happy to help, Martin.", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
                 MartinCookieLines.Add(new DialogueLine("Here, have this cat paw medallion I got from the shelter. I know it’s not valuable, but as a token of my appreciation. We’re both very thankful.", Martin, "Martin"));
                 MartinCookieLines.Add(new DialogueLine("*Meow*", Cat, "Cookie"));
 
-                FindObjectOfType<NPC>().ReplaceConversation(MartinCookieLines);
+                FindObjectOfType<Demo.NPC>().ReplaceConversation(MartinCookieLines);
             }
         }
     }

@@ -7,7 +7,7 @@ public class PapersQuest : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Mayor;
+    private Dialogue.NPC Mayor;
 
     // Objectives Display
     private ObjectivesUI QuestUI;
@@ -24,7 +24,7 @@ public class PapersQuest : Quest
             QuestUI.ChangeText("- Go speak with the mayor at the east of town");
             if (Mayor.CheckSpokenWith())
             {
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                if (!FindObjectOfType<Dialogue.DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
                 }

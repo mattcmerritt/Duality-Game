@@ -7,7 +7,7 @@ public class CatQuestFuture : Quest
 {
     // Key npcs
     [SerializeField]
-    private NPC Owner;
+    private Dialogue.NPC Owner;
 
     // Objectives Display
     private ObjectivesUI QuestUI;
@@ -24,7 +24,7 @@ public class CatQuestFuture : Quest
             QuestUI.ChangeText("- Explore the town and speak to the locals");
             if (Owner != null && Owner.CheckSpokenWith())
             {
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                if (!FindObjectOfType<Dialogue.DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
                 }

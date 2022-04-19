@@ -2,72 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+namespace Demo
 {
-    // Dialogue data
-    [SerializeField]
-    private List<string> Lines;
-    [SerializeField]
-    private List<bool> SpokenByPlayer;
-    private List<DialogueLine> DialogueItems;
-    private DialogueUpdater DialogueUI;
-
-    // NPC information
-    [SerializeField]
-    private string Name;
-    [SerializeField]
-    private Sprite Portrait;
-
-    // Instance Data
-    private bool SpokenWith;
-
-    // Create a list of dialogue items for when the NPC is interacted with
-    private void Start()
+    public class NPC : MonoBehaviour
     {
-        DialogueItems = new List<DialogueLine>();
-        for (int i = 0; i < Lines.Count; i++)
+        // Dialogue data
+        [SerializeField]
+        private List<string> Lines;
+        [SerializeField]
+        private List<bool> SpokenByPlayer;
+        private List<DialogueLine> DialogueItems;
+        private DialogueUpdater DialogueUI;
+
+        // NPC information
+        [SerializeField]
+        private string Name;
+        [SerializeField]
+        private Sprite Portrait;
+
+        // Instance Data
+        private bool SpokenWith;
+
+        // Create a list of dialogue items for when the NPC is interacted with
+        private void Start()
         {
-            if (!SpokenByPlayer[i])
+            DialogueItems = new List<DialogueLine>();
+            for (int i = 0; i < Lines.Count; i++)
             {
-                DialogueItems.Add(new DialogueLine(Lines[i], Portrait, Name));
+                if (!SpokenByPlayer[i])
+                {
+                    DialogueItems.Add(new DialogueLine(Lines[i], Portrait, Name));
+                }
+                else
+                {
+                    DialogueItems.Add(new DialogueLine(Lines[i], FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
+                }
             }
-            else
+
+            DialogueUI = FindObjectOfType<DialogueUpdater>();
+        }
+
+        public void StartConversation()
+        {
+            DialogueUI.StartDialogue(DialogueItems);
+
+            SpokenWith = true;
+
+            // handling special interactions
+            BoxScript box = GetComponent<BoxScript>();
+            if (box != null)
             {
-                DialogueItems.Add(new DialogueLine(Lines[i], PlayerInteractions.Portrait, PlayerInteractions.Name));
+                box.Check();
             }
         }
 
-        DialogueUI = FindObjectOfType<DialogueUpdater>();
-    }
-
-    public void StartConversation()
-    {
-        DialogueUI.StartDialogue(DialogueItems);
-
-        SpokenWith = true;
-
-        // handling special interactions
-        BoxScript box = GetComponent<BoxScript>();
-        if (box != null)
+        public bool CheckSpokenWith()
         {
-            box.Check();
+            return SpokenWith;
+        }
+
+        public void ReplaceConversation(List<DialogueLine> newLines)
+        {
+            DialogueItems = newLines;
+        }
+
+        // TODO: override when necessary in child classes of NPC to create alternate ways of finishing a quest
+        public bool CheckTaskComplete()
+        {
+            return CheckSpokenWith();
         }
     }
-
-    public bool CheckSpokenWith()
-    {
-        return SpokenWith;
-    }
-
-    public void ReplaceConversation(List<DialogueLine> newLines)
-    {
-        DialogueItems = newLines;
-    }
-
-    // TODO: override when necessary in child classes of NPC to create alternate ways of finishing a quest
-    public bool CheckTaskComplete()
-    {
-        return CheckSpokenWith();
-    }
-
 }

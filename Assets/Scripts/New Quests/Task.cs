@@ -35,7 +35,7 @@ namespace Quests
             for (int i = 0; i < TriggerNames.Count; i++)
             {
                 GameObject currentTrigger = GameObject.Find(TriggerNames[i]);
-                if(currentTrigger != null && currentTrigger.GetComponent<NPC>().CheckTaskComplete())
+                if(currentTrigger != null && currentTrigger.GetComponent<Dialogue.NPC>().CheckTaskComplete())
                 {
                     TriggerStatuses[i] = true;
                 }
