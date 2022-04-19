@@ -15,6 +15,7 @@ namespace Quests
         public bool Complete = false;
 
         public bool[] TriggerStatuses;
+        public List<string> RewardNames; // objects to activate on completion
 
         public void Setup()
         {
@@ -23,6 +24,10 @@ namespace Quests
             string[] finishedTriggers = savedProgress.Split(',');
             foreach (string index in finishedTriggers)
             {
+                if(index == "")
+                {
+                    continue;
+                }
                 TriggerStatuses[Int32.Parse(index)] = true;
             }
             UpdateCompletionValues();
@@ -60,9 +65,21 @@ namespace Quests
             if (Progress == TriggerNames.Count)
             {
                 Complete = true;
+                for (int i = 0; i < RewardNames.Count; i++)
+                {
+                    // TODO: make this nonspecific once we have a generic sparkles holder
+                    if(GameObject.Find(RewardNames[i]).GetComponent<BoxScript>() != null)
+                    {
+                        GameObject.Find(RewardNames[i]).GetComponent<BoxScript>().toggleParticles(true);
+                    }
+
+                    GameObject.Find(RewardNames[i]).GetComponent<BoxCollider2D>().enabled = true;
+                }
+                // clear the list
+                RewardNames.Clear();
             }
 
-            saveString = saveString.Substring(0, saveString.Length - 1);
+            saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));
             PlayerPrefs.SetString(Name, saveString);
         }
 
@@ -84,6 +101,11 @@ namespace Quests
         public bool GetCompletion()
         {
             return Complete;
+        }
+
+        public int GetNumberOfTriggers()
+        {
+            return TriggerNames.Count;
         }
 
     }

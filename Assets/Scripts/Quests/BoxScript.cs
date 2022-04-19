@@ -27,4 +27,9 @@ public class BoxScript : MonoBehaviour
     {
         return Checked;
     }
+
+    public void toggleParticles(bool enabled)
+    {
+        Particles.SetActive(enabled);
+    }
 }

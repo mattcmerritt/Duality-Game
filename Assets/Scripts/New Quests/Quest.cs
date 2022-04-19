@@ -20,16 +20,16 @@ namespace Quests
             }
         }
 
-        public string UpdateObjectiveText()
+        public string GetObjectiveText()
         {
             foreach (Task task in Tasks)
             {
                 if (!task.GetCompletion())
                 {
-                    return task.GetDescription();
+                    return "- " + task.GetDescription() + (task.GetNumberOfTriggers() > 1 ? " (" + task.GetProgress() + "/" + task.GetNumberOfTriggers() + ")" : "") + "\n";
                 }
             }
-            return "ERROR";
+            return "";
         }
 
         public void UpdateCompletion()
