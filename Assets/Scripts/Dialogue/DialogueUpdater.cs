@@ -11,11 +11,14 @@ namespace Dialogue
     public class DialogueUpdater : MonoBehaviour
     {
         public GameObject DialogueBox;
+        public GameObject OptionSelect;
         public TMP_Text DialogueText;
         public TMP_Text SpeakerName;
         public Image SpeakerImage;
         private DialogueElement ActiveConversation;
         public bool DialogueActive = false;
+
+        private Coroutine WritingCoroutine;
 
         // call this function to start a dialogue interaction
         public void StartDialogue(DialogueElement activeConversation)
@@ -26,11 +29,12 @@ namespace Dialogue
 
             ActiveConversation = activeConversation;
             DialogueBox.SetActive(true);
-            if(ActiveConversation.Next != null)
+            OptionSelect.SetActive(true);
+            if (ActiveConversation != null)
             {
                 SpeakerName.SetText(ActiveConversation.Speaker.Name);
                 SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
-                StartCoroutine(TypeText(ActiveConversation.Text));
+                WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
             }
             else
             {
@@ -54,6 +58,7 @@ namespace Dialogue
 
             ActiveConversation = null;
             DialogueBox.SetActive(false);
+            OptionSelect.SetActive(false);
             DialogueText.SetText("");
             SpeakerName.SetText("");
             DialogueActive = false;
@@ -75,21 +80,40 @@ namespace Dialogue
                 {
                     DialogueText.SetText(ActiveConversation.Text);
                 }
+                else if (ActiveConversation is Decision)
+                {
+                    Debug.Log("Decision reached, this cannot be skipped.");
+                }
                 else if (ActiveConversation.Next != null)
                 {
                     ActiveConversation = ActiveConversation.Next;
                     DialogueText.SetText("");
                     SpeakerName.SetText(ActiveConversation.Speaker.Name);
                     SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
-                    StartCoroutine(TypeText(ActiveConversation.Text));
-                }
-                else if (ActiveConversation is Decision)
-                {
-                    Debug.Log("Decision reached, this cannot be skipped.");
+                    StopCoroutine(WritingCoroutine);
+                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
                 }
                 else
                 {
                     ClearDialogue();
+                }
+            }
+
+            if (ActiveConversation is Decision)
+            {
+                // Debug.Log("Reached Decision");
+                if (ActiveConversation.Next != null)
+                {
+                    ActiveConversation = ActiveConversation.Next;
+                    DialogueText.SetText("");
+                    SpeakerName.SetText(ActiveConversation.Speaker.Name);
+                    SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
+                    StopCoroutine(WritingCoroutine);
+                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
+                }
+                else
+                {
+                    FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
                 }
             }
         }

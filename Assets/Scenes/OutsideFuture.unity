@@ -337,6 +337,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2324502372320166438, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
   m_PrefabInstance: {fileID: 1020760041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &306916601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 149260091782847860, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+  m_PrefabInstance: {fileID: 1020760041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306916600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950da4f95d1a76241a9aaa0449b45d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &314764090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1348,6 +1359,7 @@ GameObject:
   - component: {fileID: 729836425}
   - component: {fileID: 729836424}
   - component: {fileID: 729836423}
+  - component: {fileID: 729836426}
   - component: {fileID: 729836422}
   m_Layer: 7
   m_Name: Martin
@@ -1365,35 +1377,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 729836421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8b58aeb28fd004292805bd1d5aa09e, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lines:
-  - Oh my, Quinn, can't believe you're back in town!
-  - "Back in town? Maybe I can ask him how long have I been gone? I guess it\u2019s
-    best to act like I'm visiting\u2013"
-  - "Yeah! I\u2019ll be visiting for a while, but it\u2019s been a pretty long time,
-    hasn\u2019t it? "
-  - "I\u2019d say! We haven\u2019t seen you in 10 or so years now, well, not since
-    Jiff took over as Mayor. "
-  - 'Jiff?? '
-  - "Jefferson Jesmire, don\u2019t tell me you don\u2019t remember the year you left.
-    Jiff was elected as our Mayor after Amber retired and had to move away. Town
-    just hasn\u2019t been the same without her spirit."
-  - What about the time capsule she had us do?
-  - "Oh, that\u2026 Well, it\u2019s supposed to be opened this week, but I\u2019m
-    not sure if much will be in it.  "
-  - "I, um\u2026 didn\u2019t go to the ceremony that week, or put anything of mine
-    in it. That was the week I lost my cat, so I didn\u2019t feel up to it after
-    I couldn\u2019t find her. "
-  - "I\u2019m so sorry, Martin. "
-  - "Thank you, but it\u2019s long in the past now anyway, nothing to do about it
-    now. "
-  - "Right\u2026 "
-  - "Or is there\u2026?"
-  SpokenByPlayer: 00010100010001000001000101
-  Name: Martin
-  Portrait: {fileID: 21300000, guid: d6ef3b730f0e8e246b00188843664ae7, type: 3}
+  Portrait: {fileID: 0}
+  Name: 
+  Builder:
+    Lines:
+    - Text: Oh my, Quinn, can't believe you're back in town!
+      Speaker: {fileID: 729836426}
+    - Text: "Back in town? Maybe I can ask him how long have I been gone? I guess
+        it\u2019s best to act like I'm visiting\u2013"
+      Speaker: {fileID: 306916601}
+    - Text: "Yeah! I\u2019ll be visiting for a while, but it\u2019s been a pretty
+        long time, hasn\u2019t it? "
+      Speaker: {fileID: 306916601}
+    - Text: "I\u2019d say! We haven\u2019t seen you in 10 or so years now, well,
+        not since Jiff took over as Mayor. "
+      Speaker: {fileID: 729836426}
+    - Text: 'Jiff?? '
+      Speaker: {fileID: 306916601}
+    - Text: "Jefferson Jesmire, don\u2019t tell me you don\u2019t remember the year
+        you left. Jiff was elected as our Mayor after Amber retired and had to move
+        away. Town just hasn\u2019t been the same without her spirit."
+      Speaker: {fileID: 729836426}
+    - Text: What about the time capsule she had us do?
+      Speaker: {fileID: 306916601}
+    - Text: "Oh, that\u2026 Well, it\u2019s supposed to be opened this week, but
+        I\u2019m not sure if much will be in it.  "
+      Speaker: {fileID: 729836426}
+    - Text: "I, um\u2026 didn\u2019t go to the ceremony that week, or put anything
+        of mine in it. That was the week I lost my cat, so I didn\u2019t feel up
+        to it after I couldn\u2019t find her. "
+      Speaker: {fileID: 729836426}
+    - Text: "I\u2019m so sorry, Martin. "
+      Speaker: {fileID: 306916601}
+    - Text: "Thank you, but it\u2019s long in the past now anyway, nothing to do
+        about it now. "
+      Speaker: {fileID: 729836426}
+    - Text: "Right\u2026 "
+      Speaker: {fileID: 306916601}
+    - Text: "Or is there\u2026?"
+      Speaker: {fileID: 306916601}
+    HasDecision: 0
+    Decision:
+      Question: 
+      Speaker: {fileID: 0}
+      Options: []
+      BranchingConversations: []
 --- !u!61 &729836423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1485,6 +1516,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729836426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729836421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c53bcac5d34ec2469b7163a82d33284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portrait: {fileID: 21300000, guid: d6ef3b730f0e8e246b00188843664ae7, type: 3}
+  Name: Martin
 --- !u!4 &748849149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3348458653602408773, guid: 628d0ec32b7552643b8031ef259794aa, type: 3}

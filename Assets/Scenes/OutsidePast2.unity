@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 729836425}
   - component: {fileID: 729836424}
   - component: {fileID: 729836423}
+  - component: {fileID: 729836426}
   - component: {fileID: 729836422}
   m_Layer: 7
   m_Name: Martin
@@ -1539,21 +1540,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 729836421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8b58aeb28fd004292805bd1d5aa09e, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lines:
-  - "Hey Martin! You seem worried, what\u2019s up?"
-  - "My\u2013 my cat, Cookie, she didn\u2019t come home last night. She always comes
-    home before it gets dark. I\u2019m worried that she got hurt or stuck somewhere."
-  - "Oh no, I\u2019m sure she\u2019s someplace in town though, do you want some help
-    looking?"
-  - You would do that for me?
-  - "Of course! I\u2019ll keep an eye out for her."
-  - Thank you so much!
-  SpokenByPlayer: 010001000100
-  Name: Martin
-  Portrait: {fileID: 21300000, guid: 751f95ed2d39cb849b0ab978366a20a2, type: 3}
+  Portrait: {fileID: 0}
+  Name: 
+  Builder:
+    Lines:
+    - Text: "Hey Martin! You seem worried, what\u2019s up?"
+      Speaker: {fileID: 1020760042}
+    - Text: "My\u2013 my cat, Cookie, she didn\u2019t come home last night. She always
+        comes home before it gets dark. I\u2019m worried that she got hurt or stuck
+        somewhere."
+      Speaker: {fileID: 729836426}
+    - Text: "Oh no, I\u2019m sure she\u2019s someplace in town though, do you want
+        some help looking?"
+      Speaker: {fileID: 1020760042}
+    - Text: You would do that for me?
+      Speaker: {fileID: 729836426}
+    - Text: "Of course! I\u2019ll keep an eye out for her."
+      Speaker: {fileID: 1020760042}
+    - Text: Thank you so much!
+      Speaker: {fileID: 729836426}
+    HasDecision: 0
+    Decision:
+      Question: 
+      Speaker: {fileID: 0}
+      Options: []
+      BranchingConversations: []
 --- !u!61 &729836423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1645,6 +1659,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729836426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729836421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c53bcac5d34ec2469b7163a82d33284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portrait: {fileID: 21300000, guid: 751f95ed2d39cb849b0ab978366a20a2, type: 3}
+  Name: Martin
 --- !u!4 &748849149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3348458653602408773, guid: 628d0ec32b7552643b8031ef259794aa, type: 3}
@@ -1769,6 +1797,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+--- !u!114 &1020760042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 149260091782847860, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
+  m_PrefabInstance: {fileID: 1020760041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306916600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950da4f95d1a76241a9aaa0449b45d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1056328942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 541056551113096011, guid: 488a018d9d1a71d49bfc8afc2e2ec0a7, type: 3}

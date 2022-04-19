@@ -10,7 +10,7 @@ public class UnpackingQuest : Quest
     [SerializeField]
     private BoxScript WatchBox;
     [SerializeField]
-    private Demo.NPC WatchBoxNPC;
+    private Dialogue.NPC WatchBoxNPC;
     [SerializeField]
     private Exit Exit;
 
@@ -47,18 +47,20 @@ public class UnpackingQuest : Quest
                 WatchBox.gameObject.SetActive(true);
                 QuestUI.ChangeText("- Unpack the boxes (" + boxesChecked + "/3)\n- Check the last box");
 
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive && !HasNoticed)
+                if (!FindObjectOfType<Dialogue.DialogueUpdater>().DialogueActive && !HasNoticed)
                 {
                     HasNoticed = true;
-                    List<DialogueLine> lines = new List<DialogueLine>();
-                    lines.Add(new DialogueLine("Huh? What’s that?", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
-                    FindObjectOfType<DialogueUpdater>().StartDialogue(lines);
+                    // List<DialogueLine> lines = new List<DialogueLine>();
+                    // lines.Add(new DialogueLine("Huh? What’s that?", FindObjectOfType<Dialogue.PlayerCharacter>().Portrait, FindObjectOfType<Dialogue.PlayerCharacter>().Name));
+                    // FindObjectOfType<DialogueUpdater>().StartDialogue(lines);
+                    Dialogue.DialogueElement line = new Dialogue.Line("Huh? What’s that?", FindObjectOfType<Dialogue.PlayerCharacter>());
+                    FindObjectOfType<Dialogue.DialogueUpdater>().StartDialogue(line);
                 }
             }
 
             if (WatchBox.BoxChecked())
             {
-                if (!FindObjectOfType<DialogueUpdater>().DialogueActive)
+                if (!FindObjectOfType<Dialogue.DialogueUpdater>().DialogueActive)
                 {
                     Completed = true;
                     QuestUI.ChangeText("- Go speak with the mayor at the east of town");
