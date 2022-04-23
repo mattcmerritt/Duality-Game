@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8839289616259992750}
   - component: {fileID: 8839289616259992721}
   - component: {fileID: 8839289616259992720}
-  - component: {fileID: 8839289616259992751}
   m_Layer: 0
   m_Name: Minigame Square
   m_TagString: Untagged
@@ -110,23 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58934784, y: 0.5007744}
   m_EdgeRadius: 0
---- !u!114 &8839289616259992751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8839289616259992723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68793d8633154e646b6d37e947659288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 8839289616259992720}
-  catsCaught: 0
-  timeUntilNextCatAction: 5
-  catActive: 0
-  minigameActive: 0
-  Cat: {fileID: 21300000, guid: e36ce849416b1ed4cb7e3b0fbb24fff6, type: 3}
-  BushCat: {fileID: 4720216510328841301, guid: 76a67c84c9318fa41a6c7f75b97063ea, type: 3}
-  Martin: {fileID: 21300000, guid: 751f95ed2d39cb849b0ab978366a20a2, type: 3}

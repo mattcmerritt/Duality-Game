@@ -26,6 +26,8 @@ public class NPCEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        base.OnInspectorGUI();
+        /*
         //base.OnInspectorGUI();
 
         Dialogue.NPC npc = (Dialogue.NPC) target;
@@ -60,5 +62,6 @@ public class NPCEditor : Editor
 
         // pushing changes made in UI to the object
         serializedObject.ApplyModifiedProperties();
+        */
     }
 }

@@ -15,11 +15,11 @@ MonoBehaviour:
   Name: UnpackBoxes
   Description: Unpack the boxes
   TriggerNames:
-  - New Box
-  - Box (1)
-  - Box (2)
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 
+  - Box 1
+  - Box 2
+  - Box 3
+  Progress: 3
+  Complete: 1
+  TriggerStatuses: 010101
   RewardNames:
   - Watch Box

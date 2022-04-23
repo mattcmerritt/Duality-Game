@@ -13,12 +13,13 @@ namespace Dialogue
         // ideally, this should be just ConversationBuilder
         public EndingConversationBuilder[] BranchingConversations;
 
-        public DialogueElement Build()
+        public IDialogueElement Build()
         {
+            /*
             Decision d = new Decision(Question, Speaker);
             d.Options = Options;
             
-            DialogueElement[] branches = new DialogueElement[BranchingConversations.Length];
+            IDialogueElement[] branches = new DialogueElement[BranchingConversations.Length];
             for (int i = 0; i < branches.Length; i++)
             {
                 branches[i] = BranchingConversations[i].Build();
@@ -26,6 +27,8 @@ namespace Dialogue
             d.Branches = branches;
 
             return d;
+            */
+            return null;
         }
     }
 }

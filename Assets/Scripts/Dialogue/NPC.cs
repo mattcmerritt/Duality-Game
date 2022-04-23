@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Dialogue
 {
-    public class NPC : Character
+    public class NPC : MonoBehaviour
     {
         // Dialogue loading
-        public ConversationBuilder Builder;        
+        public Conversation ConversationObject;        
 
         // Dialogue data
-        public DialogueElement CurrentConversation;
+        public IDialogueElement CurrentConversation;
         private DialogueUpdater DialogueUI;
 
         // Instance Data
@@ -19,7 +19,7 @@ namespace Dialogue
         // Create a list of dialogue items for when the NPC is interacted with
         private void Start()
         {
-            CurrentConversation = Builder.Build();
+            CurrentConversation = ConversationObject.BuildConversation();
 
             DialogueUI = FindObjectOfType<DialogueUpdater>();
         }
@@ -43,7 +43,7 @@ namespace Dialogue
             return SpokenWith;
         }
 
-        public void ReplaceConversation(DialogueElement newConversation)
+        public void ReplaceConversation(IDialogueElement newConversation)
         {
             CurrentConversation = newConversation;
         }

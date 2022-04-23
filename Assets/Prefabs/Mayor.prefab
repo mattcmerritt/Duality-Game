@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 619638515253798190}
   - component: {fileID: 619638515253798191}
   - component: {fileID: 619638515253798176}
-  - component: {fileID: 7567452664395542850}
   - component: {fileID: 1706310131761180732}
   m_Layer: 7
   m_Name: Mayor
@@ -111,20 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7567452664395542850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619638515253798178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c53bcac5d34ec2469b7163a82d33284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Portrait: {fileID: 21300000, guid: 29ade30a9f1723e4b8b5aa7909f24c07, type: 3}
-  Name: Amber
 --- !u!114 &1706310131761180732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,33 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: 
   Builder:
     Lines:
-    - Text: "Mayor Abernath! I\u2019m so glad I caught you. I wanted to give you
-        my move-in papers. "
-      Speaker: {fileID: 0}
-    - Text: "Oh, yes, thank you! Good morning, please call me Amber. There\u2019s
-        no need for such formalities. "
-      Speaker: {fileID: 7567452664395542850}
-    - Text: "I\u2019m so glad you decided to move back to our quaint little town.
-        Just in time for our time capsule this weekend as well! "
-      Speaker: {fileID: 7567452664395542850}
-    - Text: Time capsule?
-      Speaker: {fileID: 0}
-    - Text: "Why yes, our town is putting together a time capsule to bury for 20
-        years from now. Not many people have volunteered to put items in it, but
-        I\u2019m hopin\u2019 that\u2019ll change by the end of the week. "
-      Speaker: {fileID: 7567452664395542850}
-    - Text: 'Having you will be a wonderful thing for us, I can feel it. As I always
-        say, the future holds great things for our people. '
-      Speaker: {fileID: 7567452664395542850}
-    - Text: "Great things, huh\u2026? I wonder, what will everything be like in 20
-        years? "
-      Speaker: {fileID: 0}
-    - Text: "Where is that\u2013? The pocketwatch?? "
-      Speaker: {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     HasDecision: 0
     Decision:
       Question: 

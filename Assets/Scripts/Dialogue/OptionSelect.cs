@@ -18,8 +18,6 @@ namespace Dialogue
         {
             if (!WaitingOnPlayer)
             {
-                Debug.Log("Starting Decision");
-
                 WaitingOnPlayer = true;
                 ActiveButtons = new List<GameObject>();
                 ActiveDecision = decision;
@@ -31,7 +29,7 @@ namespace Dialogue
                     Option optionScript = buttonObj.GetComponent<Option>();
                     optionScript.SetText(ActiveDecision.Options[i]);
 
-                    DialogueElement correspondingDialogue = ActiveDecision.Branches[i];
+                    IDialogueElement correspondingDialogue = ActiveDecision.Branches[i].BuildConversation();
                     Button button = buttonObj.GetComponent<Button>();
                     UnityAction selectDialogue = () =>
                     {
@@ -51,7 +49,6 @@ namespace Dialogue
 
         public void RemoveButtons()
         {
-            Debug.Log("Removing");
             while (ActiveButtons.Count > 0)
             {
                 Destroy(ActiveButtons[0]);

@@ -192,7 +192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268680549
 GameObject:
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 268680550}
   - component: {fileID: 268680554}
   m_Layer: 7
-  m_Name: Box (2)
+  m_Name: Box 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,19 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: 
-  Builder:
-    Lines:
-    - Text: "All of my papers for moving\u2026 I should really get these to Townhall,
-        so Mayor Abernath can look at them."
-      Speaker: {fileID: 2324502373485817894}
-    HasDecision: 0
-    Decision:
-      Question: 
-      Speaker: {fileID: 0}
-      Options: []
-      BranchingConversations: []
+  ConversationObject: {fileID: 11400000, guid: 4bba994949f6e36458e97a6dd7f0b5a2, type: 2}
 --- !u!61 &268680551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -329,7 +317,7 @@ Transform:
   m_Children:
   - {fileID: 397970139}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &268680554
 MonoBehaviour:
@@ -360,7 +348,7 @@ GameObject:
   - component: {fileID: 353346363}
   - component: {fileID: 353346362}
   m_Layer: 7
-  m_Name: New Box
+  m_Name: Box 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,27 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: 
-  Builder:
-    Lines:
-    - Text: "It\u2019s a photo of me and my grandparents. I remember taking this
-        at the park when I was a kid\u2026 I\u2019m going to miss them."
-      Speaker: {fileID: 2324502373485817894}
-    HasDecision: 1
-    Decision:
-      Question: What dialogue track would you like to explore?
-      Speaker: {fileID: 2324502373485817894}
-      Options:
-      - Branch 1
-      - Branch 2
-      BranchingConversations:
-      - Lines:
-        - Text: You chose option 1.
-          Speaker: {fileID: 2324502373485817894}
-      - Lines:
-        - Text: You chose option 2.
-          Speaker: {fileID: 2324502373485817894}
+  ConversationObject: {fileID: 11400000, guid: 44dcacdad8f80894b9992ee3117f3754, type: 2}
 --- !u!61 &353346364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -504,7 +472,7 @@ Transform:
   m_Children:
   - {fileID: 1448176547}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &397970139 stripped
 Transform:
@@ -809,7 +777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298217907
 GameObject:
@@ -891,7 +859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1310274670 stripped
 GameObject:
@@ -981,7 +949,6 @@ GameObject:
   - component: {fileID: 1484457997}
   - component: {fileID: 1484457996}
   - component: {fileID: 1484457995}
-  - component: {fileID: 1484457998}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1078,21 +1045,8 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1484457998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484457994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ce97d5636ff4d46bfd8433bbd12bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 1484457995}
 --- !u!1 &1506391190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,19 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: 
-  Builder:
-    Lines:
-    - Text: "A pocket watch? Weird\u2026 it looks relatively new. Why did my grandparents
-        have something so expensive? "
-      Speaker: {fileID: 2324502373485817894}
-    HasDecision: 0
-    Decision:
-      Question: 
-      Speaker: {fileID: 0}
-      Options: []
-      BranchingConversations: []
+  ConversationObject: {fileID: 11400000, guid: 2409a6b670ef3604aa2c453a8bf5a289, type: 2}
 --- !u!61 &1506391193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1243,7 +1185,7 @@ Transform:
   m_Children:
   - {fileID: 1743855438}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1595275579
 PrefabInstance:
@@ -1262,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8827608359807370993, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8827608359807370993, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1340,7 +1282,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue UI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1301372864167715681, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
 --- !u!1 &1702328938
 GameObject:
@@ -1356,7 +1299,7 @@ GameObject:
   - component: {fileID: 1702328939}
   - component: {fileID: 1702328943}
   m_Layer: 7
-  m_Name: Box (1)
+  m_Name: Box 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1374,20 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: 
-  Builder:
-    Lines:
-    - Text: "Records! They\u2019re old, but seemingly in good condition. Maybe I
-        should take them to Quick Tempo Records? Octavia will know what they\u2019re
-        worth. "
-      Speaker: {fileID: 2324502373485817894}
-    HasDecision: 0
-    Decision:
-      Question: 
-      Speaker: {fileID: 0}
-      Options: []
-      BranchingConversations: []
+  ConversationObject: {fileID: 11400000, guid: 7166154754952114491b17c8372a5c0f, type: 2}
 --- !u!61 &1702328940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1478,7 +1408,7 @@ Transform:
   m_Children:
   - {fileID: 52610491}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1702328943
 MonoBehaviour:
@@ -1566,56 +1496,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4486977311529359523, guid: 4a097fa76fe6ea9468fd60687b392c0f, type: 3}
   m_PrefabInstance: {fileID: 1743855436}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2054297654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2054297655}
-  - component: {fileID: 2054297656}
-  m_Layer: 0
-  m_Name: Quest 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2054297655
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054297654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2054297656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054297654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa36b9a0ba02f0419690e800bbc6dc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boxes:
-  - {fileID: 353346362}
-  - {fileID: 1702328943}
-  - {fileID: 268680554}
-  WatchBox: {fileID: 1506391191}
-  WatchBoxNPC: {fileID: 1506391192}
-  Exit: {fileID: 1484457998}
 --- !u!1001 &2324502373485817893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1625,7 +1505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_LocalScale.x
@@ -1683,80 +1563,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 149260091782847860, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
---- !u!114 &2324502373485817894 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 149260091782847860, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
-  m_PrefabInstance: {fileID: 2324502373485817893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310274670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950da4f95d1a76241a9aaa0449b45d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &3146737403778401070
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204307, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_Name
-      value: Game Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204307, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
 --- !u!1001 &9111113386897786392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1774,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 619697578}
     - target: {fileID: 9111113387696306186, guid: 6ae5478e975705646a4fd11ba8a51135, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9111113387696306186, guid: 6ae5478e975705646a4fd11ba8a51135, type: 3}
       propertyPath: m_LocalPosition.x

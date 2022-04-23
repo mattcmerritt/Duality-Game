@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Dialogue 
 {
-    public class Character : MonoBehaviour
+    [CreateAssetMenu(menuName = "Character", fileName = "Character")]
+    public class Character : ScriptableObject
     {
         public Sprite Portrait;
         public string Name;

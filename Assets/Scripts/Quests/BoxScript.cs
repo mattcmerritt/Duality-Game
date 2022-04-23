@@ -17,6 +17,7 @@ public class BoxScript : MonoBehaviour
 
     public void Check()
     {
+        Debug.Log("Box checked");
         Checked = true;
         Particles.SetActive(false);
         npc.enabled = false;
@@ -25,6 +26,7 @@ public class BoxScript : MonoBehaviour
 
     public bool BoxChecked()
     {
+        Debug.Log("Checking " + gameObject.name);
         return Checked;
     }
 

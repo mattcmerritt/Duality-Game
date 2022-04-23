@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00c0ba321ca36d40bc023dcd9c4cd12, type: 3}
+  m_Name: Box 1 Branch A Decision
+  m_EditorClassIdentifier: 
+  Text: This is the decision on branch A.
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Options:
+  - Option AA
+  - Option AB
+  Branches:
+  - {fileID: 11400000, guid: 9ea20c7a2ed1d9c499bbeb2fc0f4a70a, type: 2}
+  - {fileID: 11400000, guid: 25d9a2c8fb70d94488db238072931c8d, type: 2}

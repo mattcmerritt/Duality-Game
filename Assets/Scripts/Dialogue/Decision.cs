@@ -11,13 +11,34 @@ using UnityEngine;
 /// </summary>
 namespace Dialogue
 {
-    [System.Serializable]
-    public class Decision : DialogueElement
+    [CreateAssetMenu(menuName = "Decision", fileName = "Decision")]
+    public class Decision : ScriptableObject, IDialogueElement
     {
-        public string[] Options;
-        public DialogueElement[] Branches;
+        [TextArea] public string Text;
+        public Character Speaker;
+        public IDialogueElement Next;
 
-        public Decision(string text, Character speaker) : base(text, speaker) {}
+        public string[] Options;
+        public Conversation[] Branches;
         
+        public string GetText() 
+        {
+            return Text;
+        }
+
+        public Character GetSpeaker()
+        {
+            return Speaker;
+        }
+
+        public IDialogueElement GetNext()
+        {
+            return Next;
+        }
+
+        public void SetNext(IDialogueElement next)
+        {
+            Next = next;
+        }
     }
 }

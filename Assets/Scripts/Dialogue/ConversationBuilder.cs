@@ -11,16 +11,16 @@ namespace Dialogue
         public bool HasDecision;
         public DecisionBuilder Decision;
 
-        public DialogueElement Build() 
+        public IDialogueElement Build() 
         {
             for (int i = 0; i < Lines.Count - 1; i++)
             {
-                Lines[i].AddNext(Lines[i+1]);
+                Lines[i].SetNext(Lines[i+1]);
             }
 
             if (HasDecision)
             {
-                Lines[Lines.Count - 1].AddNext(Decision.Build());
+                Lines[Lines.Count - 1].SetNext(Decision.Build());
             }
             
             return Lines[0];

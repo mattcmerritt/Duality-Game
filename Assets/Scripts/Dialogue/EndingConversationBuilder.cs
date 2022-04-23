@@ -7,6 +7,7 @@ namespace Dialogue
     [System.Serializable]
     public class EndingConversationBuilder
     {
+        /*
         public List<Line> Lines;
 
         public DialogueElement Build()
@@ -18,5 +19,6 @@ namespace Dialogue
 
             return Lines[0];
         }
+        */
     }
 }

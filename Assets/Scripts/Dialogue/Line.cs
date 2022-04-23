@@ -8,10 +8,31 @@ using UnityEngine;
 /// </summary>
 namespace Dialogue
 {
-    [System.Serializable]
-    public class Line : DialogueElement
+    [CreateAssetMenu(menuName = "Line", fileName = "Line")]
+    public class Line : ScriptableObject, IDialogueElement
     {
-        public Line(string text, Character speaker) : base(text, speaker) {}
-        public Line(string text, Character speaker, DialogueElement next) : this(text, speaker) {}
+        [TextArea] public string Text;
+        public Character Speaker;
+        public IDialogueElement Next;
+
+        public string GetText()
+        {
+            return Text;
+        }
+
+        public Character GetSpeaker()
+        {
+            return Speaker;
+        }
+
+        public IDialogueElement GetNext()
+        {
+            return Next;
+        }
+
+        public void SetNext(IDialogueElement next)
+        {
+            Next = next;
+        }
     }
 }

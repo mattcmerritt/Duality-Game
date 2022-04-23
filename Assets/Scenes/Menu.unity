@@ -508,6 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3f4495d65017845acee2ca319f0f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllQuests:
+  - {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
+  - {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
 --- !u!1 &462758511
 GameObject:
   m_ObjectHideFlags: 0

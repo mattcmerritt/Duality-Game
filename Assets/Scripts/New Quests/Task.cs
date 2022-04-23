@@ -62,7 +62,7 @@ namespace Quests
                 }
             }
             Progress = count;
-            if (Progress == TriggerNames.Count)
+            if (Progress == TriggerNames.Count && !Complete)
             {
                 Complete = true;
                 for (int i = 0; i < RewardNames.Count; i++)
@@ -75,8 +75,6 @@ namespace Quests
 
                     GameObject.Find(RewardNames[i]).GetComponent<BoxCollider2D>().enabled = true;
                 }
-                // clear the list
-                RewardNames.Clear();
             }
 
             saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));

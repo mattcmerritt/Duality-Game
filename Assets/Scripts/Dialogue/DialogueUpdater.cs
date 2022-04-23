@@ -15,13 +15,13 @@ namespace Dialogue
         public TMP_Text DialogueText;
         public TMP_Text SpeakerName;
         public Image SpeakerImage;
-        private DialogueElement ActiveConversation;
+        private IDialogueElement ActiveConversation;
         public bool DialogueActive = false;
 
         private Coroutine WritingCoroutine;
 
         // call this function to start a dialogue interaction
-        public void StartDialogue(DialogueElement activeConversation)
+        public void StartDialogue(IDialogueElement activeConversation)
         {
             DialogueActive = true;
             // Taking control away from the player
@@ -32,9 +32,9 @@ namespace Dialogue
             OptionSelect.SetActive(true);
             if (ActiveConversation != null)
             {
-                SpeakerName.SetText(ActiveConversation.Speaker.Name);
-                SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
-                WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
+                SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+                SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
+                WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
             }
             else
             {
@@ -76,22 +76,22 @@ namespace Dialogue
             if(Input.GetKeyDown(KeyCode.Space) && DialogueBox.activeSelf)
             {
                 StopAllCoroutines();
-                if (ActiveConversation.Text != DialogueText.text)
+                if (ActiveConversation.GetText() != DialogueText.text)
                 {
-                    DialogueText.SetText(ActiveConversation.Text);
+                    DialogueText.SetText(ActiveConversation.GetText());
                 }
                 else if (ActiveConversation is Decision)
                 {
                     Debug.Log("Decision reached, this cannot be skipped.");
                 }
-                else if (ActiveConversation.Next != null)
+                else if (ActiveConversation.GetNext() != null)
                 {
-                    ActiveConversation = ActiveConversation.Next;
+                    ActiveConversation = ActiveConversation.GetNext();
                     DialogueText.SetText("");
-                    SpeakerName.SetText(ActiveConversation.Speaker.Name);
-                    SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
+                    SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+                    SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
                     StopCoroutine(WritingCoroutine);
-                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
+                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
                 }
                 else
                 {
@@ -102,14 +102,14 @@ namespace Dialogue
             if (ActiveConversation is Decision)
             {
                 // Debug.Log("Reached Decision");
-                if (ActiveConversation.Next != null)
+                if (ActiveConversation.GetNext() != null)
                 {
-                    ActiveConversation = ActiveConversation.Next;
+                    ActiveConversation = ActiveConversation.GetNext();
                     DialogueText.SetText("");
-                    SpeakerName.SetText(ActiveConversation.Speaker.Name);
-                    SpeakerImage.sprite = ActiveConversation.Speaker.Portrait;
+                    SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+                    SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
                     StopCoroutine(WritingCoroutine);
-                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.Text));
+                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
                 }
                 else
                 {

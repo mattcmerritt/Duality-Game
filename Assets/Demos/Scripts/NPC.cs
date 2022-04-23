@@ -6,6 +6,7 @@ namespace Demo
 {
     public class NPC : MonoBehaviour
     {
+        /*
         // Dialogue data
         [SerializeField]
         private List<string> Lines;
@@ -71,5 +72,6 @@ namespace Demo
         {
             return CheckSpokenWith();
         }
+        */
     }
 }
