@@ -10,6 +10,8 @@ namespace Dialogue
         public List<Line> Lines;
         public bool HasDecision;
         public Decision Decision;
+        public bool HasNextConversation;
+        public Conversation NextConversation;
 
         public IDialogueElement BuildConversation()
         {
@@ -21,6 +23,10 @@ namespace Dialogue
             if (HasDecision)
             {
                 Lines[Lines.Count - 1].SetNext(Decision);
+            }
+            else if (HasNextConversation)
+            {
+                Lines[Lines.Count - 1].SetNext(NextConversation.BuildConversation());
             }
 
             return Lines[0];

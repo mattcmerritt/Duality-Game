@@ -199,13 +199,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
+      propertyPath: ConversationObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 27d94a2c92fb40b418fbf84f22730095, type: 2}
+    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.HasDecision
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.Speaker
       value: 
-      objectReference: {fileID: 55782967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.size
       value: 2
@@ -253,27 +257,27 @@ PrefabInstance:
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[0].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[3].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[4].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[5].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[6].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Lines.Array.data[7].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.Options.Array.data[0]
       value: Time Capsule? Cool!
@@ -354,64 +358,53 @@ PrefabInstance:
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[0].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[1].Speaker
       value: 
-      objectReference: {fileID: 55782967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[2].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[3].Speaker
       value: 
-      objectReference: {fileID: 55782967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[4].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[5].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[0].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[1].Speaker
       value: 
-      objectReference: {fileID: 55782967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[2].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[3].Speaker
       value: 
-      objectReference: {fileID: 55782967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[4].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[5].Speaker
       value: 
-      objectReference: {fileID: 1310274671}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
---- !u!114 &55782967 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7567452664395542850, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-  m_PrefabInstance: {fileID: 55782966}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c53bcac5d34ec2469b7163a82d33284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &265197727
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,17 +696,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2324502372320166438, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
   m_PrefabInstance: {fileID: 2324502373485817893}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1310274671 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 149260091782847860, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
-  m_PrefabInstance: {fileID: 2324502373485817893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310274670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950da4f95d1a76241a9aaa0449b45d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1595275579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,18 +927,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 246b7266937c1e746badeb7f600f44b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mayor: {fileID: 2133848133}
---- !u!114 &2133848133 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-  m_PrefabInstance: {fileID: 55782966}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b9f921e80fff04d96d0fb3ac59a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2324502373485817893

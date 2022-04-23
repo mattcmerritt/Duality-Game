@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
-  m_Name: Box 1 Branch AB
+  m_Name: Mayor Past Ending Conversation
   m_EditorClassIdentifier: 
   Lines:
-  - {fileID: 11400000, guid: a3a1a2b574084794b890ebb1b154770e, type: 2}
+  - {fileID: 11400000, guid: 08ca2762b2ec5b946b4cec7834e70e8d, type: 2}
+  - {fileID: 11400000, guid: 64e55399992380d429d3406b120f7372, type: 2}
+  - {fileID: 11400000, guid: c5872f3dd78566e44b975fc2304cfd9b, type: 2}
   HasDecision: 0
   Decision: {fileID: 0}
-  HasNextConversation: 1
-  NextConversation: {fileID: 11400000, guid: bf7421dcfe0c19d4196e43d8ac6b5c8f, type: 2}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}

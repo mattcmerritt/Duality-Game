@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
-  m_Name: UnpackWatch
+  m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
+  m_Name: Mayor Past Branch A Line 1
   m_EditorClassIdentifier: 
-  Name: UnpackWatch
-  Description: Unpack the last box
-  TriggerNames:
-  - Watch Box
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
-  RewardNames:
-  - Exit
+  Text: Time Capsule? That sounds really cool!
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
