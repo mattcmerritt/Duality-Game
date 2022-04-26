@@ -37,50 +37,83 @@ namespace Quests
         // Update progress counter, and mark as complete if all steps are complete
         public void UpdateCompletion()
         {
-            
-            for (int i = 0; i < TriggerNames.Count; i++)
+            // if there is a trigger, let them handle completion, otherwise don't change it
+            if (TriggerNames.Count > 0)
             {
-                GameObject currentTrigger = GameObject.Find(TriggerNames[i]);
-                if(currentTrigger != null && currentTrigger.GetComponent<Dialogue.NPC>().CheckTaskComplete())
+                for (int i = 0; i < TriggerNames.Count; i++)
                 {
-                    TriggerStatuses[i] = true;
+                    GameObject currentTrigger = GameObject.Find(TriggerNames[i]);
+                    if (currentTrigger != null && currentTrigger.GetComponent<Dialogue.NPC>().CheckTaskComplete())
+                    {
+                        TriggerStatuses[i] = true;
+                    }
                 }
             }
-
             UpdateCompletionValues();
         }
 
         public void UpdateCompletionValues()
         {
-            int count = 0;
-            string saveString = "";
+            // if there is a trigger, let them handle completion
+            if (TriggerNames.Count > 0)
+            {
+                int count = 0;
+                string saveString = "";
+                for (int i = 0; i < TriggerStatuses.Length; i++)
+                {
+                    if (TriggerStatuses[i])
+                    {
+                        count++;
+                        saveString += i + ",";
+                    }
+                }
+                Progress = count;
+                if (Progress == TriggerNames.Count && !Complete)
+                {
+                    Complete = true;
+                    for (int i = 0; i < RewardNames.Count; i++)
+                    {
+                        // enables all toggleable objects
+                        GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
+                    }
+
+                    for (int i = 0; i < RemovedNames.Count; i++)
+                    {
+                        // disables all toggleable objects
+                        GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
+                    }
+                }
+
+                saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));
+                PlayerPrefs.SetString(Name, saveString);
+            }
+            // if not, completion will be handled by something else, but still deal with rewards and removing
+            else
+            {
+                if(Complete)
+                {
+                    for (int i = 0; i < RewardNames.Count; i++)
+                    {
+                        // enables all toggleable objects
+                        GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
+                    }
+
+                    for (int i = 0; i < RemovedNames.Count; i++)
+                    {
+                        // disables all toggleable objects
+                        GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
+                    }
+                }
+            }
+        }
+
+        public void ForceComplete()
+        {
+            Complete = true;
             for (int i = 0; i < TriggerStatuses.Length; i++)
             {
-                if (TriggerStatuses[i])
-                {
-                    count++;
-                    saveString += i + ",";
-                }
+                TriggerStatuses[i] = true;
             }
-            Progress = count;
-            if (Progress == TriggerNames.Count && !Complete)
-            {
-                Complete = true;
-                for (int i = 0; i < RewardNames.Count; i++)
-                {
-                    // enables all toggleable objects
-                    GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
-                }
-
-                for (int i = 0; i < RemovedNames.Count; i++)
-                {
-                    // disables all toggleable objects
-                    GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
-                }
-            }
-
-            saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));
-            PlayerPrefs.SetString(Name, saveString);
         }
 
         public string GetName()

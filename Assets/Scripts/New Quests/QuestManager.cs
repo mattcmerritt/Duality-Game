@@ -9,12 +9,14 @@ namespace Quests
     {
         public Quest UnpackingQuest;
         public Quest PapersQuest;
+        public Quest CatQuest;
         public TMP_Text ObjectivesText;
 
-        public void Start()
+        public void Awake()
         {
             UnpackingQuest.SetupAllTasks();
             PapersQuest.SetupAllTasks();
+            CatQuest.SetupAllTasks();
             UpdateText();
         }
 
@@ -22,6 +24,7 @@ namespace Quests
         {
             UnpackingQuest.UpdateCompletion();
             PapersQuest.UpdateCompletion();
+            CatQuest.UpdateCompletion();
             UpdateText();
         }
 
@@ -30,6 +33,7 @@ namespace Quests
             string objectives = "Objectives:\n";
             objectives += UnpackingQuest.GetObjectiveText();
             objectives += PapersQuest.GetObjectiveText();
+            objectives += CatQuest.GetObjectiveText();
             ObjectivesText.text = objectives;
         }
     }

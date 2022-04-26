@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownHallPast.unity
     guid: 6741073a934072e4ab84934c3a4876d4
+  - enabled: 1
+    path: Assets/Scenes/CatMinigame.unity
+    guid: b562f23ab60b7594eadd4cf6219be12a
   m_configObjects: {}

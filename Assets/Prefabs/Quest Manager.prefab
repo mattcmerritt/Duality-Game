@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnpackingQuest: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
   PapersQuest: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
+  CatQuest: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
   ObjectivesText: {fileID: 0}

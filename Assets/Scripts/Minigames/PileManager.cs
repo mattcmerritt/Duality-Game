@@ -10,6 +10,7 @@ public class PileManager : MonoBehaviour
     public static int SuccessCount;
     public static bool ClickPhase;
     public float Easy, Medium, Hard, Wait;
+    public Quests.Task FindCat;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PileManager : MonoBehaviour
     {
         if(SuccessCount >= 3)
         {
+            FindCat.ForceComplete();
             SceneManager.LoadScene("OutsidePast");
         }
 

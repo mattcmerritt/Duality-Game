@@ -12,7 +12,7 @@ public class InteractableObject : MonoBehaviour, ITogglable
     [SerializeField] private Collider2D Collider;
     [SerializeField] private Dialogue.NPC NPC;
 
-    public void InteractWith()
+    public virtual void InteractWith()
     {
         if (IsEnabled)
         {
@@ -24,7 +24,7 @@ public class InteractableObject : MonoBehaviour, ITogglable
         }
     }
 
-    public bool CheckForInteraction()
+    public virtual bool CheckForInteraction()
     {
         return Checked;
     }
