@@ -21,3 +21,5 @@ MonoBehaviour:
   TriggerStatuses: 00
   RewardNames:
   - Exit
+  RemovedNames:
+  - Early Exit

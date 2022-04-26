@@ -70,6 +70,17 @@ public class PlayerInteractions : MonoBehaviour
                     }
                 }
             }
+
+            // watch time-travel interaction
+            if (TimeManager.AbilityActive && Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Changing Time");
+                TimeManager.ChangeTime(gameObject);
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.LogWarning("Talk to the mayor first!");
+            }
         }
     }
 
