@@ -328,12 +328,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 268680549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6fa4416ac0b25499ddd824c9662e81, type: 3}
+  m_Script: {fileID: 11500000, guid: c4cbe78b0348dff4ca22de924c833650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEnabled: 1
+  Checked: 0
+  SingleUse: 1
   Particles: {fileID: 633367572}
-  npc: {fileID: 268680550}
-  col: {fileID: 268680551}
+  Collider: {fileID: 268680551}
+  NPC: {fileID: 268680550}
 --- !u!1 &353346361
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,12 +366,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 353346361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6fa4416ac0b25499ddd824c9662e81, type: 3}
+  m_Script: {fileID: 11500000, guid: c4cbe78b0348dff4ca22de924c833650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEnabled: 1
+  Checked: 0
+  SingleUse: 1
   Particles: {fileID: 1448176546}
-  npc: {fileID: 353346363}
-  col: {fileID: 353346364}
+  Collider: {fileID: 353346364}
+  NPC: {fileID: 353346363}
 --- !u!114 &353346363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +955,8 @@ GameObject:
   - component: {fileID: 1484457997}
   - component: {fileID: 1484457996}
   - component: {fileID: 1484457995}
+  - component: {fileID: 1484457998}
+  - component: {fileID: 1484457999}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1047,6 +1055,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484457998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484457994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae40066d798986247a37f93ab6218fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: OutsidePast
+  IsDoor: 1
+  Collider: {fileID: 1484457995}
+  IsEnabled: 0
+--- !u!114 &1484457999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484457994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4638d6576cadc43a9c83a1921037ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MessageConversation: {fileID: 11400000, guid: 1eaa2d2f466927745a15eb9866e1a5b7, type: 2}
+  IsCollisionBased: 1
 --- !u!1 &1506391190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,12 +1114,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506391190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6fa4416ac0b25499ddd824c9662e81, type: 3}
+  m_Script: {fileID: 11500000, guid: c4cbe78b0348dff4ca22de924c833650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEnabled: 0
+  Checked: 0
+  SingleUse: 1
   Particles: {fileID: 1743855437}
-  npc: {fileID: 1506391192}
-  col: {fileID: 1506391193}
+  Collider: {fileID: 1506391193}
+  NPC: {fileID: 1506391192}
 --- !u!114 &1506391192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,12 +1460,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1702328938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6fa4416ac0b25499ddd824c9662e81, type: 3}
+  m_Script: {fileID: 11500000, guid: c4cbe78b0348dff4ca22de924c833650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEnabled: 1
+  Checked: 0
+  SingleUse: 1
   Particles: {fileID: 1391710250}
-  npc: {fileID: 1702328939}
-  col: {fileID: 1702328940}
+  Collider: {fileID: 1702328940}
+  NPC: {fileID: 1702328939}
 --- !u!1001 &1743855436
 PrefabInstance:
   m_ObjectHideFlags: 0

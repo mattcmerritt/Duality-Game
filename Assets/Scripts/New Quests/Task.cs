@@ -67,13 +67,10 @@ namespace Quests
                 Complete = true;
                 for (int i = 0; i < RewardNames.Count; i++)
                 {
-                    // TODO: make this nonspecific once we have a generic sparkles holder
-                    if(GameObject.Find(RewardNames[i]).GetComponent<BoxScript>() != null)
-                    {
-                        GameObject.Find(RewardNames[i]).GetComponent<BoxScript>().toggleParticles(true);
-                    }
+                    // enables all toggleable objects
+                    GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
 
-                    GameObject.Find(RewardNames[i]).GetComponent<BoxCollider2D>().enabled = true;
+                    // TODO: disables all elements that are marked to be disabled
                 }
             }
 

@@ -130,33 +130,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 619638515253798176, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: m_Size.y
-      value: 2.3010437
-      objectReference: {fileID: 0}
-    - target: {fileID: 619638515253798176, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.27723345
-      objectReference: {fileID: 0}
-    - target: {fileID: 619638515253798176, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 619638515253798178, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: m_Name
       value: Mayor
       objectReference: {fileID: 0}
     - target: {fileID: 619638515253798190, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 619638515253798190, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 619638515253798190, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 619638515253798190, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,211 +177,6 @@ PrefabInstance:
     - target: {fileID: 619638515253798190, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: ConversationObject
-      value: 
-      objectReference: {fileID: 11400000, guid: 27d94a2c92fb40b418fbf84f22730095, type: 2}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.HasDecision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.Question
-      value: "I\u2019m so glad you decided to move back to our quaint little town.
-        Just in time for our time capsule this weekend as well!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[0].Text
-      value: "Mayor Abernath! I\u2019m so glad I caught you. I wanted to give you
-        my move-in papers."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[1].Text
-      value: "Oh, yes, thank you! Good morning Quinn, please, call me Amber. There\u2019s
-        no need for such formalities. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[2].Text
-      value: "I\u2019m so glad you decided to move back to our quaint little town.
-        Just in time for our time capsule this weekend as well!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[3].Text
-      value: "Where is that\u2013? The pocketwatch?? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[4].Text
-      value: "Where is that\u2013? The pocketwatch?? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[5].Text
-      value: "Where is that\u2013? The pocketwatch?? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[6].Text
-      value: "Where is that\u2013? The pocketwatch?? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.Options.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[0].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[3].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[4].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[5].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[6].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Lines.Array.data[7].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.Options.Array.data[0]
-      value: Time Capsule? Cool!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.Options.Array.data[1]
-      value: "Time Capsule? Okay\u2026"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[0].Text
-      value: Time Capsule? That sounds really cool!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[1].Text
-      value: "Why yes! Our town is putting together a time capsule to bury for 20
-        years from now. Not many people have volunteered to put items in it, but
-        I\u2019m hoping that\u2019ll change by the end of the week."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[2].Text
-      value: "I\u2019ll make sure I bring something, Amber!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[3].Text
-      value: 'Having you will be a wonderful thing for us, I can feel it. As I always
-        say, the future holds great things for our people. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[4].Text
-      value: "Great things, huh\u2026? I wonder, what will everything be like in
-        20 years?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[5].Text
-      value: " Where is that\u2013? The pocket watch??"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[0].Text
-      value: Time Capsule? I mean, do you think anyone will participate?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[1].Text
-      value: "Well, not many people have volunteered to put items in it, but I\u2019m
-        hoping that\u2019ll change by the end of the week. It\u2019s being put together
-        to be dug up 20 years from now! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[2].Text
-      value: "I don\u2019t know if I totally get it\u2026 but I\u2019ll make sure
-        I bring something!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[3].Text
-      value: 'Having you will be a wonderful thing for us, I can feel it. As I always
-        say, the future holds great things for our people. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[4].Text
-      value: "Great things, huh\u2026? I wonder, what will everything be like in
-        20 years?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[5].Text
-      value: " Where is that\u2013? The pocket watch??"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[0].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[1].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[2].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[3].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[4].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[0].Lines.Array.data[5].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[0].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[1].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[2].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[3].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[4].Speaker
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706310131761180732, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
-      propertyPath: Builder.Decision.BranchingConversations.Array.data[1].Lines.Array.data[5].Speaker
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584fe59c76eb1414e83668fe5b183354, type: 3}
@@ -469,7 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -628,7 +403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1274032960
 PrefabInstance:
@@ -647,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 1595275580}
     - target: {fileID: 9111113387696306186, guid: 6ae5478e975705646a4fd11ba8a51135, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9111113387696306186, guid: 6ae5478e975705646a4fd11ba8a51135, type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8827608359807370993, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8827608359807370993, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
       propertyPath: m_AnchorMax.x
@@ -884,51 +659,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2054297654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2054297655}
-  - component: {fileID: 2054297656}
-  m_Layer: 0
-  m_Name: Quest 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2054297655
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054297654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2054297656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054297654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246b7266937c1e746badeb7f600f44b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2324502373485817893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,7 +670,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2324502372320166435, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
       propertyPath: m_LocalScale.x
@@ -998,64 +730,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
---- !u!1001 &3146737403778401070
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204305, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204307, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_Name
-      value: Game Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3146737404901204307, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b4dffb1aa865a8489fdf2da821bc705, type: 3}

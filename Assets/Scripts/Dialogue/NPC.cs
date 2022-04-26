@@ -31,10 +31,10 @@ namespace Dialogue
             SpokenWith = true;
 
             // handling special interactions
-            BoxScript box = GetComponent<BoxScript>();
-            if (box != null)
+            InteractableObject obj = GetComponent<InteractableObject>();
+            if (obj != null)
             {
-                box.Check();
+                obj.InteractWith();
             }
         }
 
