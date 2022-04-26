@@ -1784,6 +1784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: TownHallPast
   IsDoor: 1
+  RoomName: Outside
   Collider: {fileID: 1128473957}
   IsEnabled: 1
 --- !u!4 &1324708180 stripped

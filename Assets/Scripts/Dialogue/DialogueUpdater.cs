@@ -84,7 +84,7 @@ namespace Dialogue
                 {
                     Debug.Log("Decision reached, this cannot be skipped.");
                 }
-                else if (ActiveConversation.GetNext() != null)
+                else if (ActiveConversation.GetNext() != null && !(ActiveConversation.GetNext() is Action))
                 {
                     ActiveConversation = ActiveConversation.GetNext();
                     DialogueText.SetText("");
@@ -93,12 +93,18 @@ namespace Dialogue
                     StopCoroutine(WritingCoroutine);
                     WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
                 }
+                else if (ActiveConversation.GetNext() is Action)
+                {
+                    ActiveConversation = ActiveConversation.GetNext();
+                    StopCoroutine(WritingCoroutine);
+                }
                 else
                 {
                     ClearDialogue();
                 }
             }
 
+            // special element handling
             if (ActiveConversation is Decision)
             {
                 // Debug.Log("Reached Decision");
@@ -115,6 +121,10 @@ namespace Dialogue
                 {
                     FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
                 }
+            }
+            else if (ActiveConversation is Action)
+            {
+                ((Action) ActiveConversation).StartAction();
             }
         }
     }

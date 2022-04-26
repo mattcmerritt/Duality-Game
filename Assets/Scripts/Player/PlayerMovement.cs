@@ -18,6 +18,22 @@ public class PlayerMovement : MonoBehaviour
     // Constants
     private const float MoveSpeed = 5f;
 
+    private void Start()
+    {
+        if (TimeManager.WasTimeTransition && TimeManager.HasLastLocation())
+        {
+            transform.position = TimeManager.GetLastLocation();
+            TimeManager.WasTimeTransition = false;
+        }
+        /*
+        else if (RoomManager.WasRoomTransition && RoomManager.HasLocation)
+        {
+            transform.position = RoomManager.LastPlayerLocation;
+            RoomManager.WasRoomTransition = false;
+        }
+        */
+    }
+
     // Obtain user input every frame
     private void Update()
     {
