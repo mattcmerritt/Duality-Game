@@ -70,6 +70,13 @@ public class PlayerInteractions : MonoBehaviour
                     }
                 }
             }
+
+            // watch time-travel interaction
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Changing Time");
+                TimeManager.ChangeTime(gameObject);
+            }
         }
     }
 

@@ -1193,6 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: OutsidePast
   IsDoor: 1
+  RoomName: Home
   Collider: {fileID: 1484457995}
   IsEnabled: 0
 --- !u!1 &1506391190

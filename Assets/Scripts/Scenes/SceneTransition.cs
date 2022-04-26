@@ -7,6 +7,7 @@ public class SceneTransition : MonoBehaviour, ITogglable
 {
     [SerializeField] private string Scene;
     [SerializeField] private bool IsDoor;
+    [SerializeField] private string RoomName;
 
     [SerializeField] private Collider2D Collider;
 
@@ -26,8 +27,9 @@ public class SceneTransition : MonoBehaviour, ITogglable
         {
             if (IsDoor)
             {
-                ActivateTransition();
+                RoomManager.ChangeRoom(collision.gameObject, RoomName);
             }
+            ActivateTransition();
         }
     }
 
