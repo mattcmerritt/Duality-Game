@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
-    public static string CurrentTime;
+    public static string CurrentTime = "Past";
     public static bool HasLocation;
     public static Vector3 PlayerPosition;
     public static bool WasTimeTransition;
+
+    public static bool AbilityActive;
 
     public static void ChangeTime(GameObject player)
     {
@@ -25,6 +27,11 @@ public class TimeManager : MonoBehaviour
             SceneManager.LoadScene("OutsidePast");
         }
         WasTimeTransition = true;
+    }
+
+    public static void ChangeTimeNoTransition(string time)
+    {
+        CurrentTime = time;
     }
 
     public static Vector3 GetLastLocation()
