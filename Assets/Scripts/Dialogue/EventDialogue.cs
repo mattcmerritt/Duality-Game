@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace Dialogue
 {
-    public class EventDialogue : MonoBehaviour
+    public class EventDialogue : MonoBehaviour, ITogglable
     {
         [SerializeField] private Conversation MessageConversation;
         [SerializeField] private bool IsCollisionBased;
 
         private DialogueUpdater DialogueUI;
+
+        public bool IsEnabled;
 
         private void Start()
         {
@@ -18,25 +20,31 @@ namespace Dialogue
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (IsCollisionBased)
+            if (IsEnabled)
             {
-                //StartConversation();
+                if (IsCollisionBased)
+                {
+                    StartConversation();
+                }
             }
-        }
-
-        private void OnTriggerStay2D(Collider2D collision)
-        {
-            Debug.Log("Collision Occurring");
         }
 
         public void StartConversation()
         {
-            DialogueUI.StartDialogue(MessageConversation.BuildConversation());
+            if (IsEnabled)
+            {
+                DialogueUI.StartDialogue(MessageConversation.BuildConversation());
+            }
         }
 
-        public void DisableEvent()
+        public void Enable()
         {
-            this.enabled = false;
+            IsEnabled = true;
+        }
+
+        public void Disable()
+        {
+            IsEnabled = false;
         }
     }
 }

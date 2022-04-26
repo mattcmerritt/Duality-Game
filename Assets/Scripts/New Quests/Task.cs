@@ -16,6 +16,7 @@ namespace Quests
 
         public bool[] TriggerStatuses;
         public List<string> RewardNames; // objects to activate on completion
+        public List<string> RemovedNames; // objects to remove on completion
 
         public void Setup()
         {
@@ -69,8 +70,12 @@ namespace Quests
                 {
                     // enables all toggleable objects
                     GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
+                }
 
-                    // TODO: disables all elements that are marked to be disabled
+                for (int i = 0; i < RemovedNames.Count; i++)
+                {
+                    // disables all toggleable objects
+                    GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
                 }
             }
 
