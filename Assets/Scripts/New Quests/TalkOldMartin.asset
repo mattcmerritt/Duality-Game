@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
   m_Name: TalkOldMartin
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  TriggerNames: []
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 
+  Name: TalkOldMartin
+  Description: Talk to Martin in the future.
+  TriggerNames:
+  - Old Martin
+  Progress: 1
+  Complete: 1
+  TriggerStatuses: 01
   RewardNames: []
   RemovedNames: []
