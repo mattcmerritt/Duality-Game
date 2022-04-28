@@ -57,7 +57,7 @@ public class PlayerInteractions : MonoBehaviour
 
 
             // check for an npc/item to interact with
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, Distance, TargetLayer);
                 if (hit.transform != null)

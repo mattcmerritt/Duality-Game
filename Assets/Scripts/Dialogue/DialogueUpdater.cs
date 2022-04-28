@@ -17,6 +17,7 @@ namespace Dialogue
         public Image SpeakerImage;
         private IDialogueElement ActiveConversation;
         public bool DialogueActive = false;
+        private bool FirstMessage = false;
 
         private Coroutine WritingCoroutine;
 
@@ -40,6 +41,8 @@ namespace Dialogue
             {
                 ClearDialogue();
             }
+
+            FirstMessage = true;
         }
 
         IEnumerator TypeText(string message)
@@ -73,58 +76,67 @@ namespace Dialogue
         // check for spacebar input
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Space) && DialogueBox.activeSelf)
+            if (DialogueActive)
             {
-                StopAllCoroutines();
-                if (ActiveConversation.GetText() != DialogueText.text)
+                if (Input.GetKeyDown(KeyCode.Space) && DialogueBox.activeSelf)
                 {
-                    DialogueText.SetText(ActiveConversation.GetText());
+                    StopAllCoroutines();
+                    if (ActiveConversation.GetText() != DialogueText.text && !FirstMessage)
+                    {
+                        Debug.Log(0);
+                        DialogueText.SetText(ActiveConversation.GetText());
+                    }
+                    else if (ActiveConversation is Decision)
+                    {
+                        Debug.Log(1);
+                        Debug.Log("Decision reached, this cannot be skipped.");
+                    }
+                    else if (ActiveConversation.GetNext() != null && !(ActiveConversation.GetNext() is Action))
+                    {
+                        Debug.Log(2);
+                        ActiveConversation = ActiveConversation.GetNext();
+                        DialogueText.SetText("");
+                        SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+                        SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
+                        StopCoroutine(WritingCoroutine);
+                        WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
+                        FirstMessage = false;
+                    }
+                    else if (ActiveConversation.GetNext() is Action)
+                    {
+                        Debug.Log(3);
+                        ActiveConversation = ActiveConversation.GetNext();
+                        StopCoroutine(WritingCoroutine);
+                    }
+                    else
+                    {
+                        Debug.Log(4);
+                        ClearDialogue();
+                    }
                 }
-                else if (ActiveConversation is Decision)
-                {
-                    Debug.Log("Decision reached, this cannot be skipped.");
-                }
-                else if (ActiveConversation.GetNext() != null && !(ActiveConversation.GetNext() is Action))
-                {
-                    ActiveConversation = ActiveConversation.GetNext();
-                    DialogueText.SetText("");
-                    SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
-                    SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
-                    StopCoroutine(WritingCoroutine);
-                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
-                }
-                else if (ActiveConversation.GetNext() is Action)
-                {
-                    ActiveConversation = ActiveConversation.GetNext();
-                    StopCoroutine(WritingCoroutine);
-                }
-                else
-                {
-                    ClearDialogue();
-                }
-            }
 
-            // special element handling
-            if (ActiveConversation is Decision)
-            {
-                // Debug.Log("Reached Decision");
-                if (ActiveConversation.GetNext() != null)
+                // special element handling
+                if (ActiveConversation is Decision)
                 {
-                    ActiveConversation = ActiveConversation.GetNext();
-                    DialogueText.SetText("");
-                    SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
-                    SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
-                    StopCoroutine(WritingCoroutine);
-                    WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
+                    // Debug.Log("Reached Decision");
+                    if (ActiveConversation.GetNext() != null)
+                    {
+                        ActiveConversation = ActiveConversation.GetNext();
+                        DialogueText.SetText("");
+                        SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+                        SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
+                        StopCoroutine(WritingCoroutine);
+                        WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
+                    }
+                    else
+                    {
+                        FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
+                    }
                 }
-                else
+                else if (ActiveConversation is Action)
                 {
-                    FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
+                    ((Action)ActiveConversation).StartAction();
                 }
-            }
-            else if (ActiveConversation is Action)
-            {
-                ((Action) ActiveConversation).StartAction();
             }
         }
     }
