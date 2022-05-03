@@ -45,7 +45,6 @@ namespace Quests
                     GameObject currentTrigger = GameObject.Find(TriggerNames[i]);
                     if (currentTrigger != null && currentTrigger.GetComponent<Dialogue.NPC>().CheckTaskComplete())
                     {
-                        Debug.Log("Setting " + Name + " equal to true!");
                         TriggerStatuses[i] = true;
                     }
                 }
