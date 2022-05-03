@@ -10,6 +10,7 @@ public class IngameMenu : MonoBehaviour
     public static Quests.Quest ChosenQuest; // might need to write this to session storage to persist between scenes
     public Toggle[] QuestToggles;
     public Quests.Quest UnpackingQuest, MayorQuest, MartinQuest;
+    public string[] Items; // TODO: change data type to Item or something when made
 
     public void Start()
     {
