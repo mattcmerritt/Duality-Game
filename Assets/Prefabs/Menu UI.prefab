@@ -422,6 +422,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuOpen: 0
   MenuUI: {fileID: 8087872248661271318}
+  QuestToggles:
+  - {fileID: 6002381486851383441}
+  - {fileID: 4103796928699029261}
+  - {fileID: 2284736566190944790}
+  UnpackingQuest: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
+  MayorQuest: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
+  MartinQuest: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
+  ToggleIndex: 0
 --- !u!1 &2807329661720883462
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,11 +779,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8909523546737911297}
   toggleTransition: 1
   graphic: {fileID: 7758547891001031830}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &4890341981947419819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1296,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6002381487965406981}
   toggleTransition: 1
   graphic: {fileID: 6002381487435694936}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1558,6 +1566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6002381487761089727}
   - component: {fileID: 6002381487761089726}
+  - component: {fileID: 8555118099337476204}
   m_Layer: 5
   m_Name: Toggles
   m_TagString: Untagged
@@ -1613,6 +1622,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8555118099337476204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002381487761089720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &6002381487965406983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,11 +2229,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8952029489586468636}
   toggleTransition: 1
   graphic: {fileID: 3013443766711728988}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &7838172889287156320
 GameObject:
   m_ObjectHideFlags: 0
