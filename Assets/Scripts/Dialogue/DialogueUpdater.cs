@@ -17,7 +17,7 @@ namespace Dialogue
         public Image SpeakerImage;
         private IDialogueElement ActiveConversation;
         public bool DialogueActive = false;
-        private bool FirstMessage = false;
+        public bool WritingFirst = false;
 
         private Coroutine WritingCoroutine;
 
@@ -31,18 +31,12 @@ namespace Dialogue
             ActiveConversation = activeConversation;
             DialogueBox.SetActive(true);
             OptionSelect.SetActive(true);
-            if (ActiveConversation != null)
-            {
-                SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
-                SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
-                WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
-            }
-            else
-            {
-                ClearDialogue();
-            }
 
-            FirstMessage = true;
+            // starting the dialogue for the first message
+            PrepareTextbox();
+            RestartTyping();
+
+            WritingFirst = true;
         }
 
         IEnumerator TypeText(string message)
@@ -73,69 +67,94 @@ namespace Dialogue
             return DialogueBox.activeSelf;
         }
 
+        // preparing the textbox with the current conversation's info
+        private void PrepareTextbox()
+        {
+            // clearing the text
+            DialogueText.SetText("");
+            // getting character details
+            SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
+            SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
+        }
+
+        private void RestartTyping()
+        {
+            // ending the previous coroutine if there was one
+            if (WritingCoroutine != null)
+            {
+                StopCoroutine(WritingCoroutine);
+            }
+            // starting the new typing coroutine
+            WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
+        }
+
         // check for spacebar input
         private void Update()
         {
+            // special element handling
+            if (ActiveConversation is Decision)
+            {
+                // if the user has selected an option, continue the dialogue from the new option
+                if (ActiveConversation.GetNext() != null)
+                {
+                    ActiveConversation = ActiveConversation.GetNext();
+                    PrepareTextbox();
+                    RestartTyping();
+                }
+                // otherwise, activate the decision UI
+                else
+                {
+                    FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
+                }
+            }
+            else if (ActiveConversation is Action)
+            {
+                // performing the action
+                ((Action)ActiveConversation).StartAction();
+                // moving the conversation along
+                ActiveConversation = ActiveConversation.GetNext();
+            }
+
+            // ending the conversation if no lines remain
+            if (ActiveConversation == null)
+            {
+                ClearDialogue();
+            }
+
+            // player control
             if (DialogueActive)
             {
                 if (Input.GetKeyDown(KeyCode.Space) && DialogueBox.activeSelf)
                 {
-                    StopAllCoroutines();
-                    if (ActiveConversation.GetText() != DialogueText.text && !FirstMessage)
+                    if (!WritingFirst)
                     {
-                        Debug.Log(0);
-                        DialogueText.SetText(ActiveConversation.GetText());
-                    }
-                    else if (ActiveConversation is Decision)
-                    {
-                        Debug.Log(1);
-                        Debug.Log("Decision reached, this cannot be skipped.");
-                    }
-                    else if (ActiveConversation.GetNext() != null && !(ActiveConversation.GetNext() is Action))
-                    {
-                        Debug.Log(2);
-                        ActiveConversation = ActiveConversation.GetNext();
-                        DialogueText.SetText("");
-                        SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
-                        SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
-                        StopCoroutine(WritingCoroutine);
-                        WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
-                        FirstMessage = false;
-                    }
-                    else if (ActiveConversation.GetNext() is Action)
-                    {
-                        Debug.Log(3);
-                        ActiveConversation = ActiveConversation.GetNext();
-                        StopCoroutine(WritingCoroutine);
+                        // if we are still typing out the message
+                        if (ActiveConversation.GetText() != DialogueText.text)
+                        {
+                            // stop the writing routine
+                            StopCoroutine(WritingCoroutine);
+                            // complete the message
+                            DialogueText.SetText(ActiveConversation.GetText());
+                        }
+                        // else if text is fully typed
+                        else
+                        {
+                            if (!(ActiveConversation is Decision))
+                            {
+                                ActiveConversation = ActiveConversation.GetNext();
+                                // only load the next message is there is one
+                                if (ActiveConversation != null && !(ActiveConversation is Action))
+                                {
+                                    PrepareTextbox();
+                                    RestartTyping();
+                                }
+                            }
+                        }
                     }
                     else
                     {
-                        Debug.Log(4);
-                        ClearDialogue();
+                        WritingFirst = false;
                     }
-                }
-
-                // special element handling
-                if (ActiveConversation is Decision)
-                {
-                    // Debug.Log("Reached Decision");
-                    if (ActiveConversation.GetNext() != null)
-                    {
-                        ActiveConversation = ActiveConversation.GetNext();
-                        DialogueText.SetText("");
-                        SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
-                        SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
-                        StopCoroutine(WritingCoroutine);
-                        WritingCoroutine = StartCoroutine(TypeText(ActiveConversation.GetText()));
-                    }
-                    else
-                    {
-                        FindObjectOfType<OptionSelect>().StartDecision((Decision)ActiveConversation);
-                    }
-                }
-                else if (ActiveConversation is Action)
-                {
-                    ((Action)ActiveConversation).StartAction();
                 }
             }
         }
