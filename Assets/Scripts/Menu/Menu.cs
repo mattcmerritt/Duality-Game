@@ -21,6 +21,11 @@ public class Menu : MonoBehaviour
             foreach (Quests.Task currentTask in currentQuest.Tasks)
             {
                 currentTask.Complete = false;
+                currentTask.Progress = 0;
+                for(int i = 0; i < currentTask.TriggerStatuses.Length; i++)
+                {
+                    currentTask.TriggerStatuses[i] = false;
+                }
             }
             currentQuest.IsActive = false;
         }

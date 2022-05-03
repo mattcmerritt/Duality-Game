@@ -16,9 +16,9 @@ MonoBehaviour:
   Description: Go speak with the mayor at the east of town
   TriggerNames:
   - Mayor
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
+  Progress: 1
+  Complete: 1
+  TriggerStatuses: 01
   RewardNames:
   - Watch Enabler
   RemovedNames: []

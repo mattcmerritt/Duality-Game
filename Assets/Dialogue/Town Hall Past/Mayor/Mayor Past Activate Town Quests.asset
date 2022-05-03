@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757cfae180b9f8b4fbfde8d5bbf2e0b6, type: 3}
   m_Name: Mayor Past Activate Town Quests
   m_EditorClassIdentifier: 
-  ActionObjectName: 
+  ActionObjectName: Activate Town Quests
