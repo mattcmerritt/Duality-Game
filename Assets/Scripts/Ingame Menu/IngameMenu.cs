@@ -17,10 +17,12 @@ public class IngameMenu : MonoBehaviour
         if(MenuOpen)
         {
             MenuUI.SetActive(false);
+            MenuOpen = false;
         }
         else
         {
             MenuUI.SetActive(true);
+            MenuOpen = true;
         }
     }
 }
