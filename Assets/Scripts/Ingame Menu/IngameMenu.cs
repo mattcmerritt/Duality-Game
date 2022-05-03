@@ -10,7 +10,6 @@ public class IngameMenu : MonoBehaviour
     public static Quests.Quest ChosenQuest; // might need to write this to session storage to persist between scenes
     public Toggle[] QuestToggles;
     public Quests.Quest UnpackingQuest, MayorQuest, MartinQuest;
-    public int ToggleIndex;
 
     public void Start()
     {
@@ -26,6 +25,7 @@ public class IngameMenu : MonoBehaviour
         }
         else
         {
+            UpdateSelectedQuestTogglesOnLoad();
             MenuUI.SetActive(true);
             MenuOpen = true;
         }
@@ -58,5 +58,6 @@ public class IngameMenu : MonoBehaviour
     public void SetSelectedQuest(Quests.Quest toggleQuest)
     {
         ChosenQuest = toggleQuest;
+        GameObject.FindObjectOfType<Quests.QuestManager>().UpdateText();
     }
 }

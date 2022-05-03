@@ -31,9 +31,7 @@ namespace Quests
         public void UpdateText()
         {
             string objectives = "Objectives:\n";
-            objectives += UnpackingQuest.GetObjectiveText();
-            objectives += PapersQuest.GetObjectiveText();
-            objectives += CatQuest.GetObjectiveText();
+            objectives += IngameMenu.ChosenQuest.GetObjectiveText();
             ObjectivesText.text = objectives;
         }
     }

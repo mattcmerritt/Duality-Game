@@ -429,7 +429,6 @@ MonoBehaviour:
   UnpackingQuest: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
   MayorQuest: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
   MartinQuest: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
-  ToggleIndex: 0
 --- !u!1 &2807329661720883462
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +781,19 @@ MonoBehaviour:
   m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3963852802696433413}
+        m_TargetAssemblyTypeName: IngameMenu, Assembly-CSharp
+        m_MethodName: SetSelectedQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quests.Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &4890341981947419819
 GameObject:
@@ -1299,7 +1310,19 @@ MonoBehaviour:
   m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3963852802696433413}
+        m_TargetAssemblyTypeName: IngameMenu, Assembly-CSharp
+        m_MethodName: SetSelectedQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quests.Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &6002381487144462934
 GameObject:
@@ -2232,7 +2255,19 @@ MonoBehaviour:
   m_Group: {fileID: 8555118099337476204}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3963852802696433413}
+        m_TargetAssemblyTypeName: IngameMenu, Assembly-CSharp
+        m_MethodName: SetSelectedQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quests.Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &7838172889287156320
 GameObject:
