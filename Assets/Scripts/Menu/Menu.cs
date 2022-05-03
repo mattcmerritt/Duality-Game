@@ -30,5 +30,6 @@ public class Menu : MonoBehaviour
             currentQuest.IsActive = false;
         }
         AllQuests[0].IsActive = true;
+        IngameMenu.ChosenQuest = AllQuests[0]; // set initial quest instructions to unpacking quest
     }
 }
