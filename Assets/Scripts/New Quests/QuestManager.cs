@@ -37,12 +37,14 @@ namespace Quests
         public void UpdateText()
         {
             string objectives = "Objectives:\n";
-            foreach (Quest quest in AllQuests)
+            string obj = IngameMenu.ChosenQuest.GetObjectiveText();
+            if (obj.Equals(""))
             {
-                if (quest.IsActive)
-                {
-                    objectives += quest.GetObjectiveText();
-                }
+                objectives += "Quest complete! Select a new quest in the menu.";
+            }
+            else
+            {
+                objectives += obj;
             }
             ObjectivesText.text = objectives;
         }
