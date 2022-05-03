@@ -70,6 +70,29 @@ public class PlayerInteractions : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, Distance, TargetLayer);
+                if (hit.transform != null)
+                {
+                    GameObject interactPrompt = hit.transform.GetChild(0).gameObject;
+                    if (interactPrompt != null)
+                    {
+                        if (GameObject.Find("Interact Prompt") != null)
+                        {
+                            GameObject.Find("Interact Prompt").SetActive(false);
+                        }
+                        interactPrompt.SetActive(true);
+                    }
+                }
+                else
+                {
+                    if (GameObject.Find("Interact Prompt") != null)
+                    {
+                        GameObject.Find("Interact Prompt").SetActive(false);
+                    }
+                }
+            }
 
             // watch time-travel interaction
             if (TimeManager.AbilityActive && Input.GetKeyDown(KeyCode.Q))
