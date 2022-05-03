@@ -12,8 +12,8 @@ namespace Dialogue
         public Decision Decision;
         public bool HasNextConversation;
         public Conversation NextConversation;
-        public bool HasAction;
-        public Action Action;
+        public bool HasActions;
+        public List<Action> Actions;
 
         public IDialogueElement BuildConversation()
         {
@@ -30,9 +30,14 @@ namespace Dialogue
             {
                 Lines[Lines.Count - 1].SetNext(NextConversation.BuildConversation());
             }
-            else if (HasAction)
+            else if (HasActions)
             {
-                Lines[Lines.Count - 1].SetNext(Action);
+                Lines[Lines.Count - 1].SetNext(Actions[0]);
+                for (int i = 0; i < Actions.Count - 1; i++)
+                {
+                    Actions[i].SetNext(Actions[i + 1]);
+                }
+                
             }
 
             return Lines[0];
