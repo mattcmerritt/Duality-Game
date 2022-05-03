@@ -7,34 +7,49 @@ namespace Quests
 {
     public class QuestManager : MonoBehaviour
     {
-        public Quest UnpackingQuest;
-        public Quest PapersQuest;
-        public Quest CatQuest;
+        public Quest[] AllQuests;
         public TMP_Text ObjectivesText;
 
         public void Awake()
         {
-            UnpackingQuest.SetupAllTasks();
-            PapersQuest.SetupAllTasks();
-            CatQuest.SetupAllTasks();
+            foreach (Quest quest in AllQuests)
+            {
+                if (quest.IsActive)
+                {
+                    quest.SetupAllTasks();
+                }
+            }
             UpdateText();
         }
 
         public void Update()
         {
-            UnpackingQuest.UpdateCompletion();
-            PapersQuest.UpdateCompletion();
-            CatQuest.UpdateCompletion();
+            foreach (Quest quest in AllQuests)
+            {
+                if (quest.IsActive)
+                {
+                    quest.UpdateCompletion();
+                }
+            }
             UpdateText();
         }
 
         public void UpdateText()
         {
             string objectives = "Objectives:\n";
-            objectives += UnpackingQuest.GetObjectiveText();
-            objectives += PapersQuest.GetObjectiveText();
-            objectives += CatQuest.GetObjectiveText();
+            foreach (Quest quest in AllQuests)
+            {
+                if (quest.IsActive)
+                {
+                    objectives += quest.GetObjectiveText();
+                }
+            }
             ObjectivesText.text = objectives;
+        }
+
+        public void ActivateQuest(int index)
+        {
+            AllQuests[index].IsActive = true;
         }
     }
 }

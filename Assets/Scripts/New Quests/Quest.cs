@@ -12,6 +12,8 @@ namespace Quests
         public List<Task> Tasks;
         // TODO: add attribute for a quest reward here
 
+        public bool IsActive;
+
         public void SetupAllTasks()
         {
             foreach (Task task in Tasks)

@@ -17,3 +17,4 @@ MonoBehaviour:
   Tasks:
   - {fileID: 11400000, guid: fb9737a109000044da4bae7ced5cab55, type: 2}
   - {fileID: 11400000, guid: 03be7d3f2b1c9a84dab07654044f722a, type: 2}
+  IsActive: 1

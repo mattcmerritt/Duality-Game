@@ -22,6 +22,8 @@ public class Menu : MonoBehaviour
             {
                 currentTask.Complete = false;
             }
+            currentQuest.IsActive = false;
         }
+        AllQuests[0].IsActive = true;
     }
 }
