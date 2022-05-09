@@ -65,3 +65,6 @@ idea.txt
 
 # UserSettings Files
 /[Uu]serSettings/
+
+# Mac
+.DS_STORE

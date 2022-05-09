@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class IngameMenu : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class IngameMenu : MonoBehaviour
     public Toggle[] QuestToggles;
     public Quests.Quest UnpackingQuest, MayorQuest, MartinQuest;
     public string[] Items; // TODO: change data type to Item or something when made
+    public TMP_Text DescriptionPanel;
 
     public void Start()
     {
@@ -60,5 +62,10 @@ public class IngameMenu : MonoBehaviour
     {
         ChosenQuest = toggleQuest;
         GameObject.FindObjectOfType<Quests.QuestManager>().UpdateText();
+    }
+
+    private void Update()
+    {
+        DescriptionPanel.SetText(ChosenQuest.MenuDescription);
     }
 }
