@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Box 1 Line 2
+  m_Name: Hope Line 8
   m_EditorClassIdentifier: 
-  Text: This is a second line of dialogue.
-  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Text: "Well, 10 years will do that to ya. You haven\u2019t changed a stitch though.
+    Honestly, you look even younger than when you left.\r"
+  Speaker: {fileID: 11400000, guid: 3088fea99a3580f4380881ce39c88fa6, type: 2}
+  Italic: 0

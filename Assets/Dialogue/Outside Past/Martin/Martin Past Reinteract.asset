@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
-  m_Name: Hope Conversation
+  m_Name: Martin Past Reinteract
   m_EditorClassIdentifier: 
   Lines: []
   HasDecision: 0
