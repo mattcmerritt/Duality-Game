@@ -14,6 +14,7 @@ namespace Dialogue
         [TextArea] public string Text;
         public Character Speaker;
         public IDialogueElement Next;
+        public bool Italic;
 
         public string GetText()
         {
