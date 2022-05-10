@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Future 8
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: "Thank you, but it\u2019s long in the past anyway, nothing we can do about
+    it now."
+  Speaker: {fileID: 11400000, guid: 3153f55da4c89bf4198fd4ecaa5a714e, type: 2}
   Italic: 0

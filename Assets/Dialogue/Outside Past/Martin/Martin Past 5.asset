@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Past 5
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: "Of course! I\u2019ll keep an eye out for her."
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0

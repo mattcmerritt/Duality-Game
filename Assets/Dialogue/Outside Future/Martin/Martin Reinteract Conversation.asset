@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
   m_Name: Martin Reinteract Conversation
   m_EditorClassIdentifier: 
-  Lines: []
+  Lines:
+  - {fileID: 11400000, guid: 1030804605e0f0949a89a8a77c42ad5c, type: 2}
   HasDecision: 0
   Decision: {fileID: 0}
   HasNextConversation: 0

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lines:
   - {fileID: 11400000, guid: f1312febc7f762045aa01c38f0e5c67d, type: 2}
-  - {fileID: 11400000, guid: d77e4adba1294ba45be7fbb90d3385ca, type: 2}
-  HasDecision: 1
-  Decision: {fileID: 11400000, guid: 19c1aba16ed3e15438a8e41b086c33be, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Future 6
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: "I guess I can\u2019t really say anything though. I\u2013 um\u2026 didn\u2019t
+    go to the ceremony that week, or put anything of mine in it. That was the week
+    I lost my cat, so I didn\u2019t feel up to it after I couldn\u2019t find her."
+  Speaker: {fileID: 11400000, guid: 3153f55da4c89bf4198fd4ecaa5a714e, type: 2}
   Italic: 0

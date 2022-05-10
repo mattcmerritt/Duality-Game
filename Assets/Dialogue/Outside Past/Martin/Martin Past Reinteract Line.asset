@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Past Reinteract Line
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: Thank you again for keeping an eye out, Quinn. Let me know if you find her!
+  Speaker: {fileID: 11400000, guid: 3fc6787229f30654fa3dcc9bdd1db231, type: 2}
   Italic: 0

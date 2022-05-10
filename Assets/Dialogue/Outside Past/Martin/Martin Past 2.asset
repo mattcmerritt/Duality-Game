@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Past 2
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: "My\u2013 my cat, Cookie, she didn\u2019t come home last night. She always
+    comes home before it gets dark. I think she may have gotten hurt or stuck somewhere."
+  Speaker: {fileID: 11400000, guid: 3fc6787229f30654fa3dcc9bdd1db231, type: 2}
   Italic: 0

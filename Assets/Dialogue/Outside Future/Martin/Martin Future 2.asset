@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Martin Future 2
   m_EditorClassIdentifier: 
-  Text: 
-  Speaker: {fileID: 0}
+  Text: "Uh\u2013 Yeah! \u2026Back. I\u2019ll be visiting for a while, but it\u2019s
+    been a pretty long time, hasn\u2019t it?"
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0
