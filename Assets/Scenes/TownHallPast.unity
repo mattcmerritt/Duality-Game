@@ -197,6 +197,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1159913744647307131, guid: ed3d1a2b8a30faf4b8cf1b320b930fdc, type: 3}
+      propertyPath: PaperQuest.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159913744647307131, guid: ed3d1a2b8a30faf4b8cf1b320b930fdc, type: 3}
+      propertyPath: PaperQuest.Array.data[0]
+      value: 
+      objectReference: {fileID: 619638515231705876}
+    - target: {fileID: 1159913744647307131, guid: ed3d1a2b8a30faf4b8cf1b320b930fdc, type: 3}
       propertyPath: Quest2Objects.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -401,10 +409,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 625344575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637afa0c9c24ba4d9517cfa9072927c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ecb59a588711d94aaebf6c3feb6bc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuestIndices: 02000000
+  QuestIndex: 2
 --- !u!1 &884729282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 27d94a2c92fb40b418fbf84f22730095, type: 2}
+  AlternateConversation: {fileID: 0}
+  Collider: {fileID: 619638515231705878}
+  CurrentlyActive: 0
 --- !u!1001 &2324502373485817893
 PrefabInstance:
   m_ObjectHideFlags: 0

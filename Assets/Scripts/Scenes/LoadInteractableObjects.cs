@@ -17,7 +17,7 @@ public class LoadInteractableObjects : MonoBehaviour
     public GameObject CatMinigame;
 
 
-    private void Start()
+    private void Awake()
     {
         Objects = new GameObject[5][];
         Objects[0] = UnpackingQuest;
@@ -31,9 +31,27 @@ public class LoadInteractableObjects : MonoBehaviour
 
         for (int i = 0; i < quests.Length; i++)
         {
+            // checking completion
+            bool questCompleted = true;
+            foreach (Quests.Task task in quests[i].Tasks)
+            {
+                if (!task.Complete)
+                {
+                    questCompleted = false;
+                }
+            }
+
             for (int j = 0; j < Objects[i].Length; j++)
             {
-                Objects[i][j].SetActive(quests[i].IsActive);
+                // show the object regardless of if it is interactable,
+                // but change its layer to prevent the player from interacting
+                Objects[i][j].layer = quests[i].IsActive ? 7 : 0;
+
+                // only enabling if the quest is not completed
+                if (quests[i].IsActive && !questCompleted)
+                {
+                    Objects[i][j].GetComponent<ITogglable>().Enable();
+                }
             }
         }
 
@@ -46,5 +64,10 @@ public class LoadInteractableObjects : MonoBehaviour
                 CatMinigame.GetComponent<SceneTransition>().Enable();
             }
         }
+    }
+
+    public void ReupdateScene()
+    {
+        Awake();
     }
 }
