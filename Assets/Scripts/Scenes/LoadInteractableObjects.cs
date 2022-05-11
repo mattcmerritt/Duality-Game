@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class LoadInteractableObjects : MonoBehaviour
 {
-    public GameObject[] Quest1Objects;
-    public GameObject[] Quest2Objects;
-    public GameObject[] Quest3Objects;
+    public GameObject[] UnpackingQuest;
+    public GameObject[] PaperQuest;
+    public GameObject[] ExploreFutureQuest;
+    public GameObject[] CatQuest;
+    public GameObject[] RecordQuest;
 
     private GameObject[][] Objects;
 
@@ -17,10 +19,12 @@ public class LoadInteractableObjects : MonoBehaviour
 
     private void Start()
     {
-        Objects = new GameObject[3][];
-        Objects[0] = Quest1Objects;
-        Objects[1] = Quest2Objects;
-        Objects[2] = Quest3Objects;
+        Objects = new GameObject[5][];
+        Objects[0] = UnpackingQuest;
+        Objects[1] = PaperQuest;
+        Objects[2] = ExploreFutureQuest;
+        Objects[3] = CatQuest;
+        Objects[4] = RecordQuest;
 
         Quests.QuestManager qm = GameObject.FindObjectOfType<Quests.QuestManager>();
         Quests.Quest[] quests = qm.AllQuests;

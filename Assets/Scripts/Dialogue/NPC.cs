@@ -16,6 +16,9 @@ namespace Dialogue
         // Instance Data
         private bool SpokenWith;
 
+        // Alternate Conversation
+        public Conversation AlternateConversation;
+
         // Create a list of dialogue items for when the NPC is interacted with
         private void Start()
         {
@@ -30,6 +33,12 @@ namespace Dialogue
 
             SpokenWith = true;
 
+            // swap the conversation to the alt conversation for the next time
+            if (AlternateConversation != null)
+            {
+                ReplaceConversation(AlternateConversation);
+            }
+
             // handling special interactions
             InteractableObject obj = GetComponent<InteractableObject>();
             if (obj != null)
@@ -43,9 +52,9 @@ namespace Dialogue
             return SpokenWith;
         }
 
-        public void ReplaceConversation(IDialogueElement newConversation)
+        public void ReplaceConversation(Conversation newConversation)
         {
-            CurrentConversation = newConversation;
+            CurrentConversation = newConversation.BuildConversation();
         }
 
         // TODO: override when necessary in child classes of NPC to create alternate ways of finishing a quest
