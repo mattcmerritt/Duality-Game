@@ -21,11 +21,8 @@ public class Blocker : MonoBehaviour
         if (((checkLeft < currRight && checkLeft > currLeft) || (checkRight < currRight && checkRight > currLeft)) &&
             ((checkTop < currBottom && checkTop > currTop) || (checkBottom < currBottom && checkBottom > currTop)))
         {
-            Debug.Log(true);
             return true;
         }
-
-        Debug.Log(false);
         return false;
     }
 }
