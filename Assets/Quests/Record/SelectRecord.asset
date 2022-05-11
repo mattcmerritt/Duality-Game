@@ -17,7 +17,7 @@ MonoBehaviour:
     Denice.
   TriggerNames: []
   Progress: 0
-  Complete: 0
+  Complete: 1
   TriggerStatuses: 
   RewardNames: []
   RemovedNames: []

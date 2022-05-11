@@ -16,9 +16,9 @@ MonoBehaviour:
   Description: Speak with Octavia and Denice in the past to see if there is anything
     you can help with.
   TriggerNames:
-  - Octavia and Denice
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
+  - Past Octavia and Denice
+  Progress: 1
+  Complete: 1
+  TriggerStatuses: 01
   RewardNames: []
   RemovedNames: []

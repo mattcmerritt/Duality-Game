@@ -36,9 +36,24 @@ namespace Quests
 
         public void UpdateCompletion()
         {
+            bool prev = true;
             foreach (Task task in Tasks)
             {
                 task.UpdateCompletion();
+
+                // preventing sequence breaks
+                if (!prev)
+                {
+                    // undoing invalid progress
+                    for (int i = 0; i < task.TriggerStatuses.Length; i++)
+                    {
+                        task.TriggerStatuses[i] = false;
+                    }
+                    task.Complete = false;
+                    task.Progress = 0;
+                }
+
+                prev = task.Complete;
             }
         }
     }

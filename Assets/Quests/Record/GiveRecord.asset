@@ -15,9 +15,9 @@ MonoBehaviour:
   Name: GiveRecord
   Description: Give Octavia and Denice the record you found.
   TriggerNames:
-  - Past Octavia and Denice
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
+  - Octavia and Denice
+  Progress: 1
+  Complete: 1
+  TriggerStatuses: 01
   RewardNames: []
   RemovedNames: []

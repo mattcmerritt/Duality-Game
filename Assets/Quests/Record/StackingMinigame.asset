@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: Help Bella by stacking the groceries.
   TriggerNames: []
   Progress: 0
-  Complete: 0
+  Complete: 1
   TriggerStatuses: 
   RewardNames: []
   RemovedNames: []
