@@ -47,7 +47,7 @@ namespace Dialogue
             // swap the conversation to the alt conversation for the next time
             if (AlternateConversation != null)
             {
-                ReplaceConversation(AlternateConversation);
+                ReplaceConversation(AlternateConversation, null);
             }
 
             // handling special interactions
@@ -63,9 +63,10 @@ namespace Dialogue
             return SpokenWith;
         }
 
-        public void ReplaceConversation(Conversation newConversation)
+        public void ReplaceConversation(Conversation newConversation, Conversation altConversation)
         {
             CurrentConversation = newConversation.BuildConversation();
+            AlternateConversation = altConversation;
         }
 
         // TODO: override when necessary in child classes of NPC to create alternate ways of finishing a quest

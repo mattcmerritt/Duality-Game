@@ -428,6 +428,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
+--- !u!1 &222969285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222969287}
+  - component: {fileID: 222969286}
+  m_Layer: 0
+  m_Name: Record Replace Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &222969286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222969285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f901bbbde192f1498744767727d259e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 2080327037}
+  Conversation: {fileID: 11400000, guid: 59e3280ae1d6efa4a89b55549690d155, type: 2}
+  AlternateConversation: {fileID: 11400000, guid: 2fbc6bcbaa8b9ed4f97823bac2071082, type: 2}
+  Prereq: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}
+--- !u!4 &222969287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222969285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &267756917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3348458653602408773, guid: 628d0ec32b7552643b8031ef259794aa, type: 3}
@@ -4455,7 +4502,7 @@ GameObject:
   - component: {fileID: 2080327038}
   - component: {fileID: 2080327037}
   m_Layer: 0
-  m_Name: Octavia and Denice
+  m_Name: Past Octavia and Denice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

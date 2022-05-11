@@ -10,16 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
-  m_Name: Speak To Hope
+  m_Name: StackingMinigame
   m_EditorClassIdentifier: 
-  Name: SpeakToHope
-  Description: Go to the statue of the new mayor and speak with Hope to find out
-    what happened.
-  TriggerNames:
-  - Hope
+  Name: StackingMinigame
+  Description: Help Bella by stacking the groceries.
+  TriggerNames: []
   Progress: 0
   Complete: 0
-  TriggerStatuses: 00
+  TriggerStatuses: 
   RewardNames: []
-  RemovedNames:
-  - Hope
+  RemovedNames: []
