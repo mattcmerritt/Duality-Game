@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StackChecker : MonoBehaviour
 {
     private DraggableCan[] Cans;
     private float CheckTimer = 0f;
+
+    public Quests.Task Task;
 
     private void Start()
     {
@@ -48,6 +51,11 @@ public class StackChecker : MonoBehaviour
             {
                 Debug.Log("Good job stacking the cans!");
                 // win stuff
+                // mark tasks as completed
+                Task.ForceComplete();
+
+                // send back to overworld
+                SceneManager.LoadScene("OutsideFuture");
             }
         }
     }

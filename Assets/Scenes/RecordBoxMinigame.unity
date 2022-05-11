@@ -925,6 +925,14 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8638974970110075878, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ab575241d1e6d042aa48ceb85afa33a, type: 2}
+    - target: {fileID: 8638974970110075878, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}
+      propertyPath: Task
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}
 --- !u!224 &645959547 stripped
@@ -1298,7 +1306,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1918,5 +1926,13 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8638974970110075878, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ab575241d1e6d042aa48ceb85afa33a, type: 2}
+    - target: {fileID: 8638974970110075878, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}
+      propertyPath: Task
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb83f9e8a0f0d84409cb02eb1ddc0810, type: 3}

@@ -429,8 +429,19 @@ MonoBehaviour:
   UnpackingQuest: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
   MayorQuest: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
   MartinQuest: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
-  Items: []
   DescriptionPanel: {fileID: 1674894518660245233}
+  ButtonImages:
+  - {fileID: 4282080764123848952}
+  - {fileID: 5204208023336400755}
+  - {fileID: 1003349350534183959}
+  - {fileID: 9158946532540370133}
+  - {fileID: 4104555005771389178}
+  Buttons:
+  - {fileID: 5002699920666776788}
+  - {fileID: 4352943438135744369}
+  - {fileID: 6063733897410412808}
+  - {fileID: 7483359176544731272}
+  - {fileID: 8872038114390324996}
 --- !u!1 &2807329661720883462
 GameObject:
   m_ObjectHideFlags: 0

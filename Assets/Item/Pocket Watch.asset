@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7501762a463988445a76d85e4725182d, type: 3}
+  m_Name: Pocket Watch
+  m_EditorClassIdentifier: 
+  Name: Weird Pocketwatch
+  Image: {fileID: 21300000, guid: a9f82315018a949c6b8198c63469ea57, type: 3}
+  Description: "The odd pocketwatch I found in my grandparent\u2019s old things\u2026
+    I\u2019m still not sure where it came from."
