@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Grocery Future 2
+  m_Name: Grocery Future 15
   m_EditorClassIdentifier: 
-  Text: "Hello! Welcome to Grace\u2019s Groceries. Can I help you find anything today?"
+  Text: "Huh? Certainly, but when I said I couldn\u2019t pay anything substantial,
+    I really meant it, Quinn."
   Speaker: {fileID: 11400000, guid: 7b98f81ee4529be4ea94b2c3624f3c3d, type: 2}
   Italic: 0

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Grocery Future 2
+  m_Name: Box Line 4
   m_EditorClassIdentifier: 
-  Text: "Hello! Welcome to Grace\u2019s Groceries. Can I help you find anything today?"
-  Speaker: {fileID: 11400000, guid: 7b98f81ee4529be4ea94b2c3624f3c3d, type: 2}
+  Text: Thank you so much! You have no idea how perfect this is.
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0

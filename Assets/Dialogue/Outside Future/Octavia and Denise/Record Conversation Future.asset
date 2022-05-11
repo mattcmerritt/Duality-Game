@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
   m_Name: Record Conversation Future
   m_EditorClassIdentifier: 
-  Lines: []
+  Lines:
+  - {fileID: 11400000, guid: 91eb2f6b510afce479b83466286a5933, type: 2}
+  - {fileID: 11400000, guid: 2018f2c2bc547be4bb3b95e31ba436f1, type: 2}
+  - {fileID: 11400000, guid: cb44e8970ae0a6f4eaa6329b2ee48898, type: 2}
+  - {fileID: 11400000, guid: e79610bda7838fa43b44a7aed907524a, type: 2}
+  - {fileID: 11400000, guid: 2306b96e064b87c409f53497a4b0f551, type: 2}
+  - {fileID: 11400000, guid: 62a22495c94304741995eac78d0778aa, type: 2}
+  - {fileID: 11400000, guid: 423460dc58142f740852f83066b126cb, type: 2}
+  - {fileID: 11400000, guid: dc900e5358b3789438866012cec0e1ab, type: 2}
+  - {fileID: 11400000, guid: 9306413080012434180bae406995d6c9, type: 2}
+  - {fileID: 11400000, guid: 6f228e4d379ce0b408ec505aeca5952e, type: 2}
+  - {fileID: 11400000, guid: fde13c8a86b260a41a713fe020f12401, type: 2}
   HasDecision: 0
   Decision: {fileID: 0}
   HasNextConversation: 0
