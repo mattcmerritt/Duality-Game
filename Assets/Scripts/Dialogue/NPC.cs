@@ -63,6 +63,11 @@ namespace Dialogue
             return SpokenWith;
         }
 
+        public void SetSpokenWith(bool val)
+        {
+            SpokenWith = val;
+        }
+
         public void ReplaceConversation(Conversation newConversation, Conversation altConversation)
         {
             CurrentConversation = newConversation.BuildConversation();

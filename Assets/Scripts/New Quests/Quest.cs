@@ -42,14 +42,20 @@ namespace Quests
                 task.UpdateCompletion();
 
                 // preventing sequence breaks
-                if (!prev)
+                if (!prev && task.Complete)
                 {
+                    Debug.LogWarning("Sequence break with " + task.Name + ", undoing");
                     // undoing invalid progress
                     for (int i = 0; i < task.TriggerStatuses.Length; i++)
                     {
                         task.TriggerStatuses[i] = false;
                     }
-                    task.Complete = false;
+                    foreach (string name in task.TriggerNames)
+                    {
+                        GameObject currentTrigger = GameObject.Find(name);
+                        currentTrigger.GetComponent<Dialogue.NPC>().SetSpokenWith(false);
+                    }
+                        task.Complete = false;
                     task.Progress = 0;
                 }
 
