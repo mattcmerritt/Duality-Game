@@ -11,7 +11,7 @@ public class IngameMenu : MonoBehaviour
     public GameObject MenuUI;
     public static Quests.Quest ChosenQuest; // might need to write this to session storage to persist between scenes
     public Toggle[] QuestToggles;
-    public Quests.Quest UnpackingQuest, MayorQuest, HopeQuest, MartinQuest, RecordQuest;
+    public Quests.Quest[] AllQuests;
     public static Item[] Items = new Item[5];
     public TMP_Text DescriptionPanel;
     public GameObject ObjectivesBox;
@@ -20,6 +20,7 @@ public class IngameMenu : MonoBehaviour
     public Image[] ButtonImages;
     public Button[] Buttons;
 
+    [System.Obsolete]
     public void Start()
     {
         MenuOpen = false;
@@ -30,6 +31,12 @@ public class IngameMenu : MonoBehaviour
 
         // find objectives box
         ObjectivesBox = GameObject.Find("Objective Background");
+
+        // set the quests to update as the game progresses
+        foreach (Quests.Quest quest in AllQuests)
+        {
+            quest.SetDirty();
+        }
     }
 
     public void MenuButtonUpdate()
@@ -55,29 +62,20 @@ public class IngameMenu : MonoBehaviour
         {
             t.isOn = false;
         }
-        if (ChosenQuest == UnpackingQuest)
+        for(int i = 0; i < QuestToggles.Length; i++)
         {
-            QuestToggles[0].isOn = true;
-        }
-        else if (ChosenQuest == MayorQuest)
-        {
-            QuestToggles[1].isOn = true;
-        }
-        else if (ChosenQuest == HopeQuest)
-        {
-            QuestToggles[2].isOn = true;
-        }
-        else if (ChosenQuest == MartinQuest)
-        {
-            QuestToggles[3].isOn = true;
-        }
-        else if (ChosenQuest == RecordQuest)
-        {
-            QuestToggles[4].isOn = true;
-        }
-        else
-        {
-            // no quest selected, do nothing
+            if (ChosenQuest == AllQuests[i])
+            {
+                QuestToggles[i].isOn = true;
+            }
+            if (!AllQuests[i].IsActive)
+            {
+                QuestToggles[i].interactable = false;
+            }
+            else
+            {
+                QuestToggles[i].interactable = true;
+            }
         }
     }
 
@@ -98,6 +96,7 @@ public class IngameMenu : MonoBehaviour
             if (IngameMenu.Items[i] == null)
             {
                 IngameMenu.Items[i] = item;
+                break;
             }
         }
 
@@ -117,9 +116,11 @@ public class IngameMenu : MonoBehaviour
                 {
                     activeMenu.ButtonImages[i].sprite = IngameMenu.Items[i].Image;
 
+                    string itemtext = IngameMenu.Items[i].Name + "\n\n" + IngameMenu.Items[i].Description;
+
                     UnityAction action = () =>
                     {
-                        activeMenu.DescriptionPanel.SetText(IngameMenu.Items[i].Name + "\n\n" + IngameMenu.Items[i].Description);
+                        activeMenu.DescriptionPanel.SetText(itemtext);
                     };
 
                     activeMenu.Buttons[i].onClick.AddListener(action);

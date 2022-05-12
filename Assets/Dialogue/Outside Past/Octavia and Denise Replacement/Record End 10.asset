@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Record Future 2
+  m_Name: Record End 10
   m_EditorClassIdentifier: 
-  Text: "Yes, well, actually\u2013 I thought you might want me to bring you this
-    as soon as possible!"
+  Text: "Oh\u2013 thank you both! I\u2019ll listen to it as soon as I get home."
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0

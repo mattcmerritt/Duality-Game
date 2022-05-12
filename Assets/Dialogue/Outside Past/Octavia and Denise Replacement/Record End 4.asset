@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Record Future 6
+  m_Name: Record End 4
   m_EditorClassIdentifier: 
-  Text: "Don\u2019t worry about it you two! Please, keep it, it\u2019s for you."
+  Text: "A bit beat up and only one\u2026 but yes!"
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0

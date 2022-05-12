@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Blockable : MonoBehaviour
 {
@@ -33,7 +32,7 @@ public class Blockable : MonoBehaviour
             Task.ForceComplete();
 
             // send back to overworld
-            SceneManager.LoadScene("OutsideFuture");
+            FindObjectOfType<TransitionManager>().LoadRoom("OutsideFuture");
         }
 
     }

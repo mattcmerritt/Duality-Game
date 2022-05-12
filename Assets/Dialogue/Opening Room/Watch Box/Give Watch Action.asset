@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Record Future 4
+  m_Script: {fileID: 11500000, guid: 757cfae180b9f8b4fbfde8d5bbf2e0b6, type: 3}
+  m_Name: Give Watch Action
   m_EditorClassIdentifier: 
-  Text: "A bit beat up and only one\u2026 but yes!"
-  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
-  Italic: 0
+  ActionObjectName: Give Watch

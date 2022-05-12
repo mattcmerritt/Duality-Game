@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour, ITogglable
 {
@@ -17,7 +16,7 @@ public class SceneTransition : MonoBehaviour, ITogglable
     {
         if (IsEnabled)
         {
-            SceneManager.LoadScene(Scene);
+            FindObjectOfType<TransitionManager>().LoadRoom(Scene);
         }
     }
 
