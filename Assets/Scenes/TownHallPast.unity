@@ -413,6 +413,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestIndex: 2
+--- !u!1 &775473563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775473565}
+  - component: {fileID: 775473564}
+  m_Layer: 0
+  m_Name: Enable Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &775473564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775473563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2e41cc91ff3458ae01cd8e72deff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1992913445}
+  Prerequisite: {fileID: 11400000, guid: d848ca9afc4c5f246b9dc1fbf742ce7b, type: 2}
+  Postrequisite: {fileID: 0}
+--- !u!4 &775473565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775473563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814926282
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1341853199763666948, guid: eb8f5550410dc8548bbd230b4707d73a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1341853199763667001, guid: eb8f5550410dc8548bbd230b4707d73a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -723,6 +773,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2324502372320166438, guid: 95304c6e31f94ce42bf336c3ca1cc9a3, type: 3}
   m_PrefabInstance: {fileID: 2324502373485817893}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1354846178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354846180}
+  - component: {fileID: 1354846179}
+  m_Layer: 0
+  m_Name: Mayor Dialogue Replacement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354846179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354846178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f901bbbde192f1498744767727d259e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 1706310131808296458}
+  Conversation: {fileID: 11400000, guid: ae1236b1959db6a4f9d34e8112603822, type: 2}
+  AlternateConversation: {fileID: 0}
+  Prereq: {fileID: 11400000, guid: d848ca9afc4c5f246b9dc1fbf742ce7b, type: 2}
+  Used: 0
+--- !u!4 &1354846180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354846178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1400693994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,6 +1070,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1005,7 +1111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.5
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1022,6 +1128,10 @@ PrefabInstance:
     - target: {fileID: 3491670405331812455, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
       propertyPath: m_Name
       value: Interact Prompt
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491670405331812455, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
@@ -1168,12 +1278,12 @@ GameObject:
   - component: {fileID: 1992913445}
   - component: {fileID: 1992913444}
   m_Layer: 0
-  m_Name: Exit
+  m_Name: Town Hall Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1992913444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,7 +1520,8 @@ MonoBehaviour:
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 619638515231705878}
   CurrentlyActive: 0
-  Replacements: []
+  Replacements:
+  - {fileID: 1354846179}
 --- !u!1001 &2324502373485817893
 PrefabInstance:
   m_ObjectHideFlags: 0

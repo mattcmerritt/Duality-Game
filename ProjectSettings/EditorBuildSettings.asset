@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RecordBoxMinigame.unity
     guid: 0fb62db979023b043b261be158bf9a90
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: c5fee4f5693199541ae006477921d03d
   m_configObjects: {}
