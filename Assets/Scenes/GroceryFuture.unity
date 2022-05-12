@@ -1524,12 +1524,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093123029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c9865a72592fc4459d6cf259d588297, type: 3}
+  m_Script: {fileID: 11500000, guid: a651a21159d8aaf4eacc117d953c6b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Prerequisite: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}
   Preventer: {fileID: 11400000, guid: f8451d9316391c445b808b483d213251, type: 2}
-  Conversation: {fileID: 11400000, guid: 8aa18b8265002f146a906abcdc290c3f, type: 2}
+  RequiredItem: {fileID: 11400000, guid: 2ab575241d1e6d042aa48ceb85afa33a, type: 2}
+  GoodConversation: {fileID: 11400000, guid: 8aa18b8265002f146a906abcdc290c3f, type: 2}
+  BadConversation: {fileID: 11400000, guid: d760560103c73124aa4067deda02a95d, type: 2}
 --- !u!1 &2112341547
 GameObject:
   m_ObjectHideFlags: 0

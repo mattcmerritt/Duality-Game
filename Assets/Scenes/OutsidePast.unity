@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 266645752}
-  - component: {fileID: 266645753}
+  - component: {fileID: 266645754}
   m_Layer: 0
   m_Name: Duo Replace Dialogue
   m_TagString: Untagged
@@ -519,7 +519,7 @@ Transform:
   m_Father: {fileID: 996979563}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &266645753
+--- !u!114 &266645754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,13 +528,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 266645751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f901bbbde192f1498744767727d259e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dca72fccd3f9084daef9049c5e2f6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 2080327037}
-  Conversation: {fileID: 11400000, guid: 59e3280ae1d6efa4a89b55549690d155, type: 2}
-  AlternateConversation: {fileID: 11400000, guid: 2fbc6bcbaa8b9ed4f97823bac2071082, type: 2}
+  GoodConversation: {fileID: 11400000, guid: 59e3280ae1d6efa4a89b55549690d155, type: 2}
+  GoodAlternateConversation: {fileID: 11400000, guid: 2fbc6bcbaa8b9ed4f97823bac2071082, type: 2}
+  BadConversation: {fileID: 11400000, guid: 4c5d2fa102d36a44087d565515956d41, type: 2}
+  BadAlternateConversation: {fileID: 0}
   Prereq: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}
+  RequiredItem: {fileID: 11400000, guid: 2ab575241d1e6d042aa48ceb85afa33a, type: 2}
   Used: 0
 --- !u!4 &267756917 stripped
 Transform:
@@ -5547,11 +5550,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: b6c1af59d23090643b1a7571d818d698, type: 2}
   SpokenWith: 0
-  AlternateConversation: {fileID: 0}
+  AlternateConversation: {fileID: 11400000, guid: 373d17ea27df76c458fffd9b56dec8aa, type: 2}
   Collider: {fileID: 2080327038}
   CurrentlyActive: 0
-  Replacements:
-  - {fileID: 266645753}
+  Replacements: []
+  BranchingReplacements:
+  - {fileID: 266645754}
 --- !u!61 &2080327038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6106,6 +6110,7 @@ MonoBehaviour:
   CurrentlyActive: 0
   Replacements:
   - {fileID: 500971746}
+  BranchingReplacements: []
 --- !u!4 &7454381445317790803
 Transform:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ namespace Dialogue
 
         // Replacement Dialogues
         public ReplaceDialogue[] Replacements;
+        public InventoryDialogueSplit[] BranchingReplacements;
 
         // Create a list of dialogue items for when the NPC is interacted with
         private void Awake()

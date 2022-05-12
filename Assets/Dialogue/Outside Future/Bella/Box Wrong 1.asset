@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Box Line 1 Alt
+  m_Name: Box Wrong 1
   m_EditorClassIdentifier: 
   Text: "Hmm\u2026 \u201CXanadu?\u201D This seems like a good find. I could bring
     it to Quick Tempo!"
