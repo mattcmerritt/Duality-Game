@@ -1,6 +1,6 @@
 # Saving Time
 
-Quinn Macklemore moves back into their grandparents' house after their passing, and while unpacking/going through some of their grandparents' things, they find a magical pocket watch that transports them 20 years into the future. They find that 20 years from their move-in around 1990 the town is bleak and the people are miserable. Caring about the townspeople they grew up with, they vow to find the cause and to go back in time to fix things.
+Quinn Bennet moves back into their grandparents' house after their passing, and while unpacking/going through some of their grandparents' things, they find a magical pocket watch that transports them 20 years into the future. They find that 20 years from their move-in around 1990 the town is bleak and the people are miserable. Caring about the townspeople they grew up with, they vow to find the cause and to go back in time to fix things.
 
 In Version 2.0, we rebuilt the game to be much closer to our original vision of the game during the jam. In this new build, Quinn has access to more quests with the townspeople, can engage in branching conversations, has the ability to use the mysterious watch to control time at will, and can gather mementos to put in Mayor Abernath's time capsule.
 

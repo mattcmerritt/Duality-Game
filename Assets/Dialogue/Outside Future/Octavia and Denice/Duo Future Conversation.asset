@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Duo Future Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: 92abea90d341c3c478fd7a99cfa45b56, type: 2}
+  - {fileID: 11400000, guid: 581d59953f539194cb213e5d2b388a62, type: 2}
+  - {fileID: 11400000, guid: 6c5dde1191c701643a73a31f8ab03fc1, type: 2}
+  - {fileID: 11400000, guid: 6690d54510ed1c3469076bd20204e179, type: 2}
+  - {fileID: 11400000, guid: 44eddd1b91434bb45bfe2492d8d43318, type: 2}
+  - {fileID: 11400000, guid: b38b6f5baa225994dac5a973d542f6d3, type: 2}
+  - {fileID: 11400000, guid: 94452173739148d43b9ccda978069f7a, type: 2}
+  - {fileID: 11400000, guid: c9ede0e626fe1cc47b4f627eeb1d3102, type: 2}
+  - {fileID: 11400000, guid: 24c3f517491241a4fb40847852f6ffb2, type: 2}
+  - {fileID: 11400000, guid: a8f543ae0b91f5d46accd97d7186f1b6, type: 2}
+  - {fileID: 11400000, guid: 25ba1975d93a0024bbce1f3172bc6283, type: 2}
+  - {fileID: 11400000, guid: f32c02d7eb04b664b8021cc0a3073dcc, type: 2}
+  - {fileID: 11400000, guid: 1e04028eabe9a5e4d8f827ad4e6cac8e, type: 2}
+  - {fileID: 11400000, guid: 1666b20863c567e44b1c425a5ceeaa3f, type: 2}
+  - {fileID: 11400000, guid: 0d070a836b68ac749907e03bc9269231, type: 2}
+  - {fileID: 11400000, guid: 761d8366c2f125240a02b240dc83ad8b, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []
