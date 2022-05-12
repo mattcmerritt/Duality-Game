@@ -16,4 +16,4 @@ MonoBehaviour:
   MenuDescription: Go to the mayor at the east of town and submit your move-in papers.
   Tasks:
   - {fileID: 11400000, guid: d848ca9afc4c5f246b9dc1fbf742ce7b, type: 2}
-  IsActive: 1
+  IsActive: 0
