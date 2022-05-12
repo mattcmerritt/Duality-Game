@@ -54,7 +54,7 @@ public class StackChecker : MonoBehaviour
                 Task.ForceComplete();
 
                 // send back to overworld
-                FindObjectOfType<TransitionManager>().LoadRoom("OutsideFuture");
+                FindObjectOfType<TransitionManager>().LoadRoom("GroceryFuture");
             }
         }
     }

@@ -14,6 +14,7 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField]
     private LayerMask[] LayersToHit;
     private int TargetLayer;
+    [SerializeField]
     private float Distance = 1f;
 
     // Instance Data
