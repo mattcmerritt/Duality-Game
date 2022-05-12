@@ -15,3 +15,4 @@ MonoBehaviour:
   Text: "It\u2019s a photo of me and my grandparents. I remember taking this at the
     park when I was a kid\u2026 I\u2019m going to miss them."
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Italic: 0

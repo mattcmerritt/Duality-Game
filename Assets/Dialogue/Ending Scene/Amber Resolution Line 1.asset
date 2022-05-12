@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Grocery Future 1
+  m_Name: Amber Resolution Line 1
   m_EditorClassIdentifier: 
-  Text: It's nice to see some places from the past are still moderately intact.
-  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
-  Italic: 1
+  Text: "Quinn! I\u2019m so glad you could make it. "
+  Speaker: {fileID: 11400000, guid: 172538e0b5069344c923b6588dbdda61, type: 2}
+  Italic: 0

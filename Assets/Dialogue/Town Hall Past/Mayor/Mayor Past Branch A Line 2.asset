@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Mayor Past Branch A Line 2
   m_EditorClassIdentifier: 
-  Text: "Why yes! Our town is putting together a time capsule to bury for 10 years
+  Text: "Why yes! Our town is putting together a time capsule to be dug up 20 years
     from now. Not many people have volunteered to put items in it, but I\u2019m hoping
     that\u2019ll change by the end of the week."
   Speaker: {fileID: 11400000, guid: 172538e0b5069344c923b6588dbdda61, type: 2}
+  Italic: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Octavia Past 10
   m_EditorClassIdentifier: 
-  Text: I take care of logistics, while Octavia typically sticks to our customer
-    service.
+  Text: Octavia is still the one who handles all of our customer service work, but
+    I do help take care of logistics.
   Speaker: {fileID: 11400000, guid: ad787b640377d3540b55e1bb1719a67b, type: 2}
   Italic: 0

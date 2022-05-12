@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Mayor Past Ending Line 2
   m_EditorClassIdentifier: 
-  Text: "Great things, huh\u2026? I wonder, what will everything be like in 20 years?"
+  Text: "Great things, huh\u2026? I wonder, what will everything be like in a decade
+    or two?"
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}

@@ -15,3 +15,4 @@ MonoBehaviour:
   Text: "Records! They\u2019re old, but seemingly in good condition. Maybe I should
     take them to Quick Tempo Records? Octavia will know what they\u2019re worth."
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Italic: 0

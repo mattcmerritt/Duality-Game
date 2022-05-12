@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Opening Exit Line
   m_EditorClassIdentifier: 
-  Text: You cannot leave this room yet.
+  Text: "I shouldn\u2019t go out until I get at least a few things unpacked\u2026"
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Italic: 1
