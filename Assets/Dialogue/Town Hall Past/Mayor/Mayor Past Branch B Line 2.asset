@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: "Well, not many people have volunteered to put items in it, but I\u2019m
     hoping that\u2019ll change by the end of the week. It\u2019s being put together
-    to be dug up 10 years from now! "
+    to be dug up 20 years from now!"
   Speaker: {fileID: 11400000, guid: 172538e0b5069344c923b6588dbdda61, type: 2}
+  Italic: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Amber Resolution
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: d8c3e37fc4aa2f042a579feb10fba097, type: 2}
+  - {fileID: 11400000, guid: 230bf4a75134a9d49bb165f2f0b1a406, type: 2}
+  - {fileID: 11400000, guid: 3cd129df5d46c3d42b801cc72a8fbbf3, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []

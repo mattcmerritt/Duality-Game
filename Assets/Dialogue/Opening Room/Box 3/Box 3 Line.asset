@@ -15,3 +15,4 @@ MonoBehaviour:
   Text: "All of my papers for moving\u2026 I should really get these to Townhall,
     so Mayor Abernath can look at them."
   Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
+  Italic: 0

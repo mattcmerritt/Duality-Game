@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
   m_Name: Mayor Past Ending Line 1
   m_EditorClassIdentifier: 
-  Text: 'Having you will be a wonderful thing for us, I can feel it. As I always
-    say, the future holds great things for our people. '
+  Text: Perfect! Thank you, Quinn. Having you will be a wonderful thing for us, I
+    can feel it. As I always say, the future holds great things for our people.
   Speaker: {fileID: 11400000, guid: 172538e0b5069344c923b6588dbdda61, type: 2}
+  Italic: 0

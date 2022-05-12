@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7501762a463988445a76d85e4725182d, type: 3}
-  m_Name: Grace Record
+  m_Name: Grace Record (Xanadu)
   m_EditorClassIdentifier: 
   Name: Grace's Old Record
-  Image: {fileID: 21300000, guid: b3525a8c0ad9b4b53b2271553e035209, type: 3}
-  Description: "One of Grace\u2019s old keepsakes, her favorite record\u2014Whitney
-    Houston\u2019s album, \u201CWhitney.\u201D"
+  Image: {fileID: 21300000, guid: 7c2596decc3784615825bc3a8f145c71, type: 3}
+  Description: "One of Grace\u2019s old keepsakes, her favorite record\u2014an album
+    called \u201CXanadu.\u201D"
