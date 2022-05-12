@@ -4927,6 +4927,7 @@ MonoBehaviour:
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 2080327038}
   CurrentlyActive: 0
+  Replacements: []
 --- !u!61 &2080327038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5382,6 +5383,8 @@ MonoBehaviour:
   AlternateConversation: {fileID: 11400000, guid: f81bb05be2924f94ab6762c42d2f8723, type: 2}
   Collider: {fileID: 5613914605546010850}
   CurrentlyActive: 0
+  Replacements:
+  - {fileID: 500971746}
 --- !u!4 &7454381445317790803
 Transform:
   m_ObjectHideFlags: 0

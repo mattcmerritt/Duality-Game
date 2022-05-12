@@ -31,16 +31,6 @@ public class LoadInteractableObjects : MonoBehaviour
 
         for (int i = 0; i < quests.Length; i++)
         {
-            // checking completion
-            bool questCompleted = true;
-            foreach (Quests.Task task in quests[i].Tasks)
-            {
-                if (!task.Complete)
-                {
-                    questCompleted = false;
-                }
-            }
-
             for (int j = 0; j < Objects[i].Length; j++)
             {
                 // show the object regardless of if it is interactable,
@@ -48,7 +38,7 @@ public class LoadInteractableObjects : MonoBehaviour
                 Objects[i][j].layer = quests[i].IsActive ? 7 : 0;
 
                 // only enabling if the quest is not completed
-                if (quests[i].IsActive && !questCompleted)
+                if (quests[i].IsActive)
                 {
                     Objects[i][j].GetComponent<ITogglable>().Enable();
                 }

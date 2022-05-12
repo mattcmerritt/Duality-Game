@@ -23,9 +23,14 @@ namespace Dialogue
         public Collider2D Collider;
         public bool CurrentlyActive;
 
+        // Replacement Dialogues
+        public ReplaceDialogue[] Replacements;
+
         // Create a list of dialogue items for when the NPC is interacted with
-        private void Start()
+        private void Awake()
         {
+            Debug.Log("Setting up " + name);
+
             CurrentConversation = ConversationObject.BuildConversation();
 
             DialogueUI = FindObjectOfType<DialogueUpdater>();
@@ -36,6 +41,15 @@ namespace Dialogue
             {
                 Collider.enabled = CurrentlyActive;
             } 
+
+            // replacing dialogue if needed
+            if (Replacements != null)
+            {
+                foreach (ReplaceDialogue rep in Replacements)
+                {
+                    rep.Reload();
+                }
+            }
         }
 
         public void StartConversation()
@@ -70,6 +84,7 @@ namespace Dialogue
 
         public void ReplaceConversation(Conversation newConversation, Conversation altConversation)
         {
+            Debug.Log("Replacing with " + newConversation.name);
             CurrentConversation = newConversation.BuildConversation();
             AlternateConversation = altConversation;
         }
