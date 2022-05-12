@@ -234,6 +234,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 361012166614215721, guid: 2136232b47e04b643be24cd09c9f7e57, type: 3}
   m_PrefabInstance: {fileID: 211196288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &255762237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255762238}
+  - component: {fileID: 255762239}
+  m_Layer: 0
+  m_Name: Give Watch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255762238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255762237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5078602, y: 1.6877851, z: -72.09813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255762239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255762237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3a6c02dea78b5439e9fac95b4eea27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 85976ca0f09fb2a4cb87f717940a627a, type: 2}
 --- !u!1 &265197727
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,9 +377,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 4bba994949f6e36458e97a6dd7f0b5a2, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 0}
   CurrentlyActive: 0
+  Replacements: []
 --- !u!61 &268680551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -498,9 +544,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 44dcacdad8f80894b9992ee3117f3754, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 0}
   CurrentlyActive: 0
+  Replacements: []
 --- !u!61 &353346364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1507,9 +1555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 2409a6b670ef3604aa2c453a8bf5a289, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 0}
   CurrentlyActive: 0
+  Replacements: []
 --- !u!61 &1506391193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1700,6 +1750,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4096dc3f5c52eda41988414fad5d6a63, type: 3}
+--- !u!1 &1636269341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636269343}
+  - component: {fileID: 1636269342}
+  m_Layer: 0
+  m_Name: Give Papers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1636269342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636269341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3a6c02dea78b5439e9fac95b4eea27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: c9d9332f7e443e7498a6d07e1d56703c, type: 2}
+--- !u!4 &1636269343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636269341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.053071503, y: 0.9973025, z: -72.079895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702328938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,9 +1827,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 7166154754952114491b17c8372a5c0f, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 0}
   CurrentlyActive: 0
+  Replacements: []
 --- !u!61 &1702328940
 BoxCollider2D:
   m_ObjectHideFlags: 0

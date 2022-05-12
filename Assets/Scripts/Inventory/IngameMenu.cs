@@ -98,6 +98,7 @@ public class IngameMenu : MonoBehaviour
             if (IngameMenu.Items[i] == null)
             {
                 IngameMenu.Items[i] = item;
+                break;
             }
         }
 
@@ -117,9 +118,11 @@ public class IngameMenu : MonoBehaviour
                 {
                     activeMenu.ButtonImages[i].sprite = IngameMenu.Items[i].Image;
 
+                    string itemtext = IngameMenu.Items[i].Name + "\n\n" + IngameMenu.Items[i].Description;
+
                     UnityAction action = () =>
                     {
-                        activeMenu.DescriptionPanel.SetText(IngameMenu.Items[i].Name + "\n\n" + IngameMenu.Items[i].Description);
+                        activeMenu.DescriptionPanel.SetText(itemtext);
                     };
 
                     activeMenu.Buttons[i].onClick.AddListener(action);
