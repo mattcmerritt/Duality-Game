@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Cookie Found Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: 8c866e16e69e6e6429e355894f585975, type: 2}
+  - {fileID: 11400000, guid: 29e01d8dc1ed08745b80e1e0541ac7f9, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: f46dcf582a4148e488466c9cb886793d, type: 2}

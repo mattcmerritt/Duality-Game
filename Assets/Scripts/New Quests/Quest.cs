@@ -14,11 +14,19 @@ namespace Quests
 
         public bool IsActive;
 
+        // Saving changes between scenes
+        // Source: https://answers.unity.com/questions/1501743/scriptable-object-resets-randomly-between-scenes.html?childToView=1569389#comment-1569389
+        private void OnEnable()
+        {
+            hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void SetupAllTasks()
         {
-            foreach (Task task in Tasks)
+            Tasks[0].Setup(null); // first task has no prereq
+            for (int i = 1; i < Tasks.Count; i++)
             {
-                task.Setup();
+                Tasks[i].Setup(Tasks[i - 1]);
             }
         }
 
@@ -36,9 +44,30 @@ namespace Quests
 
         public void UpdateCompletion()
         {
+            bool prev = true;
             foreach (Task task in Tasks)
             {
                 task.UpdateCompletion();
+
+                // preventing sequence breaks
+                if (!prev && task.Complete)
+                {
+                    Debug.LogWarning("Sequence break with " + task.Name + ", undoing");
+                    // undoing invalid progress
+                    for (int i = 0; i < task.TriggerStatuses.Length; i++)
+                    {
+                        task.TriggerStatuses[i] = false;
+                    }
+                    foreach (string name in task.TriggerNames)
+                    {
+                        GameObject currentTrigger = GameObject.Find(name);
+                        currentTrigger.GetComponent<Dialogue.NPC>().SetSpokenWith(false);
+                    }
+                        task.Complete = false;
+                    task.Progress = 0;
+                }
+
+                prev = task.Complete;
             }
         }
     }

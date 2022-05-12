@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7501762a463988445a76d85e4725182d, type: 3}
+  m_Name: Moving Papers
+  m_EditorClassIdentifier: 
+  Name: Moving Papers
+  Image: {fileID: 21300000, guid: 09bd13b8f6dc94d12a9b1dcb0817693d, type: 3}
+  Description: My move-in papers that I had to bring when I came back to Wellsfield.
+    I better make sure these get to Mayor Abernath.

@@ -25,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
             transform.position = TimeManager.GetLastLocation();
             TimeManager.WasTimeTransition = false;
         }
+
+        // moving the player to the proper place
+        ZoneManager zm = FindObjectOfType<ZoneManager>();
+        if (zm != null)
+        {
+            zm.MovePlayerToStart();
+        }
+
         /*
         else if (RoomManager.WasRoomTransition && RoomManager.HasLocation)
         {

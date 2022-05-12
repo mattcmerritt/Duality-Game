@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Octavia Past Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: a3229868c790e654f94d50821d4d9efd, type: 2}
+  - {fileID: 11400000, guid: aa5400900eef19044b36adcd062933e2, type: 2}
+  - {fileID: 11400000, guid: 35c2b61bee4e15c419cfc83b735aa681, type: 2}
+  - {fileID: 11400000, guid: 4e1dbee81d34c54459750ca78bff4d08, type: 2}
+  - {fileID: 11400000, guid: 9ae09729d9b2e6843a4b91cab4e23cd8, type: 2}
+  - {fileID: 11400000, guid: e3258536b64576e41b2132cd8cf75ae6, type: 2}
+  - {fileID: 11400000, guid: 86f00e53d988f2642965124d5b6d38ef, type: 2}
+  - {fileID: 11400000, guid: f726b5e69434564428dc55f512f4b048, type: 2}
+  - {fileID: 11400000, guid: 2d142a1e4a987024a9976c43025f236f, type: 2}
+  - {fileID: 11400000, guid: fb2e437dcfaa2e84c8c86aca753aaf1d, type: 2}
+  - {fileID: 11400000, guid: c719386f6956f6641b8f30c7e12e4ed8, type: 2}
+  - {fileID: 11400000, guid: 5d5cbadd6bb25f049b1fc4ee33d1c78c, type: 2}
+  - {fileID: 11400000, guid: 3c27810acf94ea14c967ce70cb48a37f, type: 2}
+  - {fileID: 11400000, guid: ff782a8d8d91bf641b24880784626a5b, type: 2}
+  - {fileID: 11400000, guid: eebd61214d6f79540942ad51f2846b1f, type: 2}
+  - {fileID: 11400000, guid: ba80b965ff9cefe438651236d00e2793, type: 2}
+  - {fileID: 11400000, guid: 90c9753583168ef4d9b2309e7b348729, type: 2}
+  - {fileID: 11400000, guid: 7212237b91a60b34abf7eb9bc2ee2ed4, type: 2}
+  - {fileID: 11400000, guid: 07380ed1c7981c548a77e816487947ad, type: 2}
+  - {fileID: 11400000, guid: d96d427d31195b847a03005e87a66b38, type: 2}
+  - {fileID: 11400000, guid: 0c5374638b5691341a7ffe7b27c8cb24, type: 2}
+  - {fileID: 11400000, guid: d3add63698c464f4cb53921f88f3e98a, type: 2}
+  - {fileID: 11400000, guid: 8fc322d4737293a4da68d31132055a6c, type: 2}
+  - {fileID: 11400000, guid: fd542734005843f439ec83abaf209058, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []

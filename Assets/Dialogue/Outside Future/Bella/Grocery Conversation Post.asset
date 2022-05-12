@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Grocery Conversation Post
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: c232d8e156194544b82501c9290c6da0, type: 2}
+  - {fileID: 11400000, guid: 98756fa1d7f38404887fbaea4094d39a, type: 2}
+  - {fileID: 11400000, guid: 1ccea64c5486a524eb8bcd19aae96f11, type: 2}
+  - {fileID: 11400000, guid: 750c8bbdc5ca87446bc5b278ca15d908, type: 2}
+  - {fileID: 11400000, guid: 0fe0fe76138625c488859719bc5913ac, type: 2}
+  - {fileID: 11400000, guid: 05c47c6ce89d9da4d911c83b7664c6d4, type: 2}
+  - {fileID: 11400000, guid: ded2f6afce84915419190fb5fc15f291, type: 2}
+  - {fileID: 11400000, guid: 4811e8dc796f7fd4ba5b36d60c93bd81, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: e43e675b4b735404abfe5764bf4bcb8e, type: 2}

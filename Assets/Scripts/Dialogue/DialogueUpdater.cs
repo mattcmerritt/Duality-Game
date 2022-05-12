@@ -75,6 +75,15 @@ namespace Dialogue
             // getting character details
             SpeakerName.SetText(ActiveConversation.GetSpeaker().Name);
             SpeakerImage.sprite = ActiveConversation.GetSpeaker().Portrait;
+
+            if (ActiveConversation is Line)
+            {
+                DialogueText.fontStyle = ((Line)ActiveConversation).Italic ? FontStyles.Italic : FontStyles.Normal;
+            }
+            else
+            {
+                DialogueText.fontStyle = FontStyles.Normal;
+            }
         }
 
         private void RestartTyping()

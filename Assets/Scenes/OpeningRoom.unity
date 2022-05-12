@@ -311,8 +311,8 @@ GameObject:
   - component: {fileID: 268680553}
   - component: {fileID: 268680552}
   - component: {fileID: 268680551}
-  - component: {fileID: 268680550}
   - component: {fileID: 268680554}
+  - component: {fileID: 268680550}
   m_Layer: 7
   m_Name: Box 3
   m_TagString: Untagged
@@ -333,6 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 4bba994949f6e36458e97a6dd7f0b5a2, type: 2}
+  AlternateConversation: {fileID: 0}
+  Collider: {fileID: 0}
+  CurrentlyActive: 0
 --- !u!61 &268680551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -455,8 +458,8 @@ GameObject:
   - component: {fileID: 353346366}
   - component: {fileID: 353346365}
   - component: {fileID: 353346364}
-  - component: {fileID: 353346363}
   - component: {fileID: 353346362}
+  - component: {fileID: 353346363}
   m_Layer: 7
   m_Name: Box 1
   m_TagString: Untagged
@@ -495,6 +498,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 44dcacdad8f80894b9992ee3117f3754, type: 2}
+  AlternateConversation: {fileID: 0}
+  Collider: {fileID: 0}
+  CurrentlyActive: 0
 --- !u!61 &353346364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1461,8 +1467,8 @@ GameObject:
   - component: {fileID: 1506391195}
   - component: {fileID: 1506391194}
   - component: {fileID: 1506391193}
-  - component: {fileID: 1506391192}
   - component: {fileID: 1506391191}
+  - component: {fileID: 1506391192}
   m_Layer: 7
   m_Name: Watch Box
   m_TagString: Untagged
@@ -1501,6 +1507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 2409a6b670ef3604aa2c453a8bf5a289, type: 2}
+  AlternateConversation: {fileID: 0}
+  Collider: {fileID: 0}
+  CurrentlyActive: 0
 --- !u!61 &1506391193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1702,8 +1711,8 @@ GameObject:
   - component: {fileID: 1702328942}
   - component: {fileID: 1702328941}
   - component: {fileID: 1702328940}
-  - component: {fileID: 1702328939}
   - component: {fileID: 1702328943}
+  - component: {fileID: 1702328939}
   m_Layer: 7
   m_Name: Box 2
   m_TagString: Untagged
@@ -1724,6 +1733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 7166154754952114491b17c8372a5c0f, type: 2}
+  AlternateConversation: {fileID: 0}
+  Collider: {fileID: 0}
+  CurrentlyActive: 0
 --- !u!61 &1702328940
 BoxCollider2D:
   m_ObjectHideFlags: 0

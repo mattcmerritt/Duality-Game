@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Hope Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: 3724443919dfcaf4c846169ee7b30225, type: 2}
+  - {fileID: 11400000, guid: d51b2d745f1ff9246b8e0bbcd7447e52, type: 2}
+  - {fileID: 11400000, guid: dee8fc7eaa49c1548976d853ec4f3a43, type: 2}
+  - {fileID: 11400000, guid: 767c806ed7941604ea7fc56655b6d63b, type: 2}
+  - {fileID: 11400000, guid: 47aeaf70ab17c454ba9c08bcd9ea20a6, type: 2}
+  - {fileID: 11400000, guid: 7f53dbd96ff7c544c9d6a0fc0b6e10be, type: 2}
+  - {fileID: 11400000, guid: e832c414504c25b4c9a7915636aed645, type: 2}
+  - {fileID: 11400000, guid: e3816717a2cd6b14fbc78ec5974e30b5, type: 2}
+  - {fileID: 11400000, guid: 81849a3536002294fa385b585a203904, type: 2}
+  - {fileID: 11400000, guid: 6e1a6bb3f3431f14290db8bb7fdc2a9d, type: 2}
+  - {fileID: 11400000, guid: b0c0df1ecdcf39645ac1cb5bfe24c77a, type: 2}
+  - {fileID: 11400000, guid: cc0524a4dbb0ef74388b7119d7500458, type: 2}
+  - {fileID: 11400000, guid: b1b94e3497657dd4eb26e941d501a8f9, type: 2}
+  - {fileID: 11400000, guid: 8369060cc4028ef42926ca351413f910, type: 2}
+  - {fileID: 11400000, guid: 13ce59804aeabe145a2e7c36b715205c, type: 2}
+  - {fileID: 11400000, guid: 82386f857b13fc147a53cce254ca0cbc, type: 2}
+  - {fileID: 11400000, guid: 289d9d46c8f56f743a63e4dbe0d110bb, type: 2}
+  - {fileID: 11400000, guid: 1f7e9e3819fae4b4aae3ce1e29683343, type: 2}
+  - {fileID: 11400000, guid: 2032947c9dd53c34d8f6c3e190e34ede, type: 2}
+  - {fileID: 11400000, guid: 30539809d9ecaaf4ab48571a2edf935f, type: 2}
+  - {fileID: 11400000, guid: 48b1ee60639aae348b31e471d2514c51, type: 2}
+  - {fileID: 11400000, guid: 37ad7f36f7a116d48bf4cf0e5d43f10c, type: 2}
+  - {fileID: 11400000, guid: b535dac50f086d6468b6f9ab8eede6de, type: 2}
+  - {fileID: 11400000, guid: caa95e2cd04805846ac2ff1182f4eceb, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: a8a496d40eaa7134e8a77185cbe820f9, type: 2}

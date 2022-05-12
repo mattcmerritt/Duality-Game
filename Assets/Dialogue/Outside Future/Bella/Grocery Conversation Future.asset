@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Grocery Conversation Future
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: eca6aacf75403b542aa27a4d506a445c, type: 2}
+  - {fileID: 11400000, guid: ef91813c5918ebb488539a52c1804e24, type: 2}
+  - {fileID: 11400000, guid: 9c7ac054c85e91c4d8990837f72ce77f, type: 2}
+  - {fileID: 11400000, guid: e7e6f16074b731e41ae8b891cbc1ad27, type: 2}
+  - {fileID: 11400000, guid: 6ce5f6453f7189d45be43a62b6792ae4, type: 2}
+  - {fileID: 11400000, guid: 3c75d854b30da4c4a8ac7c886714485d, type: 2}
+  - {fileID: 11400000, guid: af7bb53a44dd9ca4fa9f319357b01ff0, type: 2}
+  - {fileID: 11400000, guid: ebe4d879062c28549b2b51e1b948f303, type: 2}
+  - {fileID: 11400000, guid: 1fff31f665d2e0b4abfecfa3ef037108, type: 2}
+  - {fileID: 11400000, guid: 950ed93dfa709be45984508178423448, type: 2}
+  - {fileID: 11400000, guid: 781108fa6d0d1c940865634db75f0124, type: 2}
+  - {fileID: 11400000, guid: cf57aad19183f9842965ea55c5a4bf71, type: 2}
+  - {fileID: 11400000, guid: 1d03808360e159e41bfaf11a9c0c9416, type: 2}
+  - {fileID: 11400000, guid: 74b2fcf2fed843c47a90327cdf679f2d, type: 2}
+  - {fileID: 11400000, guid: 2fd3d9906fb150b4a8a6bea06b75d46d, type: 2}
+  - {fileID: 11400000, guid: 686e420053f15ed44b9d1a7546ad41f1, type: 2}
+  - {fileID: 11400000, guid: cbff87b7d40971c4dab1d49b474fe1bc, type: 2}
+  - {fileID: 11400000, guid: afefd274bbc3c5a4da6bb83ef904907a, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: 8f670265ea0bc524c8684dee1e4c57fc, type: 2}
