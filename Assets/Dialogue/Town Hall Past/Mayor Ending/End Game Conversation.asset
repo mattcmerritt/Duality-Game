@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: End Game Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: fa0fb7c40166bef41855d3e9f1cd0fb0, type: 2}
+  - {fileID: 11400000, guid: a0aad47531462d842bfb2ce45c5c75d0, type: 2}
+  - {fileID: 11400000, guid: 0c3742a5dbf64c140857dc5a50dc847f, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: 889f9b4de12b1464caca8dec01dfdd5b, type: 2}

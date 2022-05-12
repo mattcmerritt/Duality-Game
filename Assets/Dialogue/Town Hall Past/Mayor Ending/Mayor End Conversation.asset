@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Mayor End Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: 5b29679ad2ade1c4fbac2adcf7093b64, type: 2}
+  - {fileID: 11400000, guid: b01a3a673e0fd8945b4ec9cbbdfed673, type: 2}
+  - {fileID: 11400000, guid: 937e60b20e946dc49b2fb87ce947dd9a, type: 2}
+  HasDecision: 1
+  Decision: {fileID: 11400000, guid: 9370b1ec8e36ec3418d1116f1ca341aa, type: 2}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []
