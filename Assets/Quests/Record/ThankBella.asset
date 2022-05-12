@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
-  m_Name: GiveRecord
+  m_Name: ThankBella
   m_EditorClassIdentifier: 
-  Name: GiveRecord
-  Description: Go back and give Octavia and Denice the record you found.
-  TriggerNames:
-  - Past Octavia and Denice
+  Name: ThankBella
+  Description: Thank Bella for giving you the record.
+  TriggerNames: []
   Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
-  RewardNames: []
+  Complete: 1
+  TriggerStatuses: 
+  RewardNames:
+  - Duo Replace Dialogue
   RemovedNames: []
   Prerequisite: {fileID: 11400000, guid: 8a3094605c6b87f4e87d5ab304a97b7d, type: 2}

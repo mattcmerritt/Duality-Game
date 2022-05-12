@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Record Alt 1
+  m_Name: Record End 10
   m_EditorClassIdentifier: 
-  Text: You really helped us out Quinn!
-  Speaker: {fileID: 11400000, guid: bb3c1b174fed0464cb703f8f5a6df5e7, type: 2}
+  Text: "Oh\u2013 thank you both! I\u2019ll listen to it as soon as I get home."
+  Speaker: {fileID: 11400000, guid: 437d4483495e37147a995c1257d533d7, type: 2}
   Italic: 0

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
-  m_Name: Record Future 3
+  m_Name: Record Alt 1
   m_EditorClassIdentifier: 
-  Text: "Wait\u2013 is that\u2026??"
-  Speaker: {fileID: 11400000, guid: bb3c1b174fed0464cb703f8f5a6df5e7, type: 2}
+  Text: You really helped us out Quinn!
+  Speaker: {fileID: 11400000, guid: c346987a8bdc8854ba3ec02db3172413, type: 2}
   Italic: 0
