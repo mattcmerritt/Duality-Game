@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
+  m_Name: Box Wrong 3
+  m_EditorClassIdentifier: 
+  Text: "Huh? Oh\u2026 yeah, you can take that. It was one of my mom\u2019s favorite
+    records, but we have more than one copy, and honestly, I don\u2019t even have
+    a record player still."
+  Speaker: {fileID: 11400000, guid: 7b98f81ee4529be4ea94b2c3624f3c3d, type: 2}
+  Italic: 0

@@ -30,7 +30,7 @@ public class EndingSceneLoader : MonoBehaviour
             }
             else if (item.Name == "Octavia and Denice's Favorite Record")
             {
-                Martin.SetActive(true);
+                OctaviaDenice.SetActive(true);
                 Alone = false;
             }
         }

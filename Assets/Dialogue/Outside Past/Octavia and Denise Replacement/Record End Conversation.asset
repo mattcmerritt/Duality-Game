@@ -28,5 +28,6 @@ MonoBehaviour:
   Decision: {fileID: 0}
   HasNextConversation: 0
   NextConversation: {fileID: 0}
-  HasActions: 0
-  Actions: []
+  HasActions: 1
+  Actions:
+  - {fileID: 11400000, guid: c01717edb7ac7fc449af2f67c6b2fbf1, type: 2}

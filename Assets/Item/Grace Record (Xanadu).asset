@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7501762a463988445a76d85e4725182d, type: 3}
   m_Name: Grace Record (Xanadu)
   m_EditorClassIdentifier: 
-  Name: Grace's Old Record
+  Name: Grace's Old Record - Xanadu
   Image: {fileID: 21300000, guid: 7c2596decc3784615825bc3a8f145c71, type: 3}
   Description: "One of Grace\u2019s old keepsakes, her favorite record\u2014an album
     called \u201CXanadu.\u201D"

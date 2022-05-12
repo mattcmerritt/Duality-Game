@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
+  m_Name: Record Bad Conversation
+  m_EditorClassIdentifier: 
+  Lines:
+  - {fileID: 11400000, guid: 38e7f0182cb04334a859500f316b7a31, type: 2}
+  - {fileID: 11400000, guid: d6d90a764c616c8468c74472c0f25f58, type: 2}
+  - {fileID: 11400000, guid: c94ac7cf8d3ddab4897d90371eb105ff, type: 2}
+  - {fileID: 11400000, guid: c9e18714ded8d5e4abd9b53ebe0fd95b, type: 2}
+  - {fileID: 11400000, guid: b91a67d2fedd46c448ffd1da6df9b94a, type: 2}
+  - {fileID: 11400000, guid: 9b893b4f30d7c9a4ca66853d915e039a, type: 2}
+  - {fileID: 11400000, guid: c478d928bc59c68458db0689d53e67ee, type: 2}
+  - {fileID: 11400000, guid: 2391b61f5bfd05f4fbd3429cda5fbb73, type: 2}
+  - {fileID: 11400000, guid: 747731bf7788fc94c8c93ff80972b354, type: 2}
+  - {fileID: 11400000, guid: 13599760810ccc147a1eeed1cd5f4b08, type: 2}
+  HasDecision: 0
+  Decision: {fileID: 0}
+  HasNextConversation: 0
+  NextConversation: {fileID: 0}
+  HasActions: 0
+  Actions: []

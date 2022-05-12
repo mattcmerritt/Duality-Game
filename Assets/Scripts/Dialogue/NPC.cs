@@ -49,6 +49,13 @@ namespace Dialogue
                     rep.Reload();
                 }
             }
+            if (BranchingReplacements != null)
+            {
+                foreach (InventoryDialogueSplit rep in BranchingReplacements)
+                {
+                    rep.Reload();
+                }
+            }
         }
 
         public void StartConversation()

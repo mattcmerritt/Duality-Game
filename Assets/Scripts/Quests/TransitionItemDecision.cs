@@ -31,6 +31,7 @@ public class TransitionItemDecision : MonoBehaviour
                 if (item.Name == RequiredItem.Name)
                 {
                     up.StartDialogue(GoodConversation.BuildConversation());
+                    found = true;
                 }
             }
             if (!found)
