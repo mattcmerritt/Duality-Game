@@ -31,7 +31,7 @@ public class ReplaceDialogue : MonoBehaviour, IActionObject, ITogglable
         // method not needed
     }
 
-    private void Start()
+    public void Reload()
     {
         if (Prereq.Complete)
         {
