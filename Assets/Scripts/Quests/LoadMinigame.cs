@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LoadMinigame : MonoBehaviour, IActionObject
 {
@@ -9,6 +8,6 @@ public class LoadMinigame : MonoBehaviour, IActionObject
 
     public void Act()
     {
-        SceneManager.LoadScene(SceneName);
+        FindObjectOfType<TransitionManager>().LoadRoom(SceneName);
     }
 }

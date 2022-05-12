@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StackChecker : MonoBehaviour
 {
@@ -55,7 +54,7 @@ public class StackChecker : MonoBehaviour
                 Task.ForceComplete();
 
                 // send back to overworld
-                SceneManager.LoadScene("OutsideFuture");
+                FindObjectOfType<TransitionManager>().LoadRoom("OutsideFuture");
             }
         }
     }

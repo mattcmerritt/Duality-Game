@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PileManager : MonoBehaviour
 {
@@ -24,7 +23,7 @@ public class PileManager : MonoBehaviour
         if(SuccessCount >= 3)
         {
             FindCat.ForceComplete();
-            SceneManager.LoadScene("OutsidePast");
+            FindObjectOfType<TransitionManager>().LoadRoom("OutsidePast");
         }
 
         if(!ClickPhase)
