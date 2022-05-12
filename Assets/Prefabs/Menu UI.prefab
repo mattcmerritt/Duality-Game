@@ -504,11 +504,12 @@ MonoBehaviour:
   - {fileID: 9101141065880489602}
   - {fileID: 2284736566190944790}
   - {fileID: 1009571276047951759}
-  UnpackingQuest: {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
-  MayorQuest: {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
-  HopeQuest: {fileID: 11400000, guid: 9882af9b70d244b4fb4c2de1e180f1ce, type: 2}
-  MartinQuest: {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
-  RecordQuest: {fileID: 11400000, guid: 6d0aae5292b1dee4fbd43ce93ece2fbd, type: 2}
+  AllQuests:
+  - {fileID: 11400000, guid: 3c484f2c3b42416448d1d08d64e15950, type: 2}
+  - {fileID: 11400000, guid: b4f9bfdaee536c148b9cf284444f8392, type: 2}
+  - {fileID: 11400000, guid: 9882af9b70d244b4fb4c2de1e180f1ce, type: 2}
+  - {fileID: 11400000, guid: 5752bfb659eab3e40b4e681cfd899496, type: 2}
+  - {fileID: 11400000, guid: 6d0aae5292b1dee4fbd43ce93ece2fbd, type: 2}
   DescriptionPanel: {fileID: 1674894518660245233}
   ObjectivesBox: {fileID: 0}
   ButtonImages:
