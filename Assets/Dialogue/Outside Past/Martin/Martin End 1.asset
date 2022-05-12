@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
-  m_Name: SearchLeaves
+  m_Script: {fileID: 11500000, guid: 323e3acc11ecca043a61be5e43b84ad6, type: 3}
+  m_Name: Martin End 1
   m_EditorClassIdentifier: 
-  Name: SearchLeaves
-  Description: Search through the leaves for Martin's cat
-  TriggerNames: []
-  Progress: 0
-  Complete: 1
-  TriggerStatuses: 
-  RewardNames: []
-  RemovedNames: []
+  Text: Cookie!! You found her! Thank you so much.
+  Speaker: {fileID: 11400000, guid: 3fc6787229f30654fa3dcc9bdd1db231, type: 2}
+  Italic: 0

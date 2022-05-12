@@ -18,8 +18,13 @@ namespace Quests
         public List<string> RewardNames; // objects to activate on completion
         public List<string> RemovedNames; // objects to remove on completion
 
-        public void Setup()
+        public Task Prerequisite;
+
+        public void Setup(Task prereq)
         {
+            // adding a prereq task to prevent early triggers
+            Prerequisite = prereq;
+
             TriggerStatuses = new bool[TriggerNames.Count];
             string savedProgress = PlayerPrefs.GetString(Name);
             string[] finishedTriggers = savedProgress.Split(',');
@@ -54,57 +59,81 @@ namespace Quests
 
         public void UpdateCompletionValues()
         {
-            // if there is a trigger, let them handle completion
-            if (TriggerNames.Count > 0)
+            // only go if prereq is met
+            if (Prerequisite == null || Prerequisite.Complete)
             {
-                int count = 0;
-                string saveString = "";
-                for (int i = 0; i < TriggerStatuses.Length; i++)
+                // if there is a trigger, let them handle completion
+                if (TriggerNames.Count > 0)
                 {
-                    if (TriggerStatuses[i])
+                    int count = 0;
+                    string saveString = "";
+                    for (int i = 0; i < TriggerStatuses.Length; i++)
                     {
-                        count++;
-                        saveString += i + ",";
+                        if (TriggerStatuses[i])
+                        {
+                            count++;
+                            saveString += i + ",";
+                        }
                     }
-                }
-                Progress = count;
-                if (Progress == TriggerNames.Count && !Complete)
-                {
-                    Complete = true;
-                    for (int i = 0; i < RewardNames.Count; i++)
+                    Progress = count;
+                    if (Progress == TriggerNames.Count && !Complete)
                     {
-                        // enables all toggleable objects
-                        GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
+                        Complete = true;
+                        for (int i = 0; i < RewardNames.Count; i++)
+                        {
+                            // enables all toggleable objects
+                            Debug.LogWarning("Rewarded " + RewardNames[i]);
+                            GameObject obj = GameObject.Find(RewardNames[i]);
+                            if (obj != null)
+                            {
+                                obj.GetComponent<ITogglable>().Enable();
+                            }
+                        }
+
+                        for (int i = 0; i < RemovedNames.Count; i++)
+                        {
+                            // disables all toggleable objects
+                            Debug.LogWarning("Removed " + RemovedNames[i]);
+                            GameObject obj = GameObject.Find(RemovedNames[i]);
+                            if (obj != null)
+                            {
+                                obj.GetComponent<ITogglable>().Disable();
+                            }
+                        }
                     }
 
-                    for (int i = 0; i < RemovedNames.Count; i++)
-                    {
-                        // disables all toggleable objects
-                        GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
-                    }
+                    saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));
+                    PlayerPrefs.SetString(Name, saveString);
                 }
-
-                saveString = saveString.Substring(0, Mathf.Max(saveString.Length - 1, 0));
-                PlayerPrefs.SetString(Name, saveString);
-            }
-            // if not, completion will be handled by something else, but still deal with rewards and removing
-            else
-            {
-                if(Complete)
+                // if not, completion will be handled by something else, but still deal with rewards and removing
+                else
                 {
-                    for (int i = 0; i < RewardNames.Count; i++)
+                    if (Complete)
                     {
-                        // enables all toggleable objects
-                        GameObject.Find(RewardNames[i]).GetComponent<ITogglable>().Enable();
-                    }
+                        for (int i = 0; i < RewardNames.Count; i++)
+                        {
+                            // enables all toggleable objects
+                            Debug.LogWarning("Rewarded " + RewardNames[i]);
+                            GameObject obj = GameObject.Find(RewardNames[i]);
+                            if (obj != null)
+                            {
+                                obj.GetComponent<ITogglable>().Enable();
+                            }
+                        }
 
-                    for (int i = 0; i < RemovedNames.Count; i++)
-                    {
-                        // disables all toggleable objects
-                        GameObject.Find(RemovedNames[i]).GetComponent<ITogglable>().Disable();
+                        for (int i = 0; i < RemovedNames.Count; i++)
+                        {
+                            // disables all toggleable objects
+                            Debug.LogWarning("Removed " + RemovedNames[i]);
+                            GameObject obj = GameObject.Find(RemovedNames[i]);
+                            if (obj != null)
+                            {
+                                obj.GetComponent<ITogglable>().Disable();
+                            }
+                        }
                     }
                 }
-            }
+            } 
         }
 
         public void ForceComplete()

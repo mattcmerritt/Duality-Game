@@ -8,14 +8,22 @@ public class ReplaceDialogue : MonoBehaviour, IActionObject, ITogglable
     public Dialogue.Conversation Conversation, AlternateConversation;
     public Quests.Task Prereq;
 
+    public bool Used;
+
     public void Act()
     {
+        // making the npc not interacted with
+        NPC.SetSpokenWith(false);
         NPC.ReplaceConversation(Conversation, AlternateConversation);
+        Used = true;
     }
 
     public void Enable()
     {
-        Act();
+        if (!Used)
+        {
+            Act();
+        }
     }
 
     public void Disable()
@@ -27,7 +35,7 @@ public class ReplaceDialogue : MonoBehaviour, IActionObject, ITogglable
     {
         if (Prereq.Complete)
         {
-            Act();
+            Enable();
         }
     }
 }

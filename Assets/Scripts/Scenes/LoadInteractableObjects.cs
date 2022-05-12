@@ -54,16 +54,6 @@ public class LoadInteractableObjects : MonoBehaviour
                 }
             }
         }
-
-        // cat minigame code
-        // replace with scalable solution
-        if (CatMinigame != null)
-        {
-            if (quests[2].Tasks[0].Complete && quests[2].Tasks[1].Complete)
-            {
-                CatMinigame.GetComponent<SceneTransition>().Enable();
-            }
-        }
     }
 
     public void ReupdateScene()

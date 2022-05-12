@@ -16,9 +16,10 @@ namespace Quests
 
         public void SetupAllTasks()
         {
-            foreach (Task task in Tasks)
+            Tasks[0].Setup(null); // first task has no prereq
+            for (int i = 1; i < Tasks.Count; i++)
             {
-                task.Setup();
+                Tasks[i].Setup(Tasks[i - 1]);
             }
         }
 

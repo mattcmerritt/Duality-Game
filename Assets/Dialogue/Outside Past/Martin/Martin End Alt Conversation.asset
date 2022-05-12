@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7712836016eaa6d478032c8f05320233, type: 3}
-  m_Name: Martin Past Conversation
+  m_Name: Martin End Alt Conversation
   m_EditorClassIdentifier: 
   Lines:
-  - {fileID: 11400000, guid: 4b953edfea962be4aadb1bc74e3a4d09, type: 2}
-  - {fileID: 11400000, guid: 8655832b0599b7e4ab48b5c82468a6e8, type: 2}
-  - {fileID: 11400000, guid: 743ea465ee7970449af4618fe0aafbe1, type: 2}
-  - {fileID: 11400000, guid: 971707e22cf79374a8902bcb3691719b, type: 2}
-  - {fileID: 11400000, guid: 57cdba65a0313b844bc6bfc3feef6915, type: 2}
-  - {fileID: 11400000, guid: b9a8502bf1239454ea1756aac92eafdd, type: 2}
+  - {fileID: 11400000, guid: e3a245f12a799d84b9a546f0972261da, type: 2}
+  - {fileID: 11400000, guid: 40a7922d4e590984eaefd7dce218b667, type: 2}
   HasDecision: 0
   Decision: {fileID: 0}
   HasNextConversation: 0
