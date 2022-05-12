@@ -14,7 +14,7 @@ namespace Dialogue
         private DialogueUpdater DialogueUI;
 
         // Instance Data
-        private bool SpokenWith;
+        public bool SpokenWith;
 
         // Alternate Conversation
         public Conversation AlternateConversation;

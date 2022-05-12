@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7899b12475e6a424d80d7982b7e7f88a, type: 3}
-  m_Name: GiveRecord
+  m_Name: TalkCat
   m_EditorClassIdentifier: 
-  Name: GiveRecord
-  Description: Give Octavia and Denice the record you found.
-  TriggerNames:
-  - Record Duo
+  Name: TalkCat
+  Description: Speak with Cookie.
+  TriggerNames: []
   Progress: 0
-  Complete: 0
-  TriggerStatuses: 00
-  RewardNames: []
+  Complete: 1
+  TriggerStatuses: 
+  RewardNames:
+  - Martin Replace Dialogue
   RemovedNames: []
+  Prerequisite: {fileID: 11400000, guid: 77b9a44f58cea4b4b823fb5eb8954bce, type: 2}

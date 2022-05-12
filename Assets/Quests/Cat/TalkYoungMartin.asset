@@ -16,9 +16,9 @@ MonoBehaviour:
   Description: Talk to the young Martin
   TriggerNames:
   - Martin
-  Progress: 0
-  Complete: 0
-  TriggerStatuses: 
-  RewardNames:
-  - Minigame Leaves
+  Progress: 1
+  Complete: 1
+  TriggerStatuses: 01
+  RewardNames: []
   RemovedNames: []
+  Prerequisite: {fileID: 11400000, guid: cc31232386d3ab449bda8a73bd0ca198, type: 2}

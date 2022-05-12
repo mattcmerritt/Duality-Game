@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 1db37a8f7202c084186f0f7f3c99b83b, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 99753552}
   CurrentlyActive: 1
@@ -913,6 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: db8bb37d074c97d41b16f4bae5ceb68a, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 0}
   Collider: {fileID: 586078503}
   CurrentlyActive: 0
@@ -1164,6 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 2a2348a8f8333af47a7467e84511104a, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 11400000, guid: 0e01c54428450ce458af41ddb03aa6c0, type: 2}
   Collider: {fileID: 729836423}
   CurrentlyActive: 1
@@ -1551,7 +1554,7 @@ GameObject:
   - component: {fileID: 980683703}
   - component: {fileID: 980683702}
   m_Layer: 0
-  m_Name: Octavia and Denice
+  m_Name: Record Duo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1570,6 +1573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversationObject: {fileID: 11400000, guid: 59e3280ae1d6efa4a89b55549690d155, type: 2}
+  SpokenWith: 0
   AlternateConversation: {fileID: 11400000, guid: 2fbc6bcbaa8b9ed4f97823bac2071082, type: 2}
   Collider: {fileID: 980683703}
   CurrentlyActive: 1
