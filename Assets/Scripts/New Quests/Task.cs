@@ -20,6 +20,13 @@ namespace Quests
 
         public Task Prerequisite;
 
+        // Saving changes between scenes
+        // Source: https://answers.unity.com/questions/1501743/scriptable-object-resets-randomly-between-scenes.html?childToView=1569389#comment-1569389
+        private void OnEnable()
+        {
+            hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void Setup(Task prereq)
         {
             // adding a prereq task to prevent early triggers

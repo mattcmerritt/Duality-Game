@@ -10,5 +10,6 @@ public class GiveItem : MonoBehaviour, IActionObject
     {
         // TODO: Implement inventory
         Debug.LogWarning("Received " + Item.Name);
+        IngameMenu.AddItem(Item);
     }
 }

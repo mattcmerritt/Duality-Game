@@ -14,6 +14,13 @@ namespace Quests
 
         public bool IsActive;
 
+        // Saving changes between scenes
+        // Source: https://answers.unity.com/questions/1501743/scriptable-object-resets-randomly-between-scenes.html?childToView=1569389#comment-1569389
+        private void OnEnable()
+        {
+            hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void SetupAllTasks()
         {
             Tasks[0].Setup(null); // first task has no prereq
