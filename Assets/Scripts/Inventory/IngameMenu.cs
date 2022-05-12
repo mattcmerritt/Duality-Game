@@ -11,9 +11,10 @@ public class IngameMenu : MonoBehaviour
     public GameObject MenuUI;
     public static Quests.Quest ChosenQuest; // might need to write this to session storage to persist between scenes
     public Toggle[] QuestToggles;
-    public Quests.Quest UnpackingQuest, MayorQuest, MartinQuest;
+    public Quests.Quest UnpackingQuest, MayorQuest, HopeQuest, MartinQuest, RecordQuest;
     public static Item[] Items = new Item[5];
     public TMP_Text DescriptionPanel;
+    public GameObject ObjectivesBox;
 
     // Inventory
     public Image[] ButtonImages;
@@ -26,6 +27,9 @@ public class IngameMenu : MonoBehaviour
 
         // starting the text box with the current quest
         DescriptionPanel.SetText(ChosenQuest.MenuDescription);
+
+        // find objectives box
+        ObjectivesBox = GameObject.Find("Objective Background");
     }
 
     public void MenuButtonUpdate()
@@ -34,12 +38,14 @@ public class IngameMenu : MonoBehaviour
         {
             MenuUI.SetActive(false);
             MenuOpen = false;
+            ObjectivesBox.SetActive(true);
         }
         else
         {
             UpdateSelectedQuestTogglesOnLoad();
             MenuUI.SetActive(true);
             MenuOpen = true;
+            ObjectivesBox.SetActive(false);
         }
     }
 
@@ -57,9 +63,17 @@ public class IngameMenu : MonoBehaviour
         {
             QuestToggles[1].isOn = true;
         }
-        else if (ChosenQuest == MartinQuest)
+        else if (ChosenQuest == HopeQuest)
         {
             QuestToggles[2].isOn = true;
+        }
+        else if (ChosenQuest == MartinQuest)
+        {
+            QuestToggles[3].isOn = true;
+        }
+        else if (ChosenQuest == RecordQuest)
+        {
+            QuestToggles[4].isOn = true;
         }
         else
         {
