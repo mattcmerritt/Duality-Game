@@ -29,8 +29,6 @@ namespace Dialogue
         // Create a list of dialogue items for when the NPC is interacted with
         private void Awake()
         {
-            Debug.Log("Setting up " + name);
-
             CurrentConversation = ConversationObject.BuildConversation();
 
             DialogueUI = FindObjectOfType<DialogueUpdater>();

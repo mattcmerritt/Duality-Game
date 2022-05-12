@@ -16,8 +16,6 @@ public class ReplaceDialogue : MonoBehaviour, IActionObject, ITogglable
         NPC.SetSpokenWith(false);
         NPC.ReplaceConversation(Conversation, AlternateConversation);
         Used = true;
-
-        Debug.LogError("USED");
     }
 
     public void Enable()

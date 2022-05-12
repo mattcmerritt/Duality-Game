@@ -89,7 +89,6 @@ namespace Quests
                         for (int i = 0; i < RewardNames.Count; i++)
                         {
                             // enables all toggleable objects
-                            Debug.LogWarning("Rewarded " + RewardNames[i]);
                             GameObject obj = GameObject.Find(RewardNames[i]);
                             if (obj != null)
                             {
@@ -100,7 +99,6 @@ namespace Quests
                         for (int i = 0; i < RemovedNames.Count; i++)
                         {
                             // disables all toggleable objects
-                            Debug.LogWarning("Removed " + RemovedNames[i]);
                             GameObject obj = GameObject.Find(RemovedNames[i]);
                             if (obj != null)
                             {
@@ -120,7 +118,6 @@ namespace Quests
                         for (int i = 0; i < RewardNames.Count; i++)
                         {
                             // enables all toggleable objects
-                            Debug.LogWarning("Rewarded " + RewardNames[i]);
                             GameObject obj = GameObject.Find(RewardNames[i]);
                             if (obj != null)
                             {
@@ -131,7 +128,6 @@ namespace Quests
                         for (int i = 0; i < RemovedNames.Count; i++)
                         {
                             // disables all toggleable objects
-                            Debug.LogWarning("Removed " + RemovedNames[i]);
                             GameObject obj = GameObject.Find(RemovedNames[i]);
                             if (obj != null)
                             {
